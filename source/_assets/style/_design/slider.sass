@@ -1,0 +1,49 @@
+.b-slider
+	&_list
+		position: relative
+		overflow-x: hidden
+		.b-slider_item
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			opacity: 0
+			transition: all .5s
+			&.active
+				left: 0
+				opacity: 1
+				position: relative
+	&_controls
+		position: absolute
+		bottom: 1rem
+		left: 1rem
+		@include media-query-up(md)
+			left: 6em
+		.control
+			display: inline-block
+			height: 3rem
+			width: 3rem
+			position: relative
+			background-color: $color-white
+			color: $color-black
+			cursor: pointer
+			&:nth-child(odd)
+				background-color: $color-primary
+				color: $color-white
+			.rage
+				font-size: 2em
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
+				transition: all .2s
+			&#play_slide
+				overflow: hidden
+				.pause
+					top: 150%
+				&.active
+					.play
+						top: -150%
+					.pause
+						top: 50%

@@ -1,0 +1,104 @@
+$track : 'b-track'
+.#{$track}
+	display : flex
+	flex :
+		direction : row
+	position: relative
+	padding :
+		right : 1rem
+	margin : .5rem 0
+	align-items : center
+	background-color : $color-white
+	&_image
+		position : relative
+		margin :
+			right : 1rem
+		height : 3.5rem
+		width : 3.5rem
+		min-width: 3rem
+		background :
+			size : cover
+			position : center center
+		&:after
+			content : ''
+			display : block
+			visibility: hidden
+			height : 100%
+			width : 100%
+			position : absolute
+			left : 0
+			top : 0
+			z-index : 1
+			background-color : $color-primary
+			opacity: .9
+		.action
+			visibility: hidden
+			display: inline-block
+			position: absolute
+			top: 50%
+			left: 50%
+			z-index : 2
+			transform: translate(-50%,-50%)
+			color: $color-white
+			fill: $color-white
+			height: 2em
+			width: 2em
+		&:hover
+			&:after
+				opacity: 1
+	&-title
+		z-index: 0
+		margin : 0
+			right : auto
+		line-height: 1.2
+		font-size: 1.1em
+		@include media_query_down(xs)
+			max-width: 60%
+		.small
+			color : $color-gray__dark
+			line-height: inherit
+			margin-top: .3em
+			&:hover
+				color : $color-primary
+	&_duration
+		color : $color-gray
+		z-index: 0
+	&_actions
+		display : none
+		z-index: 1
+		a
+			line-height: 1
+			font-size: 1.3rem
+			color: $color-gray
+			&:first-child
+				margin-right: .5rem
+			&:hover
+				color: $color-primary
+	.info-click
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		background: transparent
+		z-index: 0
+		cursor: pointer
+	&:hover
+		box-shadow : 0 .1rem .5rem -.1rem rgba(0,0,0,0.15)
+		.#{$track}_image
+			&:after
+				visibility: visible
+			.action
+				visibility: visible
+		@include media_query_up(sm)
+			.#{$track}_duration
+				display : none
+			.#{$track}_actions
+				display : block
+	&.active
+		.#{$track}_image
+			&:after
+				visibility: visible
+				opacity : 1
+			.action
+				visibility: visible

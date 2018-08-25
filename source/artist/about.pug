@@ -1,0 +1,37 @@
+extends ../_layouts/artist
+block header
+	- var header = ''
+	- var header_back_link = 'index.html'
+	include ../_includes/header__artist
+block content
+	nav.g-breadcrumbs.g-block__background-light.g-text__center.g-margin__top-3.g-padding__top-5
+		ul
+			li: a(href="#") Home
+			li: span About
+	// Artist heroscreen
+	.g-block__background-light
+		.g-container.g-padding__yy-3.g-padding__lg-yy-5
+			.g-row.g-align-items__center
+				.g-cols__xs-12.g-cols__lg-6
+					img.g-image__fluid(src="assets/images/artist.png" alt="artist")
+				.g-cols__xs-12.g-cols__lg-6
+					h5.g-text__dark.g-margin__bottom-0 Discography
+					h1.g-margin__yy-0= artist.title
+					p.g-margin__yy-2= artist.description.substr(0, 200)
+						| ... 
+						a(href="#") More
+					.g-margin__top-4
+						a.g-button.g-button__white.g-margin__right-1(href="#")
+							svg.rage.g-margin__right-1: use(xlink:href="#rage-mix")
+							span Mix
+						a.g-button.g-button__primary(onclick="play_demo(this,'button');")
+							span Play
+							svg.rage.g-margin__left-1: use(xlink:href="#rage-play")
+	// Artist heroscreen END
+	// Sections of recent alboms
+	include ../_includes/artist-album_by_year
+	// Sections of recent alboms END
+	// Sections of tracklist
+	- var tracks_type = 'album'
+	include ../_includes/artist_track_list
+	// Sections of tracklist END

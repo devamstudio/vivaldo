@@ -1,0 +1,64 @@
+$heroscreen : 'b-heroscreen'
+.#{$heroscreen}
+	position : relative
+	z-index : 10
+	min-height : 100vh
+	max-width: 100%
+	&_back
+		width: 100%
+		min-height : 100%
+		position : absolute
+		top : 0
+		left : 0
+		z-index : 0
+		path
+			fill : $color-blue
+			filter: none
+	&_item
+		display : flex
+		flex :
+			direction : row
+		align-items : center
+		position : relative
+		min-height : 100vh
+		&__background
+			backfround-size: cover
+		&>.g-container>.g-row
+			align-items : center
+		&-image
+			text-align : center
+			path
+				width : 100%
+				height : 100%
+		.g-text__white
+			p,h1,h2,h3,h4,h5,small
+				color : inherit
+				a:hover
+					border-bottom: .1rem dashed $color-white
+		&__svg
+			min-height : 105vh
+			.#{$heroscreen}_item-image
+				display : block
+				position : absolute
+				left : 0
+				top : 0
+				width : 100%
+				height: 100%
+				path
+					width : 100%
+					height : 100%
+		&__video
+			overflow: hidden
+			video.video
+				display: block
+				height: 100%
+				width: 100%
+				position: absolute
+				left: 0
+				top: 0
+				object-fit: cover
+	&__slider
+		.#{$heroscreen}_item__svg
+			.#{$heroscreen}_item-image
+				@include media-query-down(md)
+					filter: blur(15px)

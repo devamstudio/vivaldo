@@ -1,0 +1,95 @@
+extends ../_layouts/artist
+block header
+	- var header = ''
+	- var header_back_link = 'index.html'
+	include ../_includes/header__artist-shop
+block content
+	nav.g-breadcrumbs.g-block__background-light.g-text__center.g-margin__top-3.g-padding__top-5
+		ul
+			li: a(href="#") Home
+			li: span Shop
+	// Artist heroscreen
+	.g-block__background-light
+		.g-container.g-padding__yy-3.g-padding__lg-yy-5
+			.g-row
+				.g-cols__xs-12.g-cols__md-6.g-cols__lg-4.g-offset__lg-1.g-margin__lg-yy-auto.g-order__last.g-order__md-first
+					span.g-text__gray T-shirt
+					h2.h1: a.g-text__dark(href="shop_item.html") White T-SHIRT with our print
+					.g-row.g-row__no-inset
+						h5.h2.g-text__primary.g-margin__bottom-0 5$
+						.g-margin__yy-auto.g-margin__left-auto: a.g-button.g-button__primary
+							| Buy this
+							svg.rage.g-margin__left-2: use(xlink:href="#rage-busket-truck")
+				.g-cols__xs-12.g-cols__md-6.g-cols__lg-5.g-offset__lg-1
+					.b-slider
+						.b-slider_list
+							.b-slider_item.active.g-padding__bottom-3.g-padding__xx-3
+								img.g-image__fluid(src="assets/images/t-shirt.png" alt="item")
+							.b-slider_item.g-padding__bottom-3.g-padding__xx-3
+								img.g-image__fluid(src="assets/images/t-shirt.png" alt="item")
+						.b-slider_controls
+							.control.pre_slide
+								svg.rage: use(xlink:href="#rage-chevron-left")
+							.control.next_slide
+								svg.rage: use(xlink:href="#rage-chevron-right")
+	// Artist heroscreen END
+	section
+		.g-container
+			.g-row
+				.g-cols__xs-12.g-cols__lg-3.g-padding__yy-3.g-padding__lg-yy-5
+					h4 Categories
+					ul.m-list__to-row.g-list__unstyled
+						li: a(href="#") All
+						li: a(href="#") T-shirts
+						li: a(href="#") Watches
+						li: a(href="#") Vinil
+					h4 Filter
+					.b-field
+						svg.b-field_icon.b-field_icon__right: use(xlink:href="#rage-search")
+						input.b-field_input#filter_search(type="search")
+						label.b-field_sup(for="filter_search") Search
+					h5 Select
+					.b-field
+						select.b-field_input
+							option V1
+							option V2
+							option V3
+					h5 Radios
+					label.b-field.b-field__radio
+						input.b-field_input(type="radio" name="radio")
+						| Radio
+					label.b-field.b-field__radio
+						input.b-field_input(type="radio" name="radio")
+						| Radio
+					label.b-field.b-field__radio
+						input.b-field_input(type="radio" name="radio")
+						| Radio
+					h5 Checkboxes
+					label.b-field.b-field__checkbox
+						input.b-field_input(type="checkbox" name="check")
+						| Check
+					label.b-field.b-field__checkbox
+						input.b-field_input(type="checkbox" name="check")
+						| Check
+					label.b-field.b-field__checkbox
+						input.b-field_input(type="checkbox" name="check")
+						| Check
+				.g-cols__xs-12.g-cols__lg-9.g-padding__yy-3.g-padding__lg-yy-5
+					.g-row
+						each item in [1,1,1,1,1,1]
+							.g-cols__xs-6.g-cols__sm-4.g-cols__md-3
+								.b-card.g-text__center
+									.b-card_image.g-block__background-light.g-padding__xx-2.g-padding__yy-2: a(href="shop_item.html")
+										img.g-image__fluid(src="assets/images/t-shirt.png" alt="item")
+									h5: a.g-text__dark(href="shop_item.html") Awesome #[nobr T-shirt]
+									a.g-button.g-button__primary
+										span.g-margin__right-2 5$
+										| Buy
+						.g-cols__xs-6.g-cols__sm-4.g-cols__md-3
+							.b-card.g-text__center
+								.b-card_image.g-block__background-light.g-padding__xx-2.g-padding__yy-2: a(href="shop_item.html")
+									img.g-image__fluid(src="assets/images/t-shirt.png" alt="item")
+								h5: a.g-text__dark(href="shop_item.html") Awesome #[nobr T-shirt]
+								a.g-button.g-button__primary
+									span.g-margin__right-2 15$
+									| Buy

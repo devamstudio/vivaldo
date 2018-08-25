@@ -1,0 +1,87 @@
+//* 1. Colors */
+//* 2. Grid */
+//* 3. Text */
+//* 4. Margin and paddings */
+//* 5. Design */
+//* 6. Buttons */
+//* 7. Fields */
+
+//* 1. Colors */
+$color-red    : #FF3131
+$color-blue   : #0E437F
+$color-yellow : #FF7B23
+$color-green  : #3baa35
+$color-white  : white
+$color-black  : black
+// Gray
+$color-gray__light : #FAFAFA
+$color-gray        : #D3D3D3
+$color-gray__dark  : #272727
+// Interface
+$color-primary   : #3895FF
+$color-secondary : $color-gray__light
+$color-alert     : $color-red
+$color-warning   : $color-yellow
+$color-ok        : $color-green
+
+
+//* 2. Grid */
+$grid-cols : 12
+$containers         : ( xs : 100%, sm : 100%, md : 1000px, lg : 1200px )
+$media-quaries      : ( xs, sm, md, lg, xl)
+$media-quaries_up   : ( xs : 0, sm : 501px, md : 901px, lg : 1025px, xl : 1221px )
+$media-quaries_down : ( xs : 500px, sm : 900px, md : 1024px, lg : 1220px, xl : 1220px )
+
+
+//* 3. Text */
+// Family
+$font-heading : Noto Sans, -apple-system, system-ui
+$font-main    : Noto Sans, -apple-system, system-ui
+// Size
+$font-base-size     : 16px
+$font-heading-sizes : ( h1 : 2.5rem, h2 : 2.1rem, h3 : 1.8rem, h4 : 1.5rem, h5 : 1.2rem, h6 : 1rem )
+$font-main-size     : 1rem
+// Color
+$font-heading-color : $color-black
+$font-main-color    : $color-gray__dark
+// Align
+$text-align-list : left, right, center, justify
+$flex-align_items-list : ( start : flex-start , end : flex-end , center : center , baseline : baseline , stretch : stretch )
+// Other
+$text-line-height : 1.61
+
+
+//* 4. Margin and paddings */
+$directions       : left, right, top, bottom, yy, xx
+$direction-offset : ( 0 : 0 , 1 : 0.5rem , 2 : 1rem , 3 : 2rem , 4 : 3rem , 5 : 5rem, auto: auto )
+
+
+//* 5. Design */
+// Rounded
+$global-rounded : true
+$global-rounded-radius : 2rem
+// Animation
+$global-animation : true
+$global-animation-delay : 0.2s
+//Inputs
+$global-input-inset-y: .5rem
+$global-input-inset-x: 2rem
+
+
+//* 6. Buttons */
+$colors : ( primary : $color-primary, secondary : $color-secondary, alert : $color-alert, warning : $color-warning, ok : $color-ok, black : $color-black, white : $color-white , light : $color-gray__light , dark : $color-gray__dark )
+$buttons-inset-x : $global-input-inset-x
+$buttons-inset-y : $global-input-inset-y
+$buttons-radius : ''
+@if $global-rounded
+	$buttons-radius : $global-rounded-radius
+
+
+//* 7. Fields */
+$fields-inset-x : $global-input-inset-x
+$fields-inset-y : $global-input-inset-y
+$fields-radius : ''
+@if $global-rounded
+	$fields-radius : $global-rounded-radius
+$fields-border-width : 0.1rem
+$fields-border-style : solid

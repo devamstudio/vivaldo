@@ -1,0 +1,23 @@
+.b-player
+	.b-player_cover
+		img.pre(src='https://via.placeholder.com/300x300' alt="album")
+		img.current(src='https://via.placeholder.com/300x300' alt="album")
+		img.next(src='https://via.placeholder.com/300x300' alt="album")
+	input.b-player_progress(type="range" max="100" value="15")
+	.b-player_group
+		a.b-player_actions.b-player_actions__hoverable#play-back: svg: use(xlink:href="#rage-play-back")
+		a.b-player_actions.b-player_actions__hoverable#play(onclick="play_demo(this,'button');"): svg( preserveAspectRatio="xMidYMid meet"): use(xlink:href="#rage-play")
+		a.b-player_actions.b-player_actions__hoverable#play-forward: svg: use(xlink:href="#rage-play-forward")
+	span.v-line
+	.b-player_group
+		a.b-player_actions#play-mix(onclick="this.classList.toggle('active');"): svg: use(xlink:href="#rage-mix")
+		a.b-player_actions#play-loop(onclick="this.classList.toggle('active');"): svg: use(xlink:href="#rage-loop")
+	span.v-line.g-hidden__sm-down
+	h6.b-track-title
+		span.m-text__stroke-clip What can i Dooo...
+		a.artist.m-text__stroke-clip(href="artist.html"): small Artist
+	a.b-player_actions#play-like.g-margin__right-2.g-hidden__md-down(onclick="this.querySelector('use').setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#rage-heart-filled');this.classList.add('active');"): svg: use(xlink:href="#rage-heart")
+	.b-player_volume.g-hidden__md-down
+		a.icon: svg: use(xlink:href="#rage-volume")
+		input.slider(type="range" value="38" max="100")
+	a.b-player_actions#play-maximize.g-margin__right-1(onclick="demo_fullscreen(this);"): svg: use(xlink:href="#rage-maximize")

@@ -1,0 +1,59 @@
+section.g-padding__yy-3.g-padding__lg-yy-5: .g-container
+	h2 Tracks
+	.g-row
+		.g-cols__xs-12.g-cols__lg-9
+			each track in [1,1,1,1,1,1,1,1,1,1]
+				- var album_index = Math.floor( Math.random() * artist.albums.length )
+				- var track_index = Math.floor( Math.random() *  artist.albums[album_index].tracks.length )
+				.b-track
+					// Layout that avoid clicking of all track to open it's info sidebar
+					.info-click.g-hidden__md-down(onclick="document.querySelector('.b-info-sidebar').classList.add('active');")
+					// Image
+					if artist.albums[album_index].image
+						a.b-track_image(style="background-image:url("+artist.albums[album_index].image+")" onclick="play_demo(this,'track');")
+							svg.action: use(xlink:href="#rage-play")
+					else
+						a.b-track_image(style="background-image:url(https://via.placeholder.com/100x100)" onclick="play_demo(this,'track');")
+							svg.action: use(xlink:href="#rage-play")
+					// Main info
+					h5.b-track-title.b-title__double-line
+						span.main.text.m-text__stroke-clip= artist.albums[album_index].tracks[track_index].title
+						span.small.text.g-text__gray.m-text__stroke-clip= artist.title
+					// Track duration
+					.b-track_duration= artist.albums[album_index].tracks[track_index].duration
+					// Hidden actions (open with hover)
+					.b-track_actions
+						a(onclick="this.querySelector('use').setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#rage-heart-filled');"): svg.rage: use(xlink:href="#rage-heart")
+					
+		// This block must have unic inline style overflow
+		.g-cols__xs-12.g-cols__lg-3(style="overflow:hidden;"): .g-row
+			// Info section of track opens with click on .info-click
+			.b-info-sidebar.g-block__background-light.g-hidden__md-down
+				.close(role="button" onclick="this.parentElement.classList.remove('active');"): svg.rage: use(xlink:href="#rage-close")
+				// Traks image
+				if artist.albums[0].image
+					.image
+						img.g-image__fluid(src=artist.albums[0].image alt="album")
+				else
+					.image
+						img.g-image__fluid(src='https://via.placeholder.com/300x300' alt="album")
+				// Tracks info with action icons (like,more etc)
+				.top-info.g-padding__yy-1.g-padding__xx-2
+					h6.title.b-title__double-line.g-margin__right-auto
+						span.main.text.m-text__stroke-clip What can i Dooo...
+						a.text(href="artist.html"): small.m-text__stroke-clip Artist
+					a.likes.g-text__black(onclick="this.querySelector('use').setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#rage-heart-filled');")
+						svg.rage: use(xlink:href="#rage-heart")
+					span.likes
+						svg.rage: use(xlink:href="#rage-dots")
+				// Main actions
+				.g-text__align-center.g-padding__xx-1.g-padding__yy-1
+					a.g-button.g-button__primary
+						span.text Play
+						svg.rage.g-margin__left-1: use(xlink:href="#rage-play")
+				// Song text
+				.g-padding__xx-2.g-padding__yy-1
+					h5 Text
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					p Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. #[a(href="#") more...]
+						

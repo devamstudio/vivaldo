@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 600" preserveAspectRatio="xMidYMin meet">
+	<circle class="#circle" cx="150" cy="250" r="100" fill="#3895FF"/>
+	<rect class="#rect" x="200" y="350" width="200" height="200" fill="#3895FF" transform="rotate(45 300 450)"/>
+	<image xlink:href="text-microphone.png" x="50" y="200" width="300" height="400"/>
+	<rect class="#stroke" x="100" y="200" width="300" height="300" stroke="#3895FF" stroke-width="9" fill="none" transform="rotate(45 200 300)"/>
+</svg>

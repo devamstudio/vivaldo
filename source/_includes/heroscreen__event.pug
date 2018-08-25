@@ -1,0 +1,21 @@
+.b-heroscreen.g-block__background-light
+	svg.b-heroscreen_back(width="160px" height="90px" viewBox="0 0 160 90" preserveAspectRatio="xMidYMax slice")
+		path(d="M 0,0 L 160,0 160,88 C 160,88 80,92 0,88 L 0,88 z" fill="blue")
+	// Items
+	.b-heroscreen_item.b-heroscreen_item__svg.g-padding__yy-5
+		svg.b-heroscreen_item-image(viewBox="0 0 160 90" preserveAspectRatio="xMidYMax slice")
+			pattern#heroimage_0(patternUnits="objectBoundingBox" x="0" y="0" height="100%" width="100%")
+				image(xlink:href="assets/images/heroscreen_event.jpg" width="100%" height="100%")/
+			path(d="M 0,0 L 160,0 160,88 C 160,88 80,92 0,88 L 0,88 z" fill="url(#heroimage_0)")
+		.g-container
+			.g-text__white.g-text__center
+				h4.g-margin__yy-0: small Concert soon
+				h1.g-margin__yy-0: a.g-text__white(href="#") Moskow never sleep
+				h3.g-margin__bottom-4: small 25-31th may 2018
+				div
+					a.g-button.g-button__white.g-margin__bottom-1.g-margin__sm-right-1(href="#")
+						svg.rage.g-margin__right-1: use(xlink:href="#rage-list")
+						span Watch schedule
+					a.g-button.g-button__primary.g-margin__bottom-1
+						span Book ticket
+						svg.rage.g-margin__left-1: use(xlink:href="#rage-ticket")

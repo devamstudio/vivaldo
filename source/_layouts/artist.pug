@@ -1,0 +1,28 @@
+//- PHKIT
+include ../_mixins/ph-kit/elements/list
+include ../_mixins/ph-kit/widgets/navigation
+//- PHKIT END
+include ../_data/_artist
+// - Template triggers
+doctype html
+html(lang='en')
+	head
+		link(rel="stylesheet" href="assets/css/style.css")
+		meta(charset="utf-8")
+		title Artist
+		meta( name="viewport" content="width=device-width, initial-scale=1")
+		link( rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Noto+Sans" onload="this.rel='stylesheet'")
+		noscript
+			link( rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans")
+		link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
+		link(rel="stylesheet" href="assets/css/symbols-rage.css")
+	body
+		include ../_modules/icons-rage/dist/svg/symbols.svg
+		block header
+		main#player
+			block content
+		include ../_includes/player
+		include ../_includes/footer__artist
+		// Scripts section
+		script(src="assets/js/app.js")
+		// Scripts section END

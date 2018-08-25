@@ -1,0 +1,36 @@
+$card : 'b-card'
+
+.#{$card}
+	padding :
+		bottom : 1rem
+	margin:
+		bottom: 1rem
+	&_image
+		@if $global-animation == true
+			transition : $global-animation-delay
+		margin:
+			bottom: .2rem
+		a
+			display: block
+		img
+			@if $global-animation == true
+				transition : $global-animation-delay
+	&_title
+		margin : 0
+			top : .2rem
+			bottom : 0
+		font-size : 1rem
+		a
+			text-decoration : none
+			color : $color-black
+	&_meta
+		span
+			color: $color-gray__dark
+			margin-right: .3rem
+			font-size: .8rem
+			.rage
+				margin-right: .2rem
+	&:hover
+		.#{$card}_image
+			img
+				transform : scale(1.03)

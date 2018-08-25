@@ -1,0 +1,38 @@
+extends ../_layouts/player
+block header
+	- var header = ''
+	- var header_back_link = 'index.html'
+	include ../_includes/header__player
+block content
+	nav.g-breadcrumbs.g-block__background-light.g-text__center.g-margin__top-3.g-padding__top-5
+		ul
+			li: a(href="#") Home
+			li: a(href="#") Artist
+			li: span Album
+	// Album heroscreen
+	.g-block__background-light
+		.g-container.g-padding__yy-3.g-padding__lg-yy-5
+			.g-container
+				.g-row.g-align-items__center
+					.g-cols__xs-12.g-cols__lg-3
+						if artists[0].albums[0].image
+							img.g-image__fluid(src=artists[0].albums[0].image alt="album")
+						else
+							img.g-image__fluid(src='https://via.placeholder.com/300x300' alt="album")
+					.g-cols__xs-12.g-cols__lg-9
+						h5.g-margin__yy-0: small: a(href="artist.html")= artists[0].title
+						h1.g-margin__yy-0= artists[0].albums[0].title
+						h5.g-margin__yy-0: small= genres[0]
+						p.g-margin__yy-2= artists[0].description.substr(0, 200)
+							| ... 
+							a(href="#") More
+						div.g-margin__top-2
+							a.g-button.g-button__primary(onclick="play_demo(this,'button');")
+								span Play
+								svg.rage.g-margin__left-1: use(xlink:href="#rage-play")
+	// Album heroscreen END
+
+	// Sections of tracklist
+	- var tracks_type = 'album'
+	include ../_includes/track_list
+	// Sections of tracklist END

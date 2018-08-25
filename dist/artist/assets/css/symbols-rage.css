@@ -1,0 +1,14 @@
+svg.rage{
+	display : inline-block;
+	height : 1em;
+	width : 1.3em;
+	line-height : 1;
+	fill: currentColor;
+	/*vertical-align: middle;*/
+	transform: translateY(0.13em);
+	pointer-events: none;
+}
+svg.rage-2x { font-size: 2em; }
+svg.rage-3x { font-size: 3em; }
+svg.rage-4x { font-size: 4em; }
+svg.rage-5x { font-size: 5em; }

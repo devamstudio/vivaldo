@@ -1,0 +1,55 @@
+extends ../_layouts/artist
+block header
+	- var header = ''
+	include ../_includes/header__artist
+block content
+	// Artist heroscreen
+	.g-block__background-light
+		.b-heroscreen.b-heroscreen__slider
+			// Items
+			.b-heroscreen_item.b-heroscreen_item__video.active
+				video.video(width="400" height="300" autoplay muted loop)
+					source(src='assets/video/demo.mp4' type='video/mp4')
+				.g-cols__xs-12.g-cols__lg-6.g-margin__top-auto.g-margin__md-left-5.g-margin__bottom-5
+					h5.g-margin__bottom-0.g-text__white Videography
+					h2.h1.g-margin__yy-0.g-text__white= artist.title
+			// Controls
+			.b-slider_controls
+				.control.pre_slide
+					svg.rage: use(xlink:href="#rage-chevron-left")
+				.control#play_slide.active(onclick="this.classList.toggle('active');")
+					svg.rage.play: use(xlink:href="#rage-play")
+					svg.rage.pause: use(xlink:href="#rage-pause")
+				.control.next_slide
+					svg.rage: use(xlink:href="#rage-chevron-right")
+	nav.g-breadcrumbs.g-text__center.g-padding__yy-3
+		ul
+			li: a(href="#") Home
+			li: a(href="#") Media
+			li: span Videos
+			
+	section.g-padding__yy-3.g-padding__lg-yy-5
+		.g-container
+			.g-row
+				.g-cols__xs-12.g-cols__lg-10.g-offset__lg-2
+					h2 Videos libriary
+			.g-row
+				.g-cols__xs-12.g-cols__md-2
+					h4 Year
+					ul.m-list__to-row.g-list__unstyled
+						each year in years
+							li: a(href="#")= year
+				.g-cols__xs-12.g-cols__md-10
+					.g-row
+						each item in news_list
+							.g-cols__xs-12.g-cols__sm-6.g-cols__md-4
+								.b-card
+									.b-card_image: a(href="#")
+										img.g-image__fluid(src=item.thumb alt="video")
+									h5.b-card_title: a.m-text__stroke-clip(href="#") Video title
+						each item in news_list
+							.g-cols__xs-12.g-cols__sm-6.g-cols__md-4
+								.b-card
+									.b-card_image: a(href="#")
+										img.g-image__fluid(src=item.thumb alt="video")
+									h5.b-card_title: a.m-text__stroke-clip(href="#") Video title

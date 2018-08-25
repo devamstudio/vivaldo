@@ -1,0 +1,14 @@
+extends ../_layouts/player
+block header
+	- var header = 'heroscreen'
+	include ../_includes/header__player
+block content
+	// Section of player heroscreen
+	include ../_includes/heroscreen__slider
+	// Section of player heroscreen END
+	// Sections of recent alboms
+	include ../_includes/artists_recent
+	// Sections of recent alboms END
+	// Sections of tracklist
+	include ../_includes/track_list
+	// Sections of tracklist END

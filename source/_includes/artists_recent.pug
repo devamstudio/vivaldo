@@ -1,0 +1,31 @@
+section.g-block__background-light.g-padding__yy-3.g-padding__lg-yy-5
+	.g-container
+		.g-row
+			.g-cols__xs-12.g-cols__lg-10.g-offset__lg-2
+				h2 Popular artists
+		.g-row
+			.g-cols__xs-12.g-cols__md-2
+				h4 Genres
+				ul.m-list__to-row.g-list__unstyled
+					each genre in genres
+						li: a(href="#")= genre
+			.g-cols__xs-12.g-cols__md-10
+				.g-row
+					each artist in artists
+						.g-cols__xs-6.g-cols__sm-4.g-cols__md-3
+							.b-card
+								.b-card_image: a(href="artist.html")
+									if artist.image
+										img.g-image__fluid(src=artist.image alt="album")
+									else
+										img.g-image__fluid(src='https://via.placeholder.com/300x300' alt="album")
+								h5.b-card_title: a.m-text__stroke-clip(href="artist.html")= artist.title
+					each artist in artists
+						.g-cols__xs-6.g-cols__sm-4.g-cols__md-3
+							.b-card
+								.b-card_image: a(href="artist.html")
+									if artist.image
+										img.g-image__fluid(src=artist.image alt="album")
+									else
+										img.g-image__fluid(src='https://via.placeholder.com/300x300' alt="album")
+								h5.b-card_title: a.m-text__stroke-clip(href="artist.html")= artist.title
