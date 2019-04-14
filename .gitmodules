@@ -1,0 +1,3 @@
+[submodule "src/submodules/fa-kit"]
+	path = src/submodules/fa-kit
+	url = https://github.com/devamstudio/fa-kit
