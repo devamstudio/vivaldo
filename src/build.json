@@ -1,0 +1,63 @@
+{
+	"builds" : [
+		{
+			"title" : "home",
+			"dist" : "dist/",
+			"src" : {
+				"styles" : [
+					"./src/style/fa-kit-class.sass",
+					"./src/style/fa-kit-config.sass",
+					"./src/submodules/fa-kit/sass/mixins.sass",
+					"./src/submodules/fa-kit/sass/base/reset.sass",
+					"./src/submodules/fa-kit/sass/base/grid.sass",
+					"./src/submodules/fa-kit/sass/base/typography.sass",
+					"./src/submodules/fa-kit/sass/base/article.sass",
+					"./src/submodules/fa-kit/sass/base/media_objects.sass",
+					"./src/submodules/fa-kit/sass/ui/blocks.sass",
+					"./src/submodules/fa-kit/sass/ui/forms.sass",
+					"./src/submodules/fa-kit/sass/ui/buttons.sass",
+					"./src/submodules/fa-kit/sass/ui/modals.sass",
+					"./src/submodules/fa-kit/sass/ui/notifications.sass",
+					"./src/submodules/fa-kit/sass/ui/pagination.sass",
+					"./src/submodules/fa-kit/sass/ui/breadcrumbs.sass",
+					"./src/submodules/fa-kit/sass/base/ghost.sass",
+					"./src/submodules/fa-kit/sass/base/utilites.sass",
+					"./src/submodules/fa-kit/sass/base/display.sass"
+				],
+				"markup" : [
+					"./src/markup/index.pug"
+				],
+				"images" : [],
+				"data" : "./src/data/home-demo.json"
+			}
+		},
+		{
+			"title" : "player-sidebar",
+			"dist" : "dist/player-sidebar",
+			"src" : {
+				"styles" : [
+					"./src/blocks/track/track.sass"
+				],
+				"markup" : [
+					"./src/markup/player-sidebar/index.pug"
+				],
+				"images" : [],
+				"data" : "./src/data/vivaldo-player-demo.json"
+			}
+		},
+		{
+			"title" : "Player scroller",
+			"dist" : "dist/player-scroller/",
+			"src" : {
+				"styles" : [
+					"./src/blocks/track/track.sass"
+				],
+				"markup" : [
+					"./src/markup/player-sidebar/index.pug"
+				],
+				"images" : [],
+				"data" : "./src/data/vivaldo-player-demo.json"
+			}
+		}
+	]
+}

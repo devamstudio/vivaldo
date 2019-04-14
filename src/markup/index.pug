@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset="utf-8")
+		title= title
+		//- Decorative
+		meta(name="theme-color" content= color.primary)
+		//- Decorative END
+		meta( name="viewport" content="width=device-width, initial-scale=1")
+		link( rel="stylesheet" href="style.css")
+		//- link( rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto")
+		//- link(rel="stylesheet" href="//space.i-am.studio/font-icons-rage/releases/v1.0.1/css/font-rage.css")
+	body
+		header
+			h1= title
+		main
+			.container
+				.row
+					for layout in layouts
+						.cols__xs-12.cols__md-6
+							h2= layout.title
+							p= layout.description

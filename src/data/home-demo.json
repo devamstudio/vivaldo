@@ -1,0 +1,16 @@
+{
+	"title" : "Music template Vivaldo",
+	"color" : {
+		"primary" : "#3895FF"
+	},
+	"layouts" : [
+		{
+			"title" : "Default player layout",
+			"description" : ""
+		},
+		{
+			"title" : "Scrollable  player layout",
+			"description" : ""
+		}
+	]
+}
