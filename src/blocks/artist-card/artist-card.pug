@@ -1,0 +1,3 @@
+mixin artist-card(image, title)
+	+link('./artist.html')(style='background-image:url('+image+');' class='artist-card')
+		+heading('span')(class='artist-card_title')= title

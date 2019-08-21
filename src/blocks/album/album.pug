@@ -1,0 +1,13 @@
+include ../dropdown/dropdown
+mixin album(cover, title, artist)
+	.album(class!=attributes.class)
+		.album_control.album_control__left
+			+icon('rage', 'heart')
+		.album_control.album_control__right
+			+dropdown(['Add', 'Remove'])(list_class="dropdown_list__right", icon={type:'rage',value:'dots'})
+		+link("./album")(class="album_cover")
+			img.album_cover-image(src=cover)
+		+link("./album")(class="album_title")
+			= title
+		+link("./artist")(class="album_artist")
+			= artist

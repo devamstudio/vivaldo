@@ -1,0 +1,10 @@
+mixin artist-cards-list(array, limit)
+	//- Data
+	if limit
+		- array = array.slice(0, limit)
+	else
+		- array = array
+	//- Markup
+	.artist-cards-list(class!=attributes.class)
+		for item in array
+			+artist-card(item.image, item.title)(class="artist-cards-list_item")

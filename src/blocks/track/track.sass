@@ -1,2 +1,56 @@
-h1
-	color: red
+$track-height: 4rem
+.track
+    display: flex
+    flex:
+        wrap: nowrap
+    align-items: center
+    border-radius: $track-height / 2
+    transition: all 0.3s
+    // States
+    &:hover
+        box-shadow: 0 .5em 1.5em rgba(black, .16)
+    // Separator
+    &:after
+        content: ''
+        display: block
+        width: $track-height / 3 + .75
+        flex-shrink: 0
+        @include media_query_up(lg)
+            width: $track-height / 2 + .75
+    .track_cover
+        height: $track-height
+        width: $track-height
+        border-radius: $track-height / 2
+        flex-shrink: 0
+    .track_title
+        display: block
+        height: 1.2em
+        white-space: nowrap
+        overflow-x: hidden
+        text-overflow: ellipsis
+        font:
+            size: 1.1em
+            family: $font-heading
+    .track_artist
+        margin-top: .25em
+        font-size: .9rem
+    .track_meta
+        min-width: 0
+        flex: 1
+        align-items: center
+        margin:
+            left: 1rem
+            right: 1rem
+    .track_adds
+        display: flex
+        align-items: center
+    // Overstates
+    &.track__played
+        .track_cover
+            animation: spin 5s linear 0s infinite
+
+@keyframes spin
+    from
+        transform:rotate(0deg)
+    to
+        transform:rotate(360deg)

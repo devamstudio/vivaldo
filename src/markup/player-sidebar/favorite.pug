@@ -1,0 +1,18 @@
+extends ../layouts/player-sidebar
+
+block prepend head
+	-var document_title = ': Favorite'
+
+block main
+	.container
+		// Artists list
+		+heading('h2')(class='heading__uppercase') Favorite artists
+		+artist-cards-list(artists, 4)
+
+		// Albums list
+		+heading('h2')(class='heading__uppercase') Favorite albums
+		+albums-list(albums, 10)
+
+		// Tracks list
+		+heading('h2')(class='heading__uppercase') Favorite tracks
+		+tracks-list(tracks)

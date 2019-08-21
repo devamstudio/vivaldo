@@ -1,0 +1,5 @@
+mixin tag(value)
+	if link
+		+link(link)(class='tag')&attributes(attributes)= value
+	else
+		span.tag&attributes(attributes)= value

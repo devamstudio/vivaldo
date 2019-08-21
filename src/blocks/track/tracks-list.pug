@@ -1,0 +1,10 @@
+mixin tracks-list(array, limit)
+	//- Data
+	if limit
+		- array = array.slice(0, limit)
+	else
+		- array = array
+	//- Markup
+	.tracks-list(class!=attributes.class)
+		for item in array
+			+track(item)(class="tracks-list_item")

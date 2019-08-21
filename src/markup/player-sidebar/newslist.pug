@@ -1,0 +1,11 @@
+extends ../layouts/player-sidebar
+
+block prepend head
+	-var document_title = ': Newslist'
+
+block main
+	.container
+		// News list
+		+heading('h2')(class='heading__uppercase margin__bottom-0') All news
+		- let news_tags=['History', 'Music']
+		+news-list(news)(news_tags, users=users)

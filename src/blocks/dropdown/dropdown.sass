@@ -1,0 +1,42 @@
+.dropdown
+	display: inline-block
+	position: relative
+	cursor: pointer
+	.dropdown_control
+		user-select: none
+		z-index: 81
+		display: flex
+		align-items: center
+		justify-content: center
+		height: inherit
+		width: inherit
+		*
+			pointer-events: none
+	.dropdown_list
+		display: flex
+		flex:
+			direction: column
+		position: absolute
+		z-index: 80
+		top: 3em
+		opacity: 0
+		pointer-events: none
+		font-size: initial
+		background-color: $color-white
+		box-shadow: 0 .5em 1.5em rgba(black, .16)
+		border-radius: .5rem
+		padding: .25 rem 0
+		transition: all .3s
+		&.dropdown_list__active
+			top: 100%
+			opacity: 1
+			pointer-events: auto
+		// Positions
+		&.dropdown_list__left
+			left: 0
+		&.dropdown_list__right
+			right: 0
+		// Items
+		.dropdown_list-item
+			display: block
+			padding: .5rem 1rem

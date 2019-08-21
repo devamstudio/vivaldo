@@ -1,0 +1,10 @@
+mixin albums-list(array, limit)
+	//- Data
+	if limit
+		- array = array.slice(0, limit)
+	else 
+		- array = array
+	//- Markup
+	.albums-list&attributes(attributes)
+		for item in array
+			+album(item.cover, item.title, item.artist)(class="albums-list_item")

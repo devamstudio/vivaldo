@@ -1,0 +1,19 @@
+mixin player(track)
+	.player
+		.player_track-cover(style='background-image:url('+track.cover+')')
+		.player_controls.margin__xx-2.align-items__center(hidden)
+			span.player_control
+				+icon('rage', 'play-back')
+			span.player_control.player_control__play-pause
+				+icon('rage', 'play')
+			span.player_control
+				+icon('rage', 'play-forward')
+		.player_meta
+			span.player_track-title= track.title
+			+link('./artist.html')(class='player_track-artist')= track.artist
+		.player_duration= track.duration
+		.player_additional-controls.margin__left-3(hidden)
+			span.player_control
+				+icon('rage', 'mix')
+			span.player_control
+				+icon('rage', 'loop')

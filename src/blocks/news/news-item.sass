@@ -1,0 +1,48 @@
+.news-item
+	display: flex
+	flex-direction: column
+	transition: all .2s
+	overflow: hidden
+	// States
+	&:hover
+		box-shadow: 0 .5em 1.5em rgba(black, .16)
+		padding-bottom: 1.5rem
+		//border-radius: 1em
+	// Elements
+	.news-item_cover
+		display: flex
+		flex:
+			grow: 10
+		margin-bottom: .7rem
+		background:
+			size: cover
+			position: center
+		min-height: 8rem
+		text-decoration: none !important
+		.news-item_tags-list
+			margin: auto 1.5rem 0 1.5rem
+	.news-item_date
+		display: inline-block
+		font:
+			size: .8em
+			family: $font-heading
+			style: italic
+		margin: 0 1.5rem
+	.news-item_title
+		display: inline-block
+		line-height: 1.2
+		max-height: 1em * 1.2 * 2
+		overflow: hidden
+		text-overflow: ellipsis
+		color: $color-black
+		font:
+			size: 1.2em
+			family: $font-heading
+		margin: .5rem 1.5rem 0 1.5rem
+	.news-item_author
+		display: inline-block
+		font-size: 1em
+		margin: .75rem 1.5rem 0 1.5rem
+		.user_thumb
+			height: 1.5rem
+			width: 1.5rem

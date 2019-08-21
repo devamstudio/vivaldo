@@ -1,63 +1,143 @@
 {
-	"builds" : [
-		{
-			"title" : "home",
-			"dist" : "dist/",
-			"src" : {
-				"styles" : [
-					"./src/style/fa-kit-class.sass",
-					"./src/style/fa-kit-config.sass",
-					"./src/submodules/fa-kit/sass/mixins.sass",
-					"./src/submodules/fa-kit/sass/base/reset.sass",
-					"./src/submodules/fa-kit/sass/base/grid.sass",
-					"./src/submodules/fa-kit/sass/base/typography.sass",
-					"./src/submodules/fa-kit/sass/base/article.sass",
-					"./src/submodules/fa-kit/sass/base/media_objects.sass",
-					"./src/submodules/fa-kit/sass/ui/blocks.sass",
-					"./src/submodules/fa-kit/sass/ui/forms.sass",
-					"./src/submodules/fa-kit/sass/ui/buttons.sass",
-					"./src/submodules/fa-kit/sass/ui/modals.sass",
-					"./src/submodules/fa-kit/sass/ui/notifications.sass",
-					"./src/submodules/fa-kit/sass/ui/pagination.sass",
-					"./src/submodules/fa-kit/sass/ui/breadcrumbs.sass",
-					"./src/submodules/fa-kit/sass/base/ghost.sass",
-					"./src/submodules/fa-kit/sass/base/utilites.sass",
-					"./src/submodules/fa-kit/sass/base/display.sass"
-				],
-				"markup" : [
-					"./src/markup/index.pug"
-				],
-				"images" : [],
-				"data" : "./src/data/home-demo.json"
-			}
-		},
-		{
-			"title" : "player-sidebar",
-			"dist" : "dist/player-sidebar",
-			"src" : {
-				"styles" : [
-					"./src/blocks/track/track.sass"
-				],
-				"markup" : [
-					"./src/markup/player-sidebar/index.pug"
-				],
-				"images" : [],
-				"data" : "./src/data/vivaldo-player-demo.json"
-			}
-		},
-		{
-			"title" : "Player scroller",
-			"dist" : "dist/player-scroller/",
-			"src" : {
-				"styles" : [
-					"./src/blocks/track/track.sass"
-				],
-				"markup" : [
-					"./src/markup/player-sidebar/index.pug"
-				],
-				"images" : [],
-				"data" : "./src/data/vivaldo-player-demo.json"
-			}
-		}
-	]
+    "builds" : [
+        {
+            "title" : "Home",
+            "dist" : "dist/",
+            "src" : {
+                "styles" : [
+                    "./src/style/fa-kit-class.sass",
+                    "./src/style/fa-kit-config.sass",
+                    "./src/submodules/fa-kit/sass/mixins.sass",
+                    "./src/submodules/fa-kit/sass/base/reset.sass",
+                    "./src/submodules/fa-kit/sass/base/grid.sass",
+                    "./src/submodules/fa-kit/sass/base/typography.sass",
+                    "./src/submodules/fa-kit/sass/base/article.sass",
+                    "./src/submodules/fa-kit/sass/base/media_objects.sass",
+                    "./src/submodules/fa-kit/sass/ui/blocks.sass",
+                    "./src/submodules/fa-kit/sass/ui/forms.sass",
+                    "./src/submodules/fa-kit/sass/ui/buttons.sass",
+                    "./src/submodules/fa-kit/sass/ui/modals.sass",
+                    "./src/submodules/fa-kit/sass/ui/notifications.sass",
+                    "./src/submodules/fa-kit/sass/ui/pagination.sass",
+                    "./src/submodules/fa-kit/sass/ui/breadcrumbs.sass",
+                    "./src/submodules/fa-kit/sass/base/ghost.sass",
+                    "./src/submodules/fa-kit/sass/base/utilites.sass",
+                    "./src/submodules/fa-kit/sass/base/display.sass"
+                ],
+                "markup" : [
+                    "./src/markup/index.pug"
+                ],
+                "data" : "./src/data/home-demo.json"
+            }
+        },
+        {
+            "title" : "Player sidebar",
+            "dist" : "dist/player-sidebar",
+            "src" : {
+                "styles" : [
+                    "./src/style/fa-kit-class.sass",
+                    "./src/style/fa-kit-config.sass",
+                    "./src/submodules/fa-kit/sass/mixins.sass",
+                    "./src/submodules/fa-kit/sass/base/reset.sass",
+                    "./src/submodules/fa-kit/sass/base/grid.sass",
+                    "./src/submodules/fa-kit/sass/base/typography.sass",
+                    "./src/submodules/fa-kit/sass/ui/blocks.sass",
+                    "./src/submodules/fa-kit/sass/ui/buttons.sass",
+                    "./src/blocks/heading/heading.sass",
+                    "./src/blocks/link/link.sass",
+                    "./src/blocks/dropdown/dropdown.sass",
+                    "./src/blocks/field/field.sass",
+                    "./src/blocks/icon/icon.sass",
+                    "./src/blocks/user/user.sass",
+                    "./src/blocks/tag/tag.sass",
+                    "./src/blocks/tag/tags-list.sass",
+                    "./src/blocks/track/track.sass",
+                    "./src/blocks/track/tracks-list.sass",
+                    "./src/blocks/album/album.sass",
+                    "./src/blocks/album/albums-list.sass",
+                    "./src/blocks/artist-card/artist-card.sass",
+                    "./src/blocks/artist-card/artist-cards-list.sass",
+                    "./src/blocks/news/news-item.sass",
+                    "./src/blocks/news/news-list.sass",
+                    "./src/blocks/player/player.sass",
+                    "./src/blocks/image/image.sass",
+                    "./src/blocks/dropdown/dropdown.sass",
+                    "./src/style/layouts/player-sidebar.sass",
+                    "./src/submodules/fa-kit/sass/base/ghost.sass",
+                    "./src/submodules/fa-kit/sass/base/utilites.sass",
+                    "./src/submodules/fa-kit/sass/base/display.sass"
+                ],
+                "scripts" : [
+                    "./src/blocks/dropdown/*.js",
+                    "./src/blocks/nav-trigger/*.js"
+                ],
+                "markup" : [
+                    "./src/markup/player-sidebar/index.pug",
+                    "./src/markup/player-sidebar/artists.pug",
+                    "./src/markup/player-sidebar/charts.pug",
+                    "./src/markup/player-sidebar/albums.pug",
+                    "./src/markup/player-sidebar/favorite.pug",
+                    "./src/markup/player-sidebar/playlists.pug",
+                    "./src/markup/player-sidebar/newslist.pug"
+                ],
+                "images" : "./src/images/**/*{__all,__player,__player-sidebar}.{png,gif,jpg}",
+                "data" : "./src/data/vivaldo-player-demo.json"
+            }
+        },
+        {
+            "title" : "Player scroller",
+            "dist" : "dist/player-scroller/",
+            "src" : {
+                "styles" : [
+                    "./src/style/fa-kit-class.sass",
+                    "./src/style/fa-kit-config.sass",
+                    "./src/submodules/fa-kit/sass/mixins.sass",
+                    "./src/submodules/fa-kit/sass/base/reset.sass",
+                    "./src/submodules/fa-kit/sass/base/grid.sass",
+                    "./src/submodules/fa-kit/sass/base/utilites.sass",
+                    "./src/submodules/fa-kit/sass/base/typography.sass",
+                    "./src/submodules/fa-kit/sass/ui/blocks.sass",
+                    "./src/submodules/fa-kit/sass/ui/buttons.sass",
+                    "./src/blocks/heading/heading.sass",
+                    "./src/blocks/link/link.sass",
+                    "./src/blocks/dropdown/dropdown.sass",
+                    "./src/blocks/field/field.sass",
+                    "./src/blocks/icon/icon.sass",
+                    "./src/blocks/user/user.sass",
+                    "./src/blocks/tag/tag.sass",
+                    "./src/blocks/tag/tags-list.sass",
+                    "./src/blocks/track/track.sass",
+                    "./src/blocks/track/tracks-list.sass",
+                    "./src/blocks/album/album.sass",
+                    "./src/blocks/album/albums-list.sass",
+                    "./src/blocks/artist-card/artist-card.sass",
+                    "./src/blocks/artist-card/artist-cards-list.sass",
+                    "./src/blocks/news/news-item.sass",
+                    "./src/blocks/image/image.sass",
+                    "./src/blocks/news/news-list.sass",
+                    "./src/blocks/player/player.sass",
+                    "./src/blocks/dropdown/dropdown.sass",
+                    "./src/style/layouts/player-scroller.sass",
+                    "./src/submodules/fa-kit/sass/base/ghost.sass",
+                    "./src/submodules/fa-kit/sass/base/utilites.sass",
+                    "./src/submodules/fa-kit/sass/base/display.sass"
+                ],
+                "scripts" : [
+                    "./src/blocks/dropdown/*.js",
+                    "./src/blocks/nav-trigger/*.js"
+                ],
+                "markup" : [
+                    "./src/markup/player-scroller/index.pug",
+                    "./src/markup/player-scroller/artists.pug",
+                    "./src/markup/player-scroller/charts.pug",
+                    "./src/markup/player-scroller/albums.pug",
+                    "./src/markup/player-scroller/favorite.pug",
+                    "./src/markup/player-scroller/playlists.pug",
+                    "./src/markup/player-scroller/newslist.pug"
+                ],
+                "images" : "./src/images/**/*{__all,__player,__player-scroller}.{png,gif,jpg}",
+                "data" : "./src/data/vivaldo-player-demo.json"
+            }
+        }
+    ]
 }

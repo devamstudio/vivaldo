@@ -1,6 +1,350 @@
 {
-	"title" : "Music template Vivaldo",
-	"color" : {
-		"primary" : "#3895FF"
-	}
+    "title" : "Music template Vivaldo",
+    "color" : {
+        "primary" : "#3895FF"
+    },
+    "navigation" : {
+        "app" : [
+            {
+                "caption" : "App",
+                "subnavigation" : [
+                    {
+                        "caption" : "Home",
+                        "url" : "./index.html"
+                    },
+                    {
+                        "caption" : "Charts",
+                        "url" : "./charts.html"
+                    },
+                    {
+                        "caption" : "Artists",
+                        "url" : "./artists.html"
+                    },
+                    {
+                        "caption" : "Albums",
+                        "url" : "./albums.html"
+                    },
+                    {
+                        "caption" : "News",
+                        "url" : "./newslist.html"
+                    }
+                ]
+            },
+            {
+                "caption" : "Your space",
+                "subnavigation" : [
+                    {
+                        "caption" : "Favorite",
+                        "url" : "./favorite.html"
+                    },
+                    {
+                        "caption" : "Playlists",
+                        "url" : "./playlists.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "artists" : [
+        {
+            "title" : "Link in Dark",
+            "image" : "./images/artist-1__player.jpg",
+            "albums" : [
+                {
+                    "title" : "Matras",
+                    "cover" : "./images/album-1__all.jpg",
+                    "tracks" : [
+                        {
+                            "title" : "Forewer old",
+                            "duration" : "0:13"
+                        },
+                        {
+                            "title" : "Dont Go",
+                            "duration" : "3:08"
+                        },
+                        {
+                            "title" : "Somewere i belive",
+                            "duration" : "3:34"
+                        },
+                        {
+                            "title" : "Hello world",
+                            "duration" : "2:55"
+                        },
+                        {
+                            "title" : "Knock the floor",
+                            "duration" : "2:44"
+                        },
+                        {
+                            "title" : "Easy to go",
+                            "duration" : "3:24"
+                        },
+                        {
+                            "title" : "Poster",
+                            "duration" : "2:42"
+                        },
+                        {
+                            "title" : "Figure listed",
+                            "duration" : "3:17"
+                        },
+                        {
+                            "title" : "Breaking the Hobbit",
+                            "duration" : "3:16"
+                        },
+                        {
+                            "title" : "Coll master to repair",
+                            "duration" : "2:55"
+                        },
+                        {
+                            "title" : "Go go gogogogo",
+                            "duration" : "2:58"
+                        },
+                        {
+                            "title" : "Mission",
+                            "duration" : "2:24"
+                        },
+                        {
+                            "title" : "Numbers",
+                            "duration" : "3:07"
+                        }
+                    ],
+                    "ganres" : [
+                        "Rock"
+                    ],
+                    "likes" : "15"
+                },
+                {
+                    "title" : "Old Divide",
+                    "cover" : "./images/album-2__all.jpg",
+                    "tracks" : [
+                        {
+                            "title" : "New git merge",
+                            "duration" : "0:13"
+                        },
+                        {
+                            "title" : "Git commit -m 'New commit'",
+                            "duration" : "3:08"
+                        },
+                        {
+                            "title" : "Git push",
+                            "duration" : "3:08"
+                        }
+                    ],
+                    "ganres" : [
+                        "Rock"
+                    ],
+                    "likes" : "15"
+                },
+                {
+                    "title" : "Construction",
+                    "cover" : "./images/album-3__all.jpg",
+                    "tracks" : [
+                        {
+                            "title" : "Bleed the bread",
+                            "duration" : "0:13"
+                        },
+                        {
+                            "title" : "What happaned to me?",
+                            "duration" : "3:08"
+                        }
+                    ],
+                    "ganres" : [
+                        "Rock",
+                        "Hard-rock"
+                    ],
+                    "likes" : "0"
+                },
+                {
+                    "title" : "Destruction",
+                    "cover" : "./images/album-4__all.jpg",
+                    "tracks" : [
+                        {
+                            "title" : "Catch up",
+                            "duration" : "0:13"
+                        },
+                        {
+                            "title" : "Valencies",
+                            "duration" : "3:08"
+                        }
+                    ],
+                    "ganres" : [
+                        "New age"
+                    ],
+                    "likes" : "3"
+                },
+                {
+                    "title" : "District",
+                    "cover" : "./images/album-5__all.jpg",
+                    "tracks" : [
+                        {
+                            "title" : "The Cataclysm",
+                            "duration" : "0:13"
+                        },
+                        {
+                            "title" : "Blablabla",
+                            "duration" : "3:08"
+                        }
+                    ],
+                    "ganres" : [
+                        "Rock",
+                        "Hello world"
+                    ],
+                    "likes" : "0"
+                },
+                {
+                    "title" : "Restrict",
+                    "cover" : "./images/album-6__all.jpg",
+                    "tracks" : [
+                        {
+                            "title" : "Checkbox:checked",
+                            "duration" : "0:13"
+                        }
+                    ],
+                    "ganres" : [
+                        "Pop",
+                        "Dance"
+                    ],
+                    "likes" : "4K"
+                },
+                {
+                    "title" : "What you've Done",
+                    "cover" : "./images/album-7__all.jpg",
+                    "tracks" : [
+                        {
+                            "title" : "What did you did?",
+                            "duration" : "0:13"
+                        },
+                        {
+                            "title" : "GTPD",
+                            "duration" : "0:13"
+                        }
+                    ],
+                    "ganres" : [
+                        "Metall",
+                        "Heave metall"
+                    ],
+                    "likes" : "121K"
+                }
+            ]
+        },
+        {
+            "title" : "Maverik Bowee",
+            "image" : "./images/artist-2__player.jpg",
+            "albums" : [
+                {
+                    "title" : "Heavy",
+                    "cover" : "./images/album-8__all.jpg"
+                }
+            ]
+        },
+        {
+            "title" : "Blue Freese Chili Papers",
+            "image" : "./images/artist-3__player.jpg",
+            "albums" : [
+                {
+                    "title" : "Light",
+                    "cover" : "./images/album-1__all.jpg"
+                }
+            ]
+        },
+        {
+            "title" : "Five Fighters",
+            "image" : "./images/artist-4__player.jpg",
+            "albums" : [
+                {
+                    "title" : "Kozy homr",
+                    "cover" : "./images/album-2__all.jpg"
+                }
+            ]
+        },
+        {
+            "title" : "Six Defenders",
+            "image" : "./images/artist-5__player.jpg",
+            "albums" : [
+                {
+                    "title" : "Kozy homr",
+                    "cover" : "./images/album-3__all.jpg"
+                }
+            ]
+        },
+        {
+            "title" : "Девушка у фортепьяно",
+            "image" : "./images/artist-6__player.jpg",
+            "albums" : [
+                {
+                    "title" : "Kozy homr",
+                    "cover" : "./images/album-4__all.jpg"
+                }
+            ]
+        },
+        {
+            "title" : "Флейта обезьяны",
+            "image" : "./images/artist-7__player.jpg",
+            "albums" : [
+                {
+                    "title" : "Kozy homr",
+                    "cover" : "./images/album-5__all.jpg"
+                }
+            ]
+        },
+        {
+            "title" : "Left for live",
+            "image" : "./images/artist-8__player.jpg",
+            "albums" : [
+                {
+                    "title" : "Kozy homr",
+                    "cover" : "./images/album-6__all.jpg"
+                }
+            ]
+        }
+    ],
+    "news" : [
+        {
+            "cover" : "./images/news-1__player.jpg",
+            "date" : "25/05/2020",
+            "title" : "A brief overview of new products in music.",
+            "author" : 0
+        },
+        {
+            "cover" : "./images/news-2__player.jpg",
+            "date" : "25/05/2020",
+            "title" : "Meteorologists have found a new constellation",
+            "author" : 1
+        },
+        {
+            "cover" : "./images/news-3__player.jpg",
+            "date" : "25/05/2020",
+            "title" : "How far does ignorance extend?",
+            "author" : 1
+        },
+        {
+            "cover" : "./images/news-4__player.jpg",
+            "date" : "25/05/2020",
+            "title" : "Rock is fate?",
+            "author" : 1
+        },
+        {
+            "cover" : "./images/news-5__player.jpg",
+            "date" : "25/05/2020",
+            "title" : "How far does ignorance extend?",
+            "author" : 1
+        },
+        {
+            "cover" : "./images/news-6__player.jpg",
+            "date" : "25/05/2021",
+            "title" : "I got a power",
+            "author" : 1
+        }
+    ],
+    "users" : [
+        {
+            "image" : "https://fazarosta.com/wp-content/uploads/2018/01/chto-znachit-esli-muzhchina-nikogda-ne-pishet-pervym-no-vsegda-otvechaet-na-vashi-soobshhenija1.jpg",
+            "thumb" : "./images/user-thumb-1__player.gif",
+            "name" : "Vasya Vasutkin"
+        },
+        {
+            "image" : "https://fazarosta.com/wp-content/uploads/2018/01/chto-znachit-esli-muzhchina-nikogda-ne-pishet-pervym-no-vsegda-otvechaet-na-vashi-soobshhenija1.jpg",
+            "thumb" : "./images/user-thumb-2__player.gif",
+            "name" : "Torin Duboshit"
+        }
+    ]
 }

@@ -1,2 +1,7 @@
-mixin track
-	.track
+mixin track(track)
+	.track(class!=attributes.class)
+		+image(track.cover)(class="track_cover")
+		.track_meta
+			span.track_title= track.title
+			+link('./artist.html')(class='track_artist')= track.artist
+		.track_adds= track.duration

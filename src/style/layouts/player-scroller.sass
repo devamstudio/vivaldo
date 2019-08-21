@@ -1,0 +1,112 @@
+.page
+	.header
+		display: flex
+		padding: 1rem 2rem
+		.logo
+			.logo_image
+			margin-right: 2rem
+		@include media_query_up(sm)
+			align-items: center
+			.field_input
+				margin-bottom: 0
+		// Header
+		.header_search
+			@include media_query_up(sm)
+				margin-right: auto
+		// Block navigation
+		.header_navigation
+			.navigation
+				list-style-type: none
+				padding: 0
+				.navigation_item > span, a
+					display: inline-flex
+					padding: .5rem
+			.navigation_second-level
+				list-style-type: none
+				padding: 0
+				.navigation_item > span, a
+					display: inline-flex
+					padding: .5rem 1.3rem
+			.navigation
+				display: flex
+				flex-direction: row
+				.navigation_item
+					@include media_query_up(md)
+						position: relative
+						&:hover
+							.navigation_second-level
+								transform: translateY(0)
+								opacity: 1
+								pointer-events: all
+					.navigation_second-level
+						@include media_query_up(md)
+							position: absolute
+							z-index: 100
+							background-color: white
+							box-shadow: 0 .5em 1.5em rgba(black, .16)
+							transform: translateY(3rem)
+							transition: all .2s
+							opacity: 0
+							pointer-events: none
+							&__right-align
+								right: 0
+		.header_user
+			display: flex
+			align-items: center
+	.main
+	.footer
+		width: 100%
+		display: flex
+		flex:
+			direction: row
+			wrap: wrap
+		// Decorative
+		background-color: $color-gray__light
+		padding:
+				left: 1em
+				right: 1em
+				top: 3em
+				bottom: 3em
+		@include media_query_up(lg)
+			padding:
+				left: 3em
+				right: 5em
+		.footer_nav
+			padding: 0
+			display: flex
+			list-style-type: none
+			@include media_query_down(sm)
+				flex-direction: column
+				align-items: flex-start
+				.footer_nav-item
+					line-height: 1.2
+					margin-bottom: .5rem
+			.footer_nav-item
+				color: darken($color-gray, 20%)
+				text-decoration: none
+				padding-right: 1rem
+				&:hover
+					text-decoration: underline
+		.footer_copyright
+			margin-left: auto
+			color: darken($color-gray, 20%)
+			@include media_query_down(xs)
+				width: 100%
+				margin-top: 2rem
+	.player-area
+		grid-area: player
+		position: sticky
+		bottom: 0
+		z-index: 99
+		// Size
+		width: 100%
+		height: 4rem
+		// Decorative
+		background-color: $color-white
+		box-shadow: 0 0 .5em rgba(black, .05)
+		padding:
+			left: 1rem
+			right: 1.5rem
+		@include media_query_up(sm)
+			padding:
+				left: 2.5rem

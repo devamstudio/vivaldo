@@ -1,0 +1,11 @@
+mixin news-item(cover, date, title, author)
+	.news-item(class!=attributes.class)
+		+link("./news-item.html")(class="news-item_cover", style='background-image:url('+cover+');')
+			if news_tags
+				.news-item_tags-list
+					+tags-list(news_tags)
+		span.news-item_date= date
+		+link("./news-item.html")(class="news-item_title")
+			= title
+		.news-item_author
+			+user(author.thumb, author.name)

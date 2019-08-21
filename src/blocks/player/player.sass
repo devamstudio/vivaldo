@@ -1,0 +1,49 @@
+.player
+    display: flex
+    align-items: center
+    height: 100%
+    .player_controls
+        @include media_query_up(sm)
+            display: flex
+    .player_control
+        font-size: 1.8rem
+        padding: 0 .25rem
+        opacity: .75
+        transition: opacity .2s
+        &:hover
+            opacity: 1
+            cursor: pointer
+        &.player_control__play-pause
+            font-size: 2rem
+            opacity: .8
+    .player_track-cover
+        width: 5rem
+        height: 5rem
+        border-radius: 50%
+        align-self: flex-end
+        overflow: hidden
+        margin-bottom: -.5em
+        @include media_query_up(md)
+            margin-right: 1rem
+    .player_track-title
+        display: block
+        height: 1.2em
+        white-space: nowrap
+        overflow-x: hidden
+        text-overflow: ellipsis
+        font:
+            size: 1.1em
+            family: $font-heading
+    .player_track-artist
+        margin-top: .25em
+        font-size: .9rem
+    .player_meta
+        min-width: 0
+        flex: 1
+        align-items: center
+        margin:
+            left: 1rem
+            right: 1rem
+    .player_additional-controls
+        @include media_query_up(md)
+            display: block

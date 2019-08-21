@@ -1,0 +1,8 @@
+mixin field(tag)
+	- let randomNumber = Math.floor(Math.random() * 5000)
+	.field
+		if label
+			label(for='field'+randomNumber)
+		#{tag}.field_input(id='field'+randomNumber)&attributes(attributes)
+		if block
+			block

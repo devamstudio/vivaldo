@@ -1,0 +1,85 @@
+extend default
+
+block append head
+    script(src='./scripts/build.js')
+
+block markup
+
+    //- Blocks
+    include ../../blocks/player/player
+    include ../../blocks/image/image
+    include ../../blocks/user/user
+    include ../../blocks/link/link
+    include ../../blocks/icon/icon
+    include ../../blocks/field/field
+    include ../../blocks/dropdown/dropdown
+    include ../../blocks/track/track
+    include ../../blocks/track/tracks-list
+    include ../../blocks/track/tracks-list__chart
+    include ../../blocks/album/album
+    include ../../blocks/album/albums-list
+    include ../../blocks/artist-card/artist-card
+    include ../../blocks/artist-card/artist-cards-list
+    include ../../blocks/tag/tag
+    include ../../blocks/tag/tags-list
+    include ../../blocks/news/news-item
+    include ../../blocks/news/news-list
+    include ../../blocks/search/search
+    include ../../blocks/heading/heading
+    // include ../../blocks/
+    //- Blocks END
+    
+    // Get DEMO data
+    - var albums = new Array();
+    - var tracks = new Array();
+    - var ganres = new Set();
+    for artist in artists
+        for album in artist.albums
+            - let tmp_album = new Object();
+            - tmp_album.cover = album.cover;
+            - tmp_album.title = album.title;
+            - tmp_album.artist = artist.title;
+            - albums.push(tmp_album);
+            if album.tracks
+                for track in album.tracks
+                    - let tmp_track = new Object();
+                    - tmp_track.cover = album.cover;
+                    - tmp_track.title = track.title;
+                    - tmp_track.duration = track.duration;
+                    - tmp_track.album_title = album.title;
+                    - tmp_track.artist = artist.title;
+                    - tracks.push(tmp_track);
+            if album.ganres
+                for ganre in album.ganres
+                    - ganres.add(ganre);
+    // Get DEMO data END
+
+    body.page
+        header.header
+            +link("/")(class="logo" title=title)
+                include ../includes/logo
+            +search()(class="header_search")
+            .header_navigation
+                ul.navigation
+                    for nav in navigation.app
+                        li.navigation_item
+                            span= nav.caption
+                            ul.navigation_second-level
+                                for subnav in nav.subnavigation
+                                    li.navigation_item
+                                        +link(subnav.url)(class="navigation_item")= subnav.caption
+            .header_user.margin__left-3
+                
+                +dropdown(['Settings', 'Sign out'])(list_class="dropdown_list__right")
+                    +user(users[0].thumb, users[0].name)
+        main.main
+            block main
+        footer.footer
+            block footer
+                .footer_nav
+                    +link('./blank.html')(class="footer_nav-item") User agreement
+                    +link('./blank.html')(class="footer_nav-item") Help
+                    +link('./blank.html')(class="footer_nav-item") Subscribe
+                span.footer_copyright &copy; 2019
+        .player_area
+            +player(tracks[3])

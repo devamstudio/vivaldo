@@ -1,0 +1,27 @@
+.tracks-list
+    display: grid
+    grid:
+        template:
+            columns: repeat(auto-fill, minmax(250px, 1fr))
+        auto:
+            rows: repeat(auto-fill, 1fr)
+        gap: 1rem
+    padding: 1.5rem 0
+    counter-reset: tracks-list
+    @include media_query_up(md)
+        grid:
+            template:
+                columns: repeat(auto-fill, minmax(450px, 1fr))
+    .tracks-list_item
+        position: relative
+        @include media_query_up(lg)
+            margin-left: 2rem
+            &:before
+                counter-increment: tracks-list
+                content: counter(tracks-list)
+                position: absolute
+                left: -2.3em
+                width: 1.4em
+                text-align: right
+                font-size: 1.1em
+                opacity: .15

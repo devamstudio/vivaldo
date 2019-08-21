@@ -2,14 +2,475 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Music template Vivaldo</title>
+    <title>Music template Vivaldo: Home</title>
     <meta name="theme-color" content="#3895FF">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https//fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https//space.i-am.studio/font-icons-rage/releases/v1.0.1/css/font-rage.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto|Roboto:500">
+    <link rel="stylesheet" type="text/css" href="https://space.i-am.studio/font-icons-rage/releases/v1.0.1/css/font-rage.css">
+    <script src="./scripts/build.js"></script>
   </head>
-  <body>
-    <h1>Hello world</h1>
+  <!-- include ../../blocks/-->
+  <!-- Get DEMO data-->
+  <!-- Get DEMO data END-->
+  <body class="page">
+    <header class="header"><a class="link logo" href="/">
+          <svg class="logo_image" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 446.1 164.9" xml:space="preserve" height="50" width="120">
+            <style type="text/css">
+              .st0{fill:none;stroke:#005EDD;stroke-width:16;stroke-miterlimit:10;}
+              .st1{fill:#383838;}
+            </style>
+            <polygon class="st0" points="84.3,147.1 142,30.7 14.3,10.4"></polygon>
+            <path class="st1" d="M128,59.8c0-2.6,0.9-4.7,2.6-6.4c1.7-1.7,4.1-2.5,7.1-2.5c2.9,0,5.3,0.8,7,2.5c1.7,1.7,2.6,3.8,2.6,6.4 c0,2.6-0.9,4.8-2.7,6.4c-1.8,1.7-4.1,2.5-7,2.5c-2.9,0-5.2-0.8-7-2.5C128.9,64.6,128,62.4,128,59.8z M146.3,141H129V76.5h17.3V141z"></path>
+            <path class="st1" d="M184.6,119.9l12-43.4h18L192.8,141h-16.4l-21.7-64.5h18L184.6,119.9z"></path>
+            <path class="st1" d="M258.6,141c-0.8-1.5-1.4-3.5-1.7-5.8c-4.2,4.6-9.6,7-16.3,7c-6.3,0-11.5-1.8-15.7-5.5 c-4.2-3.7-6.2-8.3-6.2-13.8c0-6.8,2.5-12.1,7.6-15.7c5.1-3.7,12.4-5.5,22-5.5h7.9v-3.7c0-3-0.8-5.4-2.3-7.1 c-1.5-1.8-3.9-2.7-7.2-2.7c-2.9,0-5.2,0.7-6.8,2.1c-1.6,1.4-2.5,3.3-2.5,5.7h-17.2c0-3.7,1.2-7.2,3.5-10.4c2.3-3.2,5.6-5.7,9.8-7.5 c4.2-1.8,8.9-2.7,14.2-2.7c7.9,0,14.2,2,18.9,6c4.7,4,7,9.6,7,16.8v27.9c0,6.1,0.9,10.7,2.6,13.9v1H258.6z M244.3,129 c2.5,0,4.9-0.6,7-1.7c2.1-1.1,3.7-2.7,4.8-4.6v-11.1h-6.4c-8.6,0-13.2,3-13.8,8.9l-0.1,1c0,2.1,0.8,3.9,2.3,5.3 C239.6,128.3,241.7,129,244.3,129z"></path>
+            <path class="st1" d="M304.8,141h-17.3V49.5h17.3V141z"></path>
+            <path class="st1" d="M316.3,108.3c0-10,2.3-18.1,6.8-24s10.7-8.9,18.5-8.9c6.3,0,11.5,2.3,15.5,7V49.5h17.3V141h-15.5l-0.8-6.9 c-4.3,5.4-9.8,8-16.6,8c-7.6,0-13.7-3-18.3-9C318.6,127.2,316.3,118.9,316.3,108.3z M333.5,109.5c0,6,1.1,10.7,3.2,13.9 s5.2,4.8,9.2,4.8c5.3,0,9.1-2.2,11.3-6.7V96.1c-2.1-4.5-5.9-6.7-11.1-6.7C337.7,89.3,333.5,96.1,333.5,109.5z"></path>
+            <path class="st1" d="M385.1,108.1c0-6.4,1.2-12.1,3.7-17.1c2.5-5,6-8.9,10.6-11.6c4.6-2.7,10-4.1,16.1-4.1c8.7,0,15.8,2.7,21.3,8 c5.5,5.3,8.6,12.6,9.2,21.7l0.1,4.4c0,9.9-2.8,17.8-8.3,23.8c-5.5,6-12.9,9-22.2,9c-9.3,0-16.7-3-22.3-8.9 c-5.5-6-8.3-14.1-8.3-24.3V108.1z M402.3,109.4c0,6.1,1.2,10.8,3.5,14.1c2.3,3.2,5.6,4.9,9.9,4.9c4.2,0,7.4-1.6,9.8-4.8 c2.3-3.2,3.5-8.3,3.5-15.4c0-6-1.2-10.7-3.5-14c-2.3-3.3-5.6-5-9.9-5c-4.2,0-7.5,1.6-9.8,4.9C403.4,97.4,402.3,102.5,402.3,109.4z"></path>
+          </svg></a>
+        <div class="search header_search">
+            <div class="field">
+              <input class="field_input" id="field3090" type="search" placeholder="Type to search..."></input>
+            </div>
+        </div>
+      <div class="header_navigation">
+        <ul class="navigation">
+          <li class="navigation_item"><span>App</span>
+            <ul class="navigation_second-level">
+              <li class="navigation_item"><a class="link navigation_item" href="./index.html">Home</a>
+              </li>
+              <li class="navigation_item"><a class="link navigation_item" href="./charts.html">Charts</a>
+              </li>
+              <li class="navigation_item"><a class="link navigation_item" href="./artists.html">Artists</a>
+              </li>
+              <li class="navigation_item"><a class="link navigation_item" href="./albums.html">Albums</a>
+              </li>
+              <li class="navigation_item"><a class="link navigation_item" href="./radio.html">Radio</a>
+              </li>
+              <li class="navigation_item"><a class="link navigation_item" href="./newslist.html">News</a>
+              </li>
+            </ul>
+          </li>
+          <li class="navigation_item"><span>Your space</span>
+            <ul class="navigation_second-level">
+              <li class="navigation_item"><a class="link navigation_item" href="./favorite.html">Favorite</a>
+              </li>
+              <li class="navigation_item"><a class="link navigation_item" href="./playlists.html">Playlists</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="header_user margin__left-3">
+          <div class="dropdown">
+            <div class="dropdown_control">
+                <div class="user">
+                  <div class="user_thumb" style="background-image:url(./images/user-thumb-1__player.gif)"></div><span class="user_name">Vasya Vasutkin</span>
+                </div>
+            </div>
+            <div class="dropdown_list dropdown_list__right"><a class="link dropdown_list-item" href="./index.html">Settings</a><a class="link dropdown_list-item" href="./index.html">Sign out</a>
+            </div>
+          </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="row">
+          <div class="cols__xs-12 cols__xl-7">
+            <!-- Artists list-->
+              <h2 class="heading heading__uppercase margin__bottom-0">Artists
+                  <div class="dropdown">
+                    <div class="dropdown_control"><i class="icon rage rage-fw rage-dots"></i>
+                    </div>
+                    <div class="dropdown_list"><a class="link dropdown_list-item" href="./index.html">Add</a><a class="link dropdown_list-item" href="./index.html">Remove</a>
+                    </div>
+                  </div>
+              </h2>
+              <div class="artist-cards-list"><a class="link artist-card" href="./artist.html" style="background-image:url(./images/artist-1__player.jpg);">
+                        <span class="heading artist-card_title">Link in Dark
+                        </span></a><a class="link artist-card" href="./artist.html" style="background-image:url(./images/artist-2__player.jpg);">
+                        <span class="heading artist-card_title">Maverik Bowee
+                        </span></a><a class="link artist-card" href="./artist.html" style="background-image:url(./images/artist-3__player.jpg);">
+                        <span class="heading artist-card_title">Blue Freese Chili Papers
+                        </span></a><a class="link artist-card" href="./artist.html" style="background-image:url(./images/artist-4__player.jpg);">
+                        <span class="heading artist-card_title">Five Fighters
+                        </span></a>
+              </div>
+          </div>
+          <div class="cols__xs-12 cols__xl-5">
+            <!-- Tracks list-->
+              <h2 class="heading heading__uppercase margin__bottom-0">Tracks list
+              </h2>
+              <div class="tracks-list">
+                  <div class="track tracks-list_item">
+                      <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                    <div class="track_meta"><span class="track_title">Forewer old</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                    </div>
+                    <div class="track_adds">0:13</div>
+                  </div>
+                  <div class="track tracks-list_item">
+                      <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                    <div class="track_meta"><span class="track_title">Dont Go</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                    </div>
+                    <div class="track_adds">3:08</div>
+                  </div>
+                  <div class="track tracks-list_item">
+                      <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                    <div class="track_meta"><span class="track_title">Somewere i belive</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                    </div>
+                    <div class="track_adds">3:34</div>
+                  </div>
+                  <div class="track tracks-list_item">
+                      <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                    <div class="track_meta"><span class="track_title">Hello world</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                    </div>
+                    <div class="track_adds">2:55</div>
+                  </div>
+                  <div class="track tracks-list_item">
+                      <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                    <div class="track_meta"><span class="track_title">Knock the floor</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                    </div>
+                    <div class="track_adds">2:44</div>
+                  </div>
+                  <div class="track tracks-list_item">
+                      <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                    <div class="track_meta"><span class="track_title">Easy to go</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                    </div>
+                    <div class="track_adds">3:24</div>
+                  </div>
+              </div>
+            <!-- Tags list-->
+              <h2 class="heading heading__uppercase margin__bottom-0">All tags
+              </h2>
+              <div class="tags-list"><span class="tag tags-list_item">Rock</span><span class="tag tags-list_item">Hard-rock</span><span class="tag tags-list_item">New age</span><span class="tag tags-list_item">Hello world</span><span class="tag tags-list_item">Pop</span><span class="tag tags-list_item">Dance</span><span class="tag tags-list_item">Metall</span><span class="tag tags-list_item">Heave metall</span>
+              </div>
+          </div>
+        </div>
+        <!-- Albums list-->
+          <h2 class="heading heading__uppercase margin__bottom-0">Actual albums
+          </h2>
+          <div class="albums-list">
+              <div class="album albums-list_item">
+                <div class="album_control album_control__left"><i class="icon rage rage-fw rage-heart"></i>
+                </div>
+                <div class="album_control album_control__right">
+                    <div class="dropdown">
+                      <div class="dropdown_control"><i class="icon rage rage-fw rage-dots"></i>
+                      </div>
+                      <div class="dropdown_list dropdown_list__right"><a class="link dropdown_list-item" href="./index.html">Add</a><a class="link dropdown_list-item" href="./index.html">Remove</a>
+                      </div>
+                    </div>
+                </div><a class="link album_cover" href="./album"><img class="album_cover-image" src="./images/album-1__all.jpg"></a><a class="link album_title" href="./album">Matras</a><a class="link album_artist" href="./artist">Link in Dark</a>
+              </div>
+              <div class="album albums-list_item">
+                <div class="album_control album_control__left"><i class="icon rage rage-fw rage-heart"></i>
+                </div>
+                <div class="album_control album_control__right">
+                    <div class="dropdown">
+                      <div class="dropdown_control"><i class="icon rage rage-fw rage-dots"></i>
+                      </div>
+                      <div class="dropdown_list dropdown_list__right"><a class="link dropdown_list-item" href="./index.html">Add</a><a class="link dropdown_list-item" href="./index.html">Remove</a>
+                      </div>
+                    </div>
+                </div><a class="link album_cover" href="./album"><img class="album_cover-image" src="./images/album-2__all.jpg"></a><a class="link album_title" href="./album">Old Divide</a><a class="link album_artist" href="./artist">Link in Dark</a>
+              </div>
+              <div class="album albums-list_item">
+                <div class="album_control album_control__left"><i class="icon rage rage-fw rage-heart"></i>
+                </div>
+                <div class="album_control album_control__right">
+                    <div class="dropdown">
+                      <div class="dropdown_control"><i class="icon rage rage-fw rage-dots"></i>
+                      </div>
+                      <div class="dropdown_list dropdown_list__right"><a class="link dropdown_list-item" href="./index.html">Add</a><a class="link dropdown_list-item" href="./index.html">Remove</a>
+                      </div>
+                    </div>
+                </div><a class="link album_cover" href="./album"><img class="album_cover-image" src="./images/album-3__all.jpg"></a><a class="link album_title" href="./album">Construction</a><a class="link album_artist" href="./artist">Link in Dark</a>
+              </div>
+              <div class="album albums-list_item">
+                <div class="album_control album_control__left"><i class="icon rage rage-fw rage-heart"></i>
+                </div>
+                <div class="album_control album_control__right">
+                    <div class="dropdown">
+                      <div class="dropdown_control"><i class="icon rage rage-fw rage-dots"></i>
+                      </div>
+                      <div class="dropdown_list dropdown_list__right"><a class="link dropdown_list-item" href="./index.html">Add</a><a class="link dropdown_list-item" href="./index.html">Remove</a>
+                      </div>
+                    </div>
+                </div><a class="link album_cover" href="./album"><img class="album_cover-image" src="./images/album-4__all.jpg"></a><a class="link album_title" href="./album">Destruction</a><a class="link album_artist" href="./artist">Link in Dark</a>
+              </div>
+              <div class="album albums-list_item">
+                <div class="album_control album_control__left"><i class="icon rage rage-fw rage-heart"></i>
+                </div>
+                <div class="album_control album_control__right">
+                    <div class="dropdown">
+                      <div class="dropdown_control"><i class="icon rage rage-fw rage-dots"></i>
+                      </div>
+                      <div class="dropdown_list dropdown_list__right"><a class="link dropdown_list-item" href="./index.html">Add</a><a class="link dropdown_list-item" href="./index.html">Remove</a>
+                      </div>
+                    </div>
+                </div><a class="link album_cover" href="./album"><img class="album_cover-image" src="./images/album-5__all.jpg"></a><a class="link album_title" href="./album">District</a><a class="link album_artist" href="./artist">Link in Dark</a>
+              </div>
+              <div class="album albums-list_item">
+                <div class="album_control album_control__left"><i class="icon rage rage-fw rage-heart"></i>
+                </div>
+                <div class="album_control album_control__right">
+                    <div class="dropdown">
+                      <div class="dropdown_control"><i class="icon rage rage-fw rage-dots"></i>
+                      </div>
+                      <div class="dropdown_list dropdown_list__right"><a class="link dropdown_list-item" href="./index.html">Add</a><a class="link dropdown_list-item" href="./index.html">Remove</a>
+                      </div>
+                    </div>
+                </div><a class="link album_cover" href="./album"><img class="album_cover-image" src="./images/album-6__all.jpg"></a><a class="link album_title" href="./album">Restrict</a><a class="link album_artist" href="./artist">Link in Dark</a>
+              </div>
+              <div class="album albums-list_item">
+                <div class="album_control album_control__left"><i class="icon rage rage-fw rage-heart"></i>
+                </div>
+                <div class="album_control album_control__right">
+                    <div class="dropdown">
+                      <div class="dropdown_control"><i class="icon rage rage-fw rage-dots"></i>
+                      </div>
+                      <div class="dropdown_list dropdown_list__right"><a class="link dropdown_list-item" href="./index.html">Add</a><a class="link dropdown_list-item" href="./index.html">Remove</a>
+                      </div>
+                    </div>
+                </div><a class="link album_cover" href="./album"><img class="album_cover-image" src="./images/album-7__all.jpg"></a><a class="link album_title" href="./album">What you've Done</a><a class="link album_artist" href="./artist">Link in Dark</a>
+              </div>
+              <div class="album albums-list_item">
+                <div class="album_control album_control__left"><i class="icon rage rage-fw rage-heart"></i>
+                </div>
+                <div class="album_control album_control__right">
+                    <div class="dropdown">
+                      <div class="dropdown_control"><i class="icon rage rage-fw rage-dots"></i>
+                      </div>
+                      <div class="dropdown_list dropdown_list__right"><a class="link dropdown_list-item" href="./index.html">Add</a><a class="link dropdown_list-item" href="./index.html">Remove</a>
+                      </div>
+                    </div>
+                </div><a class="link album_cover" href="./album"><img class="album_cover-image" src="./images/album-8__all.jpg"></a><a class="link album_title" href="./album">Heavy</a><a class="link album_artist" href="./artist">Maverik Bowee</a>
+              </div>
+              <div class="album albums-list_item">
+                <div class="album_control album_control__left"><i class="icon rage rage-fw rage-heart"></i>
+                </div>
+                <div class="album_control album_control__right">
+                    <div class="dropdown">
+                      <div class="dropdown_control"><i class="icon rage rage-fw rage-dots"></i>
+                      </div>
+                      <div class="dropdown_list dropdown_list__right"><a class="link dropdown_list-item" href="./index.html">Add</a><a class="link dropdown_list-item" href="./index.html">Remove</a>
+                      </div>
+                    </div>
+                </div><a class="link album_cover" href="./album"><img class="album_cover-image" src="./images/album-1__all.jpg"></a><a class="link album_title" href="./album">Light</a><a class="link album_artist" href="./artist">Blue Freese Chili Papers</a>
+              </div>
+              <div class="album albums-list_item">
+                <div class="album_control album_control__left"><i class="icon rage rage-fw rage-heart"></i>
+                </div>
+                <div class="album_control album_control__right">
+                    <div class="dropdown">
+                      <div class="dropdown_control"><i class="icon rage rage-fw rage-dots"></i>
+                      </div>
+                      <div class="dropdown_list dropdown_list__right"><a class="link dropdown_list-item" href="./index.html">Add</a><a class="link dropdown_list-item" href="./index.html">Remove</a>
+                      </div>
+                    </div>
+                </div><a class="link album_cover" href="./album"><img class="album_cover-image" src="./images/album-2__all.jpg"></a><a class="link album_title" href="./album">Kozy homr</a><a class="link album_artist" href="./artist">Five Fighters</a>
+              </div>
+          </div>
+        <!-- Tracks list-->
+          <h2 class="heading heading__uppercase margin__bottom-0">All tracks
+          </h2>
+          <div class="tracks-list">
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Forewer old</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">0:13</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Dont Go</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">3:08</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Somewere i belive</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">3:34</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Hello world</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">2:55</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Knock the floor</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">2:44</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Easy to go</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">3:24</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Poster</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">2:42</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Figure listed</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">3:17</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Breaking the Hobbit</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">3:16</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Coll master to repair</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">2:55</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Go go gogogogo</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">2:58</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Mission</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">2:24</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-1__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Numbers</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">3:07</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-2__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">New git merge</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">0:13</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-2__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Git commit -m 'New commit'</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">3:08</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-2__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Git push</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">3:08</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-3__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Bleed the bread</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">0:13</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-3__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">What happaned to me?</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">3:08</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-4__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Catch up</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">0:13</div>
+              </div>
+              <div class="track tracks-list_item">
+                  <image class="image track_cover" src="./images/album-4__all.jpg"></image>
+                <div class="track_meta"><span class="track_title">Valencies</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                </div>
+                <div class="track_adds">3:08</div>
+              </div>
+          </div>
+        <!-- News list-->
+          <h2 class="heading heading__uppercase margin__bottom-0">Last news
+          </h2>
+          <div class="news-list" news_tags users='[{"image":"https://fazarosta.com/wp-content/uploads/2018/01/chto-znachit-esli-muzhchina-nikogda-ne-pishet-pervym-no-vsegda-otvechaet-na-vashi-soobshhenija1.jpg","thumb":"./images/user-thumb-1__player.gif","name":"Vasya Vasutkin"},{"image":"https://fazarosta.com/wp-content/uploads/2018/01/chto-znachit-esli-muzhchina-nikogda-ne-pishet-pervym-no-vsegda-otvechaet-na-vashi-soobshhenija1.jpg","thumb":"./images/user-thumb-2__player.gif","name":"Torin Duboshit"}]'>
+              <div class="news-item news-list_item"><a class="link news-item_cover" href="./news-item.html" style="background-image:url(./images/news-1__player.jpg);">
+                    <div class="news-item_tags-list">
+                        <div class="tags-list"><span class="tag tags-list_item">History</span><span class="tag tags-list_item">Music</span>
+                        </div>
+                    </div></a><span class="news-item_date">25/05/2020</span><a class="link news-item_title" href="./news-item.html">A brief overview of new products in music.</a>
+                <div class="news-item_author">
+                    <div class="user">
+                      <div class="user_thumb" style="background-image:url(./images/user-thumb-1__player.gif)"></div><span class="user_name">Vasya Vasutkin</span>
+                    </div>
+                </div>
+              </div>
+              <div class="news-item news-list_item"><a class="link news-item_cover" href="./news-item.html" style="background-image:url(./images/news-2__player.jpg);">
+                    <div class="news-item_tags-list">
+                        <div class="tags-list"><span class="tag tags-list_item">History</span><span class="tag tags-list_item">Music</span>
+                        </div>
+                    </div></a><span class="news-item_date">25/05/2020</span><a class="link news-item_title" href="./news-item.html">Meteorologists have found a new constellation</a>
+                <div class="news-item_author">
+                    <div class="user">
+                      <div class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></div><span class="user_name">Torin Duboshit</span>
+                    </div>
+                </div>
+              </div>
+              <div class="news-item news-list_item"><a class="link news-item_cover" href="./news-item.html" style="background-image:url(./images/news-3__player.jpg);">
+                    <div class="news-item_tags-list">
+                        <div class="tags-list"><span class="tag tags-list_item">History</span><span class="tag tags-list_item">Music</span>
+                        </div>
+                    </div></a><span class="news-item_date">25/05/2020</span><a class="link news-item_title" href="./news-item.html">How far does ignorance extend?</a>
+                <div class="news-item_author">
+                    <div class="user">
+                      <div class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></div><span class="user_name">Torin Duboshit</span>
+                    </div>
+                </div>
+              </div>
+              <div class="news-item news-list_item"><a class="link news-item_cover" href="./news-item.html" style="background-image:url(./images/news-4__player.jpg);">
+                    <div class="news-item_tags-list">
+                        <div class="tags-list"><span class="tag tags-list_item">History</span><span class="tag tags-list_item">Music</span>
+                        </div>
+                    </div></a><span class="news-item_date">25/05/2020</span><a class="link news-item_title" href="./news-item.html">Rock is fate?</a>
+                <div class="news-item_author">
+                    <div class="user">
+                      <div class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></div><span class="user_name">Torin Duboshit</span>
+                    </div>
+                </div>
+              </div>
+              <div class="news-item news-list_item"><a class="link news-item_cover" href="./news-item.html" style="background-image:url(./images/news-5__player.jpg);">
+                    <div class="news-item_tags-list">
+                        <div class="tags-list"><span class="tag tags-list_item">History</span><span class="tag tags-list_item">Music</span>
+                        </div>
+                    </div></a><span class="news-item_date">25/05/2020</span><a class="link news-item_title" href="./news-item.html">How far does ignorance extend?</a>
+                <div class="news-item_author">
+                    <div class="user">
+                      <div class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></div><span class="user_name">Torin Duboshit</span>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer_nav"><a class="link footer_nav-item" href="./blank.html">User agreement</a><a class="link footer_nav-item" href="./blank.html">Help</a><a class="link footer_nav-item" href="./blank.html">Subscribe</a>
+      </div><span class="footer_copyright">&copy; 2019</span>
+    </footer>
+    <div class="player_area">
+        <div class="player">
+          <div class="player_track-cover" style="background-image:url(./images/album-1__all.jpg)"></div>
+          <div class="player_controls margin__xx-2 align-items__center" hidden><span class="player_control"><i class="icon rage rage-fw rage-play-back"></i></span><span class="player_control player_control__play-pause"><i class="icon rage rage-fw rage-play"></i></span><span class="player_control"><i class="icon rage rage-fw rage-play-forward"></i></span></div>
+          <div class="player_meta"><span class="player_track-title">Hello world</span><a class="link player_track-artist" href="./artist.html">Link in Dark</a>
+          </div>
+          <div class="player_duration">2:55</div>
+          <div class="player_additional-controls margin__left-3" hidden><span class="player_control"><i class="icon rage rage-fw rage-mix"></i></span><span class="player_control"><i class="icon rage rage-fw rage-loop"></i></span></div>
+        </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,10 @@
+extends ../layouts/player-sidebar
+
+block prepend head
+	-var document_title = ': Albums'
+
+block main
+	.container
+		// Albums list
+		+heading('h2') All albums
+		+albums-list(albums)

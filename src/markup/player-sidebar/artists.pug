@@ -1,0 +1,10 @@
+extends ../layouts/player-sidebar
+
+block prepend head
+	-var document_title = ': Artists'
+
+block main
+	.container
+		// Artists list
+		+heading('h2') Artists
+		+artist-cards-list(artists)
