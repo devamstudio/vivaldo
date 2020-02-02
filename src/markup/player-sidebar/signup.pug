@@ -1,0 +1,28 @@
+extends ../layouts/default
+include ../../blocks/heading/heading
+include ../../blocks/field/field
+include ../../blocks/link/link
+include ../../blocks/icon/icon
+
+block prepend head
+    -var document_title = ': Registration'
+
+block markup
+    main.block__background-light.padding__yy-2
+        .container
+            .row.align-items__center(style='min-height:100vh;')
+                .cols__xs-12.cols__md-6.offset__md-3.cols__lg-4.offset__lg-4
+                    +link('index.html') 
+                        +icon('rage', 'arrow-left')
+                        |  Back to site
+                    .block__background-white.padding__xx-2.padding__yy-3.margin__yy-1
+                        +heading('h1') Hello there
+                        p.text.margin__bottom-3 Connect to our team
+                        +field('input')(type='text', label='What is your name?', class='margin__bottom-1')
+                        +field('input')(type='email', label='What is your email?', class='margin__bottom-1')
+                        +field('input')(type='password', label='Enter password', class='margin__bottom-1')
+                        +field('input')(type='checkbox', label='I accept with privacy policy and terms of use.', class='margin__bottom-3')
+                        button.button.button__primary Give me access
+                    p.text.text__center: small Are you already have an account? 
+                        +link('signin.html') Sign in
+                        | .

@@ -6,11 +6,13 @@
 	"layouts" : [
 		{
 			"url" : "player-sidebar/",
+			"image" : "./demo_player_sidebar.jpg",
 			"title" : "Default player layout",
 			"description" : "It is default layout thar uses in music streaming apps."
 		},
 		{
 			"url" : "player-scroller/",
+			"image" : "./demo_player_scrollable.jpg",
 			"title" : "Scrollable player layout",
 			"description" : "Player layout, that has header placed on top as classic site."
 		}

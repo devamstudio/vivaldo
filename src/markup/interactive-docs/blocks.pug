@@ -1,0 +1,386 @@
+extends ../layouts/interactive-docs
+
+block prepend head
+    -var document_title = ': Blocks'
+
+block main
+    .container
+        +heading('h1')(class='heading__h2') Blocks
+        p.text
+            +link('#album') Album
+            |  \ 
+            +link('#album-cover') Album cover
+            |  \ 
+            +link('#article') Article
+            |  \ 
+            +link('#artist-card') Artist card
+            |  \ 
+            +link('#comment') Comments
+            |  \ 
+            +link('#dropdown') Dropdown
+            |  \ 
+            +link('#field') Fields
+            |  \ 
+            +link('#heading') Heading
+            |  \ 
+            +link('#icon') Icons
+            |  \ 
+            +link('#image') Image
+            |  \ 
+            +link('#link') Link
+            |  \ 
+            +link('#list') List
+            |  \ 
+            +link('#nav-trigger') Main nav switcher
+            |  \ 
+            +link('#news') News
+            |  \ 
+            +link('#player') Player
+            |  \ 
+            +link('#search') Search
+            |  \ 
+            +link('#tag') Tags
+            |  \ 
+            +link('#track') Track
+            |  \ 
+            +link('#user') User
+        
+        
+        +heading('h2')(class='heading__h3' id='album') Album
+        .row
+            .cols__lg-9
+                p.text This section has structure for albums and it's list wrapper.
+                p.text To use album you might create such code:
+                pre.code.code__snippet
+                    | &lt;div class="album"&gt;
+                    |     &lt;div class="album_control album_control__left"&gt;
+                    |         &lt;i class="icon rage rage-fw rage-heart"&gt;&lt;/i&gt;
+                    |     &lt;/div&gt;
+                    |     &lt;div class="album_control album_control__right"&gt;
+                    |         &lt;span class="dropdown"&gt;
+                    |             &lt;span class="dropdown_control"&gt;&lt;i class="icon rage rage-fw rage-dots"&gt;&lt;/i&gt;&lt;/span&gt;
+                    |             &lt;span class="dropdown_list dropdown_list__right"&gt;
+                    |                 &lt;a class="link dropdown_list-item" href="./index.html"&gt;Add&lt;/a&gt;
+                    |                 &lt;a class="link dropdown_list-item" href="./index.html"&gt;Remove&lt;/a&gt;
+                    |             &lt;/span&gt;
+                    |         &lt;/span&gt;
+                    |     &lt;/div&gt;
+                    |     &lt;a class="link album_cover" href="./album.html"&gt;
+                    |         &lt;img class="image album_cover-image" src="./images/album-1__all.jpg" alt=""&gt;
+                    |     &lt;/a&gt;
+                    |     &lt;a class="link album_title" href="./album.html"&gt;Matras&lt;/a&gt;
+                    |     &lt;a class="link album_artist" href="./artist.html"&gt;Link in Dark&lt;/a&gt;
+                    | &lt;/div&gt;
+                p.text There are just 1 level wrapper #[code.code .album], all elements are in. And there are:
+                ul.list
+                    li.list_item Controls #[code.code .album_control]. You can have 2 controls: left side #[code.code .album_control__left] and right side #[code.code .album_control__right].
+                    li.list_item Cover #[code.code .album_cover]. You should use square image.
+                    li.list_item Title #[code.code .album_title].
+                    li.list_item Artist #[code.code .album_artist].
+                p.text If you want to list of albums wrap them in #[code.code .albums-list] class. And add #[code.code .albums-list_item] to each album.
+            .cols__lg-3
+                +album(artists[0].albums[0].cover, artists[0].albums[0].title, artists[0].title)(style='max-width:250px;')
+
+        +heading('h2')(class='heading__h3' id='album-cover') Album cover
+        .row
+            .cols__lg-5
+                .album-cover.album-cover__disc
+                    img.image.image__fluid(src=artists[0].albums[0].cover)
+            .cols__lg-7
+                p.text This element is used separetly from albums you can see upper. But it can be used on album page or on others as decorative block.
+                p.text all you need is wrap image with:
+                pre.code.code__snippet
+                    | &lt;div class="album-cover album-cover__disc"&gt;
+                    |     &lt;img class="image image__fluid" src="./images/album-1__all.jpg"&gt;
+                    | &lt;/div&gt;
+                p.text Near to image will be created an pseudoelement which looks like vinil disc.
+                .notification.notification__warning
+                    p.text Image might be square. Because form of vinil disc is depends on image form.
+
+        +heading('h2')(class='heading__h3' id='article') Article
+        p.text This wrapper is needed to output long text with headings. It containes text and headings rules. So you can use it when you have long text and raw output of user input, or if you dont wont to write #[code.code .heading] class everytime. To make heading you can just write [code.code &lt;h1&gt;...], and it will de ok.
+        .row: .cols__lg-8
+            pre.code.code__snippet
+                | &lt;article class='article'&gt;
+                |     &lt;h1&gt;Hello world&lt;/h1&gt;
+                |     &lt;p&gt;Manuscripts don't burn&lt;/p&gt;
+                | &lt;/article&gt;
+        p.text Using tag #[code.code article] is not strict rule. You can use it in every reasonable situation.
+        .notification.margin__bottom-1
+            p.text We dont recomend to use it in unreasonable situations. Such as adding to body tag. You may breack other rules.
+        p.text And of course you can easilly use simple heading block #[code.code .heading] in it.
+
+        +heading('h2')(class='heading__h3' id='artist-card') Artist card
+        .row
+            .cols__lg-9
+                p.text This section as the album has it's own class for block and for wrapper for list artists.
+                p.text To output card all you need is the following code:
+                pre.code.code__snippet
+                    | &lt;a class="link artist-card" href="./artist.html" style="background-image:url(image);"&gt;
+                    |     &lt;span class="heading artist-card_title"&gt;Maverik Bowee&lt;/span&gt;
+                    | &lt;/a&gt;
+                p.text If you want to use list of artists, you can wrap it with #[code.code .artist-cards-list] and add #[code.code .artist-cards-list_item] to cards.
+            .cols__lg-3
+                +artist-card(artists[1].image, artists[1].title)
+
+        +heading('h2')(class='heading__h3' id='comment') Comments
+        .row
+            .cols__lg-4
+                p.text This is how they output.
+            .cols__lg-8
+                .comments-list
+                    .comment
+                        .comment_header
+                            +user(users[1].thumb, users[1].name)
+                            small: em.date 26/08/2019
+                        .comment_body
+                            p.text Comments can be used separetly, but better is group. Like in example.
+                        .comment_actions
+                            +link('#') Reply
+                            +link('#') Thumbs up
+                    .comment
+                        .comment_header
+                            +user(users[0].thumb, users[0].name)
+                            small: em.date 26/08/2019
+                        .comment_body
+                            pre.code.code__snippet
+                                | &lt;div class="comment"&gt;
+                                |     &lt;div class="comment_header"&gt;
+                                |         &lt;span class="user"&gt;
+                                |             &lt;span class="user_thumb" style="background-image:url(image)"&gt;&lt;/span&gt;
+                                |             &lt;span class="user_name"&gt;Vasya Vasutkin&lt;/span&gt;
+                                |         &lt;/span&gt;
+                                |         &lt;small&gt;&lt;em class="date"&gt;26/08/2019&lt;/em&gt;&lt;/small&gt;
+                                |     &lt;/div&gt;
+                                |     &lt;div class="comment_body"&gt;
+                                |         &lt;p class="text"&gt;Hi&lt;/p&gt;
+                                |     &lt;/div&gt;
+                                |     &lt;div class="comment_actions"&gt;
+                                |         &lt;a class="link" href="#"&gt;Reply&lt;/a&gt;
+                                |         &lt;a class="link" href="#"&gt;Thumbs up&lt;/a&gt;
+                                |     &lt;/div&gt;
+                                | &lt;/div&gt;
+                        .comment_actions
+                            +link('#') Reply
+                            +link('#') Thumbs up
+
+        +heading('h2')(class='heading__h3' id='dropdown') Dropdown
+        p.text Dropdown can be simple: icon, text or complex — block of user.
+        pre.code.code__snippet
+            | &lt;span class="dropdown"&gt;
+            |     &lt;span class="dropdown_control"&gt;
+            |         &lt;span class="user"&gt;
+            |             &lt;span class="user_thumb" style="background-image:url(image)"&gt;&lt;/span&gt;
+            |             &lt;span class="user_name"&gt;Vasya Vasutkin&lt;/span&gt;
+            |         &lt;/span&gt;
+            |         &lt;i class="icon rage rage-fw rage-chevron-bottom"&gt;&lt;/i&gt;
+            |     &lt;/span&gt;
+            |     &lt;span class="dropdown_list dropdown_list__right"&gt;
+            |         &lt;a class="link dropdown_list-item" href="./favorite.html"&gt;Favorite&lt;/a&gt;
+            |         &lt;a class="link dropdown_list-item" href="./playlists.html"&gt;Playlists&lt;/a&gt;
+            |     &lt;/span&gt;
+            | &lt;/span&gt;
+        p.text Dropdown is built on tag span for it can be used in text tags like #[code.code &lt;h2&gt;]
+
+        +heading('h2')(class='heading__h3' id='field') Fields
+        p.text There is no feedback provided. It means there are no classes with errors.
+        p.text So you can use it with some scenarious:
+        ul.list
+            li.list_item One field for text\password\email or other in one row.
+            li.list_item Form with checkboxes
+            li.list_item Row forms
+        p.text And with label\without and heler text.
+        p.text Here are examples:
+
+        +heading('h3') Default using
+        .row.align-items__center
+            .cols__lg-6
+                pre.code.code__snippet
+                    | &lt;div class='field'&gt;
+                    |     &lt;label class='field_label' for='1'&gt;Hi&lt;/label&gt;
+                    |     &lt;input class='field_input' id='1'&gt;
+                    |     &lt;span class='field_helper'&gt;Additional info. Can be an error&lt;/span&gt;
+                    | &lt;/div&gt;
+            .cols__lg-6
+                .field
+                    label.field_label Hi
+                    input.field_input(type='text')
+                    span.field_helper Additional info. Can be an error
+        +heading('h3') Textarea
+        .row.align-items__center
+            .cols__lg-6
+                pre.code.code__snippet
+                    | &lt;div class='field'&gt;
+                    |     &lt;label class='field_label' for='1'&gt;Hi&lt;/label&gt;
+                    |     &lt;textarea class='field_input' id='1'&gt;&lt;/textarea&gt;
+                    | &lt;/div&gt;
+            .cols__lg-6
+                .field
+                    label.field_label Label
+                    textarea.field_input
+        +heading('h3') Checkbox
+        .row.align-items__center
+            .cols__lg-6
+                pre.code.code__snippet
+                    | &lt;div class='field field__row'&gt;
+                    |     &lt;input type='checkbox' class='field_input' id='1'&gt;
+                    |     &lt;label class='field_label' for='1'&gt;Hi&lt;/label&gt;
+                    | &lt;/div&gt;
+            .cols__lg-6
+                .field.field__row
+                    input.field_input(type='checkbox')
+                    label.field_label Select me
+        +heading('h3') Row
+        .row.align-items__center
+            .cols__lg-6
+                pre.code.code__snippet
+                    | &lt;div class='field field__row'&gt;
+                    |     &lt;label class='field_label' for='1'&gt;Hi&lt;/label&gt;
+                    |     &lt;input type='text' class='field_input' id='1'&gt;
+                    | &lt;/div&gt;
+            .cols__lg-6
+                .field.field__row
+                    label.field_label Padam
+                    input.field_input(type='text')
+        +heading('h3') Inline
+        .row.align-items__center
+            .cols__lg-6
+                pre.code.code__snippet
+                    | &lt;div class='field field__inline'&gt;
+                    |     &lt;input type='checkbox' class='field_input' id='1'&gt;
+                    |     &lt;label class='field_label' for='1'&gt;Hi&lt;/label&gt;
+                    | &lt;/div&gt;
+                    | &lt;div class='field field__inline'&gt;
+                    |     &lt;input type='checkbox' class='field_input' id='1'&gt;
+                    |     &lt;label class='field_label' for='1'&gt;Hi&lt;/label&gt;
+                    | &lt;/div&gt;
+            .cols__lg-6
+                .field.field__inline
+                    input.field_input(type='checkbox')
+                    label.field_label Select me
+                .field.field__inline
+                    input.field_input(type='checkbox')
+                    label.field_label Select me
+        
+        +heading('h2')(class='heading__h3' id='heading') Heading
+        p.text All is very simple. Heading = heading. This is small block, that... No matter where you use it, with span\p tags or any other, even div.
+        p.text Also you can make heading h5 looks like h1. Just adding the class #[code.code .heading.heading__h1]. But its native offsets will not changed.
+
+        +heading('h2')(class='heading__h3' id='icon') Icons
+        p.text In project are used icons set Rage.
+
+        +heading('h2')(class='heading__h3' id='image') Image
+        p.text As default images styles are cleared to not create offsets. But using classes #[code.code .image.image__fit] and #[code.code .image.image__fluid] you can make them fit to its wrapper.
+
+        +heading('h2')(class='heading__h3' id='link') Link
+        p.text Link as the heading not attached to tag, but depends on it attributes. It means you can add #[code.code .link] class to tag span and it will looks like link. But we dont recomen do such.
+
+        +heading('h2')(class='heading__h3' id='list') List
+        p.text List is based on tags ol\ul and parent might have class #[code.code .list], and doughters are #[code.code .list_item].
+
+        +heading('h2')(class='heading__h3' id='nav-trigger') Main nav switcher
+        p.text This block contains the JS-instruction how to opan and close main nav on mobile resolition.
+
+        +heading('h2')(class='heading__h3' id='news') News
+        p.text Для визуализации новости 
+        .row
+            .cols__lg-9
+                p.text To show news you can use this template.
+                pre.code.code__snippet
+                    | &lt;div class="news-item"&gt;
+                    |     &lt;a class="link news-item_cover" href="./news-item.html" style="background-image:url(image);"&gt;&lt;/a&gt;
+                    |     &lt;span class="news-item_date"&gt;25/05/2020&lt;/span&gt;
+                    |     &lt;a class="link news-item_title" href="#"&gt;A brief overview of new products in music.&lt;/a&gt;
+                    |     &lt;div class="news-item_author"&gt;
+                    |         &lt;span class="user"&gt;
+                    |             &lt;span class="user_thumb" style="background-image:url(image)"&gt;&lt;/span&gt;
+                    |             &lt;span class="user_name"&gt;Torin Duboshit&lt;/span&gt;
+                    |         &lt;/span&gt;
+                    |     &lt;/div&gt;
+                    | &lt;/div&gt;
+            .cols__lg-3
+                +news-item(news[0].cover, news[0].date, news[0].title, users[1])
+
+        +heading('h2')(class='heading__h3' id='player') Player
+        p.text Player has hard structure:
+        .padding__xx-4.padding__yy-3.block__background-light
+            +player(tracks[3])
+        pre.code.code__snippet
+            | &lt;div class="player"&gt;
+            |     &lt;div class="player_track-cover" style="background-image:url(image"&gt;&lt;/div&gt;
+            |     &lt;div class="player_controls margin__xx-2 align-items__center" hidden=""&gt;
+            |         &lt;span class="player_control"&gt;
+            |             &lt;i class="icon rage rage-fw rage-play-back"&gt;&lt;/i&gt;
+            |         &lt;/span&gt;
+            |         &lt;span class="player_control player_control__play-pause"&gt;
+            |             &lt;i class="icon rage rage-fw rage-play"&gt;&lt;/i&gt;
+            |         &lt;/span&gt;
+            |         &lt;span class="player_control"&gt;&lt;i class="icon rage rage-fw rage-play-forward"&gt;&lt;/i&gt;&lt;/span&gt;
+            |     &lt;/div&gt;
+            |     &lt;div class="player_meta"&gt;
+            |         &lt;span class="player_track-title"&gt;Hello world&lt;/span&gt;
+            |         &lt;a class="link player_track-artist" href="#"&gt;Link in Dark&lt;/a&gt;
+            |     &lt;/div&gt;
+            |     &lt;div class="player_duration"&gt;2:55&lt;/div&gt;
+            |     &lt;div class="player_additional-controls margin__left-3" hidden=""&gt;
+            |         &lt;span class="player_control"&gt;&lt;i class="icon rage rage-fw rage-mix"&gt;&lt;/i&gt;&lt;/span&gt;
+            |         &lt;span class="player_control"&gt;&lt;i class="icon rage rage-fw rage-loop"&gt;&lt;/i&gt;&lt;/span&gt;
+            |     &lt;/div&gt;
+            | &lt;/div&gt;
+        p.text Here you can find here full structure with icons. But some you can remove.
+        .notification
+            p.text Pay attention. This player is for full screen use.
+
+        +heading('h2')(class='heading__h3' id='tag') Tags
+        .row
+            .cols__lg-3
+                .tags-list
+                    +tag('Hello')(class='tags-list_item')
+                    +tag('World')(class='tags-list_item')
+                    +tag('Who')(class='tags-list_item')
+                    +tag('Where')(class='tags-list_item')
+                    +tag('ZZ')(class='tags-list_item')
+                    +tag('Bottom')(class='tags-list_item')
+            .cols__lg-6
+                p.text Can you imagine music without tags? No. So if you want use list of tags wrap them in #[code.code .tags-list] and add to tag class #[code.code .tags-list_item].
+                p.text But if you want them separately just add class #[code.code .tag].
+
+        +heading('h2')(class='heading__h3' id='track') Track
+        .row
+            .cols__lg-7
+                p.text The main build part of this template.
+                p.text Track is not hard. Just cover, title and duration. Also you can add dropdowns.
+                pre.code.code__snippet
+                    | &lt;div class="track"&gt;
+                    |     &lt;img class="image track_cover" src="./images/album-1__all.jpg" alt=""&gt;
+                    |     &lt;div class="track_meta"&gt;
+                    |         &lt;span class="track_title"&gt;Poster&lt;/span&gt;
+                    |         &lt;a class="link track_artist" href="./artist.html"&gt;Link in Dark&lt;/a&gt;
+                    |     &lt;/div&gt;
+                    |     &lt;div class="track_adds"&gt;2:42&lt;/div&gt;
+                    | &lt;/div&gt;
+                p.text If you use them without list add #[code.code .margin__bottom-1].
+            .cols__lg-5
+                +track(tracks[6])(class='margin__bottom-1')
+                +track(tracks[4])(class='margin__bottom-1')
+                .track.track__played
+                    +image(tracks[10].cover)(class="track_cover")
+                    .track_meta
+                        span.track_title= tracks[10].title
+                        +link('#')(class='track_artist')= tracks[10].artist
+                    .track_adds= tracks[10].duration
+                .notification.notification__ok
+                    p.text: small Track have feature. It can rolls up. Just add #[code.code .track__played] to #[code.code .track].
+        p.text In any way better use you should use #[code.code .tracks-list] as wrapper for tracks. Add #[code.code .tracks-list_item] class to all tracks in list.
+        p.text All tracks in list are numered.
+        +tracks-list(tracks, 5)
+        .notification.notification__warning
+            p.text List have offset. Be carefull.
+
+        +heading('h2')(class='heading__h3' id='user') User
+        p.text Image and name. This is all:
+        pre.code.code__snippet
+            | &lt;span class="user"&gt;
+            |     &lt;span class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"&gt;&lt;/span&gt;
+            |     &lt;span class="user_name"&gt;Torin Duboshit&lt;/span&gt;
+            | &lt;/span&gt;

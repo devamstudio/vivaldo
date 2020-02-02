@@ -16,83 +16,89 @@ var buildData = require('./src/build.json');
 
 
 function style(cb) {
-	buildData = require('./src/build.json');
-	for (let build of buildData.builds) {
-		console.log('style for: ' + build.title);
-		gulp
-			.src( build.src.styles )
-			.pipe( pugPlumber() )
-			.pipe( sassGlobbing() )
-			.pipe( pugConcat('style.sass'))
-			.pipe( sassToCss().on( 'error', sassToCss.logError ) )
-			.pipe( gulp.dest( build.dist ) )
-			.pipe( connect.reload() );
-	}
-	return cb();
+    buildData = require('./src/build.json');
+    for (let build of buildData.builds) {
+        console.log('style for: ' + build.title);
+        gulp
+            .src( build.src.styles )
+            .pipe( pugPlumber() )
+            .pipe( sassGlobbing() )
+            .pipe( pugConcat('style.sass'))
+            .pipe( sassToCss().on( 'error', sassToCss.logError ) )
+            .pipe( gulp.dest( build.dist ) )
+            .pipe( connect.reload() );
+    }
+    return cb();
 }
 
 function markup(cb) {
-	buildData = require('./src/build.json');
-	for (let build of buildData.builds) {
-		console.log('markup for: ' + build.title);
-		let data = require(build.src.data);
-		gulp
-			.src( build.src.markup )
-			.pipe( pugPlumber() )
-			.pipe(pug({
-				locals: data,
-				pretty: true
-			}))
-			.pipe( gulp.dest( build.dist ) )
-			.pipe( connect.reload() );
-	}
-	return cb();
+    buildData = require('./src/build.json');
+    for (let build of buildData.builds) {
+        if (!build.src.markup){
+            break;
+        }
+        console.log('markup for: ' + build.title);
+        let data = require(build.src.data);
+        gulp
+            .src( build.src.markup )
+            .pipe( pugPlumber() )
+            .pipe(pug({
+                locals: data,
+                pretty: true
+            }))
+            .pipe( gulp.dest( build.dist ) )
+            .pipe( connect.reload() );
+    }
+    return cb();
 }
 
 function images(cb) {
-	buildData = require('./src/build.json');
-	for (let build of buildData.builds) {
-		if( build.src.images ) {
-			gulp
-				.src( build.src.images )
-				.pipe( gulp.dest( build.dist + '/images/' ) );
-		}
-	}
-	return cb();
+    buildData = require('./src/build.json');
+    for (let build of buildData.builds) {
+        if (!build.src.images){
+            break;
+        }
+        if( build.src.images ) {
+            gulp
+                .src( build.src.images )
+                .pipe( gulp.dest( build.dist + '/images/' ) );
+        }
+    }
+    return cb();
 }
 
 function scripts(cb) {
-	buildData = require('./src/build.json');
-	for (let build of buildData.builds) {
-		if( build.src.scripts ) {
-			gulp
-				.src( build.src.scripts )
-				.pipe( gulp.dest( build.dist + '/scripts/saparated/' ) );
-			
-			gulp
-				.src( build.src.scripts )
-				.pipe( pugConcat('build.js'))
-				.pipe( gulp.dest( build.dist + '/scripts/' ) );
-		}
-	}
-	return cb();
+    buildData = require('./src/build.json');
+    for (let build of buildData.builds) {
+        if( build.src.scripts ) {
+            gulp
+                .src( build.src.scripts )
+                .pipe( gulp.dest( build.dist + '/scripts/saparated/' ) );
+            
+            gulp
+                .src( build.src.scripts )
+                .pipe( pugConcat('build.js'))
+                .pipe( gulp.dest( build.dist + '/scripts/' ) );
+        }
+    }
+    return cb();
 }
 //build project END
 
 //local server
 function server() {
-	connect.server({
-		root: 'dist',
-		port: 8080,
-		livereload: true
-	});
+    connect.server({
+        root: 'dist',
+        port: 8080,
+        livereload: true
+    });
 };
 //local server END
 
 function watch() {
-	gulp.watch(['src/**/*.sass', 'src/**/*.json'], style);
-	gulp.watch(['src/**/*.js', 'src/**/*.json'], scripts);
-	gulp.watch(['src/**/*.pug', 'src/**/*.json'], markup);
+    gulp.watch(['src/**/*.sass', 'src/**/*.json'], style);
+    gulp.watch(['src/**/*.js', 'src/**/*.json'], scripts);
+    gulp.watch(['src/**/*.pug', 'src/**/*.json'], markup);
 }
 
 exports.style = style

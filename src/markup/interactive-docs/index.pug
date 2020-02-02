@@ -1,0 +1,24 @@
+extends ../layouts/interactive-docs
+
+block prepend head
+    -var document_title = ': Documentation'
+
+block main
+    .container
+        +heading('h1')(class='heading__h2') Good day!
+        p.text I and my team iAmStudio hasten to please you with our new template Vivaldo. This new, unique template for creating different templates should help you in the music (and not only) topics.
+        p.text Here we realized a lot of non-standard elements, which, we believe, are simply necessary for the player or for the site of the music artist, but about them later.
+
+        +heading('h2')(class='heading__h3') What inspired us
+        p.text If you look at the list of our works, you can see that we decided to call them similar to the names of great people. They inspire us.
+        p.text We, like many others, use music players to listen to music at home/at work. This is also inspiring. That's why we were so interested in developing this design.
+
+        +heading('h3')(class='heading__h4') Credits
+        ul.list
+            li.list_item Our dependencies
+                ul.list
+                    li.list_item: +link('https://github.com/devamstudio/fa-kit') FA-Kit
+                    li.list_item: +link('https://i-am.studio/market/icons-rage-set/') Icons Rage
+            li.list_item Third-Party Solutions
+                ul.list
+                    li.list_item: +link('https://pixabay.com/ru/') Pixabay

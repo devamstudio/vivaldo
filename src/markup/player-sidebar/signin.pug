@@ -1,0 +1,26 @@
+extends ../layouts/default
+include ../../blocks/heading/heading
+include ../../blocks/field/field
+include ../../blocks/link/link
+include ../../blocks/user/user
+include ../../blocks/icon/icon
+
+block prepend head
+    -var document_title = ': Login'
+
+block markup
+    main.block__background-light.padding__yy-2
+        .container
+            .row.align-items__center(style='min-height:100vh;')
+                .cols__xs-12.cols__md-6.offset__md-3.cols__lg-4.offset__lg-4
+                    +link('index.html') 
+                        +icon('rage', 'arrow-left')
+                        |  Back to site
+                    .block__background-white.padding__xx-2.padding__yy-3.margin__yy-1
+                        +user(users[0].thumb, users[0].name)(class='margin__bottom-3')
+                        +field('input')(type='password', label='Enter password', class='margin__bottom-3')
+                        .text__center
+                            button.button.button__primary Log in
+                    p.text.text__center: small Don't have an account? 
+                        +link('signup.html') Create
+                        | .

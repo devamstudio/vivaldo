@@ -6,26 +6,33 @@
     <meta name="theme-color" content="#3895FF">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" type="text/css" href="https://space.i-am.studio/font-icons-rage/releases/v1.0.1/css/font-rage.css">
   </head>
-  <body>
-    <header>
+  <body class="layouts">
+    <header class="layouts_header">
       <h1 class="text__center">Music template Vivaldo</h1>
     </header>
     <main>
-      <div class="container">
-        <div class="row">
-          <div class="cols__xs-12 cols__md-6 text__center">
-            <h2><a href="player-sidebar/">Default player layout</a></h2>
+      <div class="layouts_list padding__xx-1">
+        <div class="layouts_list-item">
+          <div class="layouts_list-item_image"><img class="image image__fluid" src="./demo_player_sidebar.jpg" alt="image"></div>
+          <div class="layouts_list-item_description">
+            <h2 class="heading"><a class="link" href="player-sidebar/">Default player layout</a>
+            </h2>
             <p>It is default layout thar uses in music streaming apps.</p>
           </div>
-          <div class="cols__xs-12 cols__md-6 text__center">
-            <h2><a href="player-scroller/">Scrollable player layout</a></h2>
+        </div>
+        <div class="layouts_list-item">
+          <div class="layouts_list-item_image"><img class="image image__fluid" src="./demo_player_scrollable.jpg" alt="image"></div>
+          <div class="layouts_list-item_description">
+            <h2 class="heading"><a class="link" href="player-scroller/">Scrollable player layout</a>
+            </h2>
             <p>Player layout, that has header placed on top as classic site.</p>
           </div>
         </div>
       </div>
     </main>
+    <footer class="layouts_footer"><a class="link" href="./interactive-docs/">Interactive documentation</a></footer>
   </body>
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto">
-  <link rel="stylesheet" href="//space.i-am.studio/font-icons-rage/releases/v1.0.1/css/font-rage.css">
 </html>

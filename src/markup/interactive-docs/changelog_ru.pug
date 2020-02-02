@@ -1,0 +1,31 @@
+extends ../layouts/interactive-docs
+
+block prepend head
+    -var document_title = ': История изменений'
+    -var docs_lang = 'ru'
+
+block main
+    .container
+        +heading('h1')(class='heading__h2') История изменений
+        +heading('h2')(class='heading__h3') v.2.0
+        ul.list
+            li.list_item Выполнен полный редизайн проекта
+            li.list_item Удалены стили для создания сайта артиста
+            li.list_item Создано 2 стиля оформления плееров
+        +heading('h2')(class='heading__h3') v.1.0.2
+        ul.list
+            li.list_item Дополнения в дизайне
+            li.list_item Переработана система вывода комментариев
+        +heading('h2')(class='heading__h3') v.1.0.1
+        ul.list
+            li.list_item Пофиксен баг строки поиска
+            li.list_item Изображения заменены на плейсхолдеры
+            li.list_item Пофиксены breakpoints в медиазапросах
+            li.list_item Добавлено формирование style и style.min для каскадных стилей
+        +heading('h2')(class='heading__h3') v.1.0.0
+        ul.list
+            li.list_item Разработаны шаблоны
+            li.list_item Созданы элементы для проигрывания треков
+            li.list_item Созданы списки треков, событий
+            li.list_item Созданы кастомные heroscreen
+            li.list_item Подключен Google Maps Api

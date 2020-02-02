@@ -969,6 +969,14 @@ article span, article strong, article i, article b, .article span, .article stro
       .field__row .field_input {
         flex-grow: 10; } }
 
+.link {
+  color: #007bff;
+  text-decoration: none; }
+  .link:hover {
+    text-decoration: underline; }
+  .link:vidited {
+    color: #A300AD; }
+
 .button {
   display: inline-flex;
   padding: 0.5rem 1rem;
@@ -988,6 +996,7 @@ article span, article strong, article i, article b, .article span, .article stro
   cursor: pointer; }
   .button__primary {
     background-color: #3895FF;
+    color: white;
     transition: background-color 0.2s; }
     .button__primary:hover {
       background-color: #6bb0ff; }
@@ -995,6 +1004,7 @@ article span, article strong, article i, article b, .article span, .article stro
       background-color: #057aff; }
   .button__secondary {
     background-color: #fab51b;
+    color: white;
     transition: background-color 0.2s; }
     .button__secondary:hover {
       background-color: #fbc54d; }
@@ -1002,6 +1012,7 @@ article span, article strong, article i, article b, .article span, .article stro
       background-color: #dd9a05; }
   .button__alert {
     background-color: #bc1817;
+    color: white;
     transition: background-color 0.2s; }
     .button__alert:hover {
       background-color: #e42322; }
@@ -1009,6 +1020,7 @@ article span, article strong, article i, article b, .article span, .article stro
       background-color: #8f1211; }
   .button__warning {
     background-color: #fab51b;
+    color: white;
     transition: background-color 0.2s; }
     .button__warning:hover {
       background-color: #fbc54d; }
@@ -1016,6 +1028,7 @@ article span, article strong, article i, article b, .article span, .article stro
       background-color: #dd9a05; }
   .button__ok {
     background-color: #3baa35;
+    color: white;
     transition: background-color 0.2s; }
     .button__ok:hover {
       background-color: #51c74b; }
@@ -1023,6 +1036,7 @@ article span, article strong, article i, article b, .article span, .article stro
       background-color: #2e8329; }
   .button__black {
     background-color: black;
+    color: white;
     transition: background-color 0.2s; }
     .button__black:hover {
       background-color: #1a1a1a; }
@@ -1030,6 +1044,7 @@ article span, article strong, article i, article b, .article span, .article stro
       background-color: black; }
   .button__white {
     background-color: white;
+    color: white;
     color: black;
     transition: background-color 0.2s; }
     .button__white:hover {
@@ -1038,6 +1053,7 @@ article span, article strong, article i, article b, .article span, .article stro
       background-color: #e6e6e6; }
   .button__light {
     background-color: #fafafa;
+    color: white;
     color: black;
     transition: background-color 0.2s; }
     .button__light:hover {
@@ -1046,6 +1062,7 @@ article span, article strong, article i, article b, .article span, .article stro
       background-color: #e1e1e1; }
   .button__dark {
     background-color: #727272;
+    color: white;
     transition: background-color 0.2s; }
     .button__dark:hover {
       background-color: #8c8c8c; }
@@ -3197,6 +3214,41 @@ article span, article strong, article i, article b, .article span, .article stro
     justify-content: baseline; }
   .justify-content__xl-stretch {
     justify-content: stretch; } }
+
+.layouts .layouts_header {
+  background-image: url("./images/layouts-home-top.gif");
+  display: flex;
+  min-height: 400px;
+  align-items: center;
+  justify-content: center;
+  color: white; }
+
+.layouts .layouts_list .layouts_list-item {
+  padding: 2rem 0; }
+  @media (min-width: 1024px) {
+    .layouts .layouts_list .layouts_list-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "image description";
+      grid-gap: 2rem;
+      padding: 4rem; }
+      .layouts .layouts_list .layouts_list-item .layouts_list-item_image {
+        grid-area: image; }
+        .layouts .layouts_list .layouts_list-item .layouts_list-item_image .image {
+          filter: drop-shadow(0 0.5em 0.5em rgba(0, 0, 0, 0.3)); }
+      .layouts .layouts_list .layouts_list-item .layouts_list-item_description {
+        grid-area: description;
+        align-self: center; } }
+  @media (min-width: 1024px) {
+    .layouts .layouts_list .layouts_list-item:nth-child(even) {
+      grid-template-areas: "description image"; }
+      .layouts .layouts_list .layouts_list-item:nth-child(even) .layouts_list-item_description {
+        text-align: right; } }
+
+.layouts .layouts_footer {
+  background-color: #fafafa;
+  padding: 3rem;
+  text-align: center; }
 
 @media (max-width: 500px) {
   .hidden__xs {

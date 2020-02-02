@@ -1,0 +1,95 @@
+extend default
+
+block append head
+    script(src='./scripts/build.js')
+
+block markup
+
+    //- Blocks
+    include ../../blocks/player/player
+    include ../../blocks/image/image
+    include ../../blocks/user/user
+    include ../../blocks/link/link
+    include ../../blocks/icon/icon
+    include ../../blocks/field/field
+    include ../../blocks/dropdown/dropdown
+    include ../../blocks/track/track
+    include ../../blocks/track/tracks-list
+    include ../../blocks/track/tracks-list__chart
+    include ../../blocks/album/album
+    include ../../blocks/album/albums-list
+    include ../../blocks/artist-card/artist-card
+    include ../../blocks/artist-card/artist-cards-list
+    include ../../blocks/tag/tag
+    include ../../blocks/tag/tags-list
+    include ../../blocks/news/news-item
+    include ../../blocks/news/news-list
+    include ../../blocks/search/search
+    include ../../blocks/heading/heading
+    // include ../../blocks/
+    //- Blocks END
+    
+    // Get DEMO data
+    - var albums = new Array();
+    - var tracks = new Array();
+    - var ganres = new Set();
+    for artist in artists
+        for album in artist.albums
+            - let tmp_album = new Object();
+            - tmp_album.cover = album.cover;
+            - tmp_album.title = album.title;
+            - tmp_album.artist = artist.title;
+            - albums.push(tmp_album);
+            if album.tracks
+                for track in album.tracks
+                    - let tmp_track = new Object();
+                    - tmp_track.cover = album.cover;
+                    - tmp_track.title = track.title;
+                    - tmp_track.duration = track.duration;
+                    - tmp_track.album_title = album.title;
+                    - tmp_track.artist = artist.title;
+                    - tracks.push(tmp_track);
+            if album.ganres
+                for ganre in album.ganres
+                    - ganres.add(ganre);
+    // Get DEMO data END
+    - var language = docs_lang ? docs_lang : 'en'
+    body.interactive-docs(lang=language)
+        header.interactive-docs_header
+            +link("../")(class="logo" title=title)
+                include ../includes/logo
+            nav.interactive-docs_header-nav
+                ul.list
+                    if docs_lang == 'ru'
+                        li.list_item: +link('./index_ru.html') К началу
+                        li.list_item: +link('./uu_ru.html') Обычное использование
+                            ul.list
+                                li.list_item: +link('./integration_ru.html') Зависимости
+                                li.list_item: +link('./blocks_ru.html') Блоки
+                                li.list_item: +link('./layouts_ru.html') Шаблоны
+                        li.list_item: +link('./au_ru.html') Продвинутое использование
+                             ul.list
+                                li.list_item: +link('./setting-dependencies_ru.html') Установка зависимостей
+                                li.list_item: +link('./running-gulp-tasks_ru.html') Запуск Gulp-задач
+                                li.list_item: +link('./working-with-the-project_ru.html') Работа с проектом
+                        li.list_item: +link('./changelog_ru.html') Changelog
+                    else
+                        li.list_item: +link('./index.html') Home
+                        li.list_item: +link('./uu.html') Usual Uses
+                            ul.list
+                                li.list_item: +link('./integration.html') Integration
+                                li.list_item: +link('./blocks.html') Blocks
+                                li.list_item: +link('./layouts.html') Layouts
+                        li.list_item: +link('./au.html') Advanced use
+                             ul.list
+                                li.list_item: +link('./setting-dependencies.html') Setting dependencies
+                                li.list_item: +link('./running-gulp-tasks.html') Running Gulp tasks
+                                li.list_item: +link('./working-with-the-project.html') Working with the project
+                        li.list_item: +link('./changelog.html') Changelog
+            .margin__top-auto
+                p.text
+                    +link('./index.html') EN
+                    |  \ 
+                    +link('./index_ru.html') RU
+        main.interactive-docs_main
+            block main

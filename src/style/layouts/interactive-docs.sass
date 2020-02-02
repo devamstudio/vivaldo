@@ -1,0 +1,36 @@
+.interactive-docs
+    display: grid
+    grid:
+        template:
+            columns: 300px 1fr
+            areas: 'header main'
+    .interactive-docs_header
+        grid-area: header
+        padding: 2rem
+        background: $color-gray__light
+        height: 100vh
+        position: sticky
+        top: 0
+        display: flex
+        flex-direction: column
+        .interactive-docs_header-nav
+            margin:
+                bottom: auto
+            & > .list
+                padding:
+                    left: 1rem
+                    
+    .interactive-docs_main
+        grid-area: main
+        padding: 2rem
+    // Globals
+    .text, .list
+        max-width: 80ch
+    .code
+        background: $color-gray__light
+        border-radius: 5px
+        padding: .5em
+        font-size: .9em
+        &.code__snippet
+            width: 100%
+            overflow-x: auto

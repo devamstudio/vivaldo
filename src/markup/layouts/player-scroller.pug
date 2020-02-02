@@ -56,22 +56,18 @@ block markup
 
     body.page
         header.header
-            +link("/")(class="logo" title=title)
+            +link("../")(class="logo" title=title)
                 include ../includes/logo
             +search()(class="header_search")
             .header_navigation
                 ul.navigation
-                    for nav in navigation.app
+                    for nav, index in navigation.app[0].subnavigation
                         li.navigation_item
-                            span= nav.caption
-                            ul.navigation_second-level
-                                for subnav in nav.subnavigation
-                                    li.navigation_item
-                                        +link(subnav.url)(class="navigation_item")= subnav.caption
+                            +link(nav.url)= nav.caption
             .header_user.margin__left-3
-                
-                +dropdown(['Settings', 'Sign out'])(list_class="dropdown_list__right")
+                +dropdown(navigation.app[1].subnavigation)(list_class="dropdown_list__right", object=true)
                     +user(users[0].thumb, users[0].name)
+                    +icon('rage','chevron-bottom')
         main.main
             block main
         footer.footer

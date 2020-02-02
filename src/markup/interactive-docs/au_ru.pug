@@ -1,0 +1,16 @@
+extends ../layouts/interactive-docs
+
+block prepend head
+    -var document_title = ': Продвинутое использование'
+    -var docs_lang = 'ru'
+
+block main
+    .container
+        +heading('h1')(class='heading__h2') Продвинутое использование
+        p.text В данном проекте мы использовали технологи:
+        ul.list
+            li.list_item Gulp — task-runner — менеджер, который собирает наш проект
+            li.list_item NPM — менеджер зависимостей
+            li.list_item SASS — препроцессор для сборки sass-стилей
+            li.list_item Pug — «препроцессор» для языка html
+        p.text Чтобы собирать проект так, как вам хочется, необходимо установить все зависимости. По умолчанию мы удалим все node зависимости, чтобы они не занимали места и запустить проект с настройками.

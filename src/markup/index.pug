@@ -1,22 +1,31 @@
+include ../blocks/heading/heading
+include ../blocks/field/field
+include ../blocks/link/link
+
 doctype html
 html(lang='en')
-	head
-		meta(charset="utf-8")
-		title= title
-		//- Decorative
-		meta(name="theme-color" content= color.primary)
-		//- Decorative END
-		meta( name="viewport" content="width=device-width, initial-scale=1")
-		link( rel="stylesheet" href="style.css")
-	body
-		header
-			h1.text__center= title
-		main
-			.container
-				.row
-					for layout in layouts
-						.cols__xs-12.cols__md-6.text__center
-							h2: a(href=layout.url)= layout.title
-							p= layout.description
-	link( rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto")
-	link(rel="stylesheet" href="//space.i-am.studio/font-icons-rage/releases/v1.0.1/css/font-rage.css")
+    head
+        meta(charset="utf-8")
+        title= title
+        //- Decorative
+        meta(name="theme-color" content= color.primary)
+        //- Decorative END
+        meta( name="viewport" content="width=device-width, initial-scale=1")
+        link( rel="stylesheet" href="style.css")
+        link( rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto")
+        link( rel="stylesheet" type="text/css" href="https://space.i-am.studio/font-icons-rage/releases/v1.0.1/css/font-rage.css")
+    body.layouts
+        header.layouts_header
+            h1.text__center= title
+        main
+            .layouts_list.padding__xx-1
+                for layout in layouts
+                    .layouts_list-item
+                        .layouts_list-item_image
+                            img.image.image__fluid(src=layout.image, alt='image')
+                        .layouts_list-item_description
+                            +heading('h2')
+                                +link(layout.url)= layout.title
+                            p= layout.description
+        footer.layouts_footer
+            a.link(href='./interactive-docs/') Interactive documentation

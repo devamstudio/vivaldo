@@ -1,8 +1,22 @@
-mixin field(tag)
-	- let randomNumber = Math.floor(Math.random() * 5000)
-	.field
-		if label
-			label(for='field'+randomNumber)
-		#{tag}.field_input(id='field'+randomNumber)&attributes(attributes)
-		if block
-			block
+mixin field(tag='input')
+    - let randomNumber = Math.floor(Math.random() * 5000)
+    if attributes.type == 'checkbox' || attributes.type == 'radio'
+        .field.field__row(class!=attributes.class)
+            #{tag}.field_input(id='field'+randomNumber, type!=attributes.type placeholder!=attributes.placeholder, value!=attributes.value)/
+            if attributes.label
+                label.field_label(for='field'+randomNumber)= attributes.label
+    else
+        if tag != 'textarea'
+            .field(class!=attributes.class)
+                if attributes.label
+                    label.field_label(for='field'+randomNumber)= attributes.label
+                #{tag}.field_input(id='field'+randomNumber, type!=attributes.type placeholder!=attributes.placeholder, value!=attributes.value)/
+                if block
+                    block
+        else
+            .field(class!=attributes.class)
+                if attributes.label
+                    label.field_label(for='field'+randomNumber)= attributes.label
+                #{tag}.field_input(id='field'+randomNumber, placeholder!=attributes.placeholder, value!=attributes.value)
+                if block
+                    block

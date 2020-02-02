@@ -1,0 +1,28 @@
+extends ../layouts/interactive-docs
+
+block prepend head
+    -var document_title = ': Changelog'
+
+block main
+    .container
+        +heading('h1')(class='heading__h2') Changelog
+        +heading('h2')(class='heading__h3') v.2.0
+        ul.list
+            
+        +heading('h2')(class='heading__h3') v.1.0.2
+        ul.list
+            li.list_item Design adds
+            li.list_item Rebuild comments design
+        +heading('h2')(class='heading__h3') v.1.0.1
+        ul.list
+            li.list_item Fixed search string bug
+            li.list_item Images replaced by placeholders
+            li.list_item Fixed breakpoints in media queries
+            li.list_item Added the formation of style and style.min for cascading styles
+        +heading('h2')(class='heading__h3') v.1.0.0
+        ul.list
+            li.list_item Template was created
+            li.list_item Created elements for playing tracks
+            li.list_item Created lists of tracks, events
+            li.list_item Created custom hero screen
+            li.list_item Connected to Google Maps Api

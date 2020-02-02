@@ -1,0 +1,390 @@
+extends ../layouts/interactive-docs
+
+block prepend head
+    -var document_title = ': Блоки'
+    -var docs_lang = 'ru'
+
+block main
+    .container
+        +heading('h1')(class='heading__h2') Блоки
+        p.text
+            +link('#album') Альбом
+            |  \ 
+            +link('#album-cover') Обложка альбома
+            |  \ 
+            +link('#article') Статья
+            |  \ 
+            +link('#artist-card') Карточка исполнителя
+            |  \ 
+            +link('#comment') Комментарии
+            |  \ 
+            +link('#dropdown') Выпадающий список
+            |  \ 
+            +link('#field') Поля ввода
+            |  \ 
+            +link('#heading') Заголовок
+            |  \ 
+            +link('#icon') Иконки
+            |  \ 
+            +link('#image') Изображение
+            |  \ 
+            +link('#link') Ссылка
+            |  \ 
+            +link('#list') Список
+            |  \ 
+            +link('#nav-trigger') Переключитель навигации
+            |  \ 
+            +link('#news') Новости
+            |  \ 
+            +link('#player') Плеер
+            |  \ 
+            +link('#tag') Теги
+            |  \ 
+            +link('#track') Трек
+            |  \ 
+            +link('#user') Юзверь
+        
+        
+        +heading('h2')(class='heading__h3' id='album') Альбом
+        .row
+            .cols__lg-9
+                p.text В данном разделе есть как альбомы, так и их обертка для списка.
+                p.text Для того, чтобы использовать альбом необходимо использовать следующий код для сборки:
+                pre.code.code__snippet
+                    | &lt;div class="album"&gt;
+                    |     &lt;div class="album_control album_control__left"&gt;
+                    |         &lt;i class="icon rage rage-fw rage-heart"&gt;&lt;/i&gt;
+                    |     &lt;/div&gt;
+                    |     &lt;div class="album_control album_control__right"&gt;
+                    |         &lt;span class="dropdown"&gt;
+                    |             &lt;span class="dropdown_control"&gt;&lt;i class="icon rage rage-fw rage-dots"&gt;&lt;/i&gt;&lt;/span&gt;
+                    |             &lt;span class="dropdown_list dropdown_list__right"&gt;
+                    |                 &lt;a class="link dropdown_list-item" href="./index.html"&gt;Add&lt;/a&gt;
+                    |                 &lt;a class="link dropdown_list-item" href="./index.html"&gt;Remove&lt;/a&gt;
+                    |             &lt;/span&gt;
+                    |         &lt;/span&gt;
+                    |     &lt;/div&gt;
+                    |     &lt;a class="link album_cover" href="./album.html"&gt;
+                    |         &lt;img class="image album_cover-image" src="./images/album-1__all.jpg" alt=""&gt;
+                    |     &lt;/a&gt;
+                    |     &lt;a class="link album_title" href="./album.html"&gt;Matras&lt;/a&gt;
+                    |     &lt;a class="link album_artist" href="./artist.html"&gt;Link in Dark&lt;/a&gt;
+                    | &lt;/div&gt;
+                p.text Тут есть 1 уровень обертки, это класс #[code.code .album] все элементы находятся внутри. В блоке альбома есть несколько элементов:
+                ul.list
+                    li.list_item Контролы #[code.code .album_control]. Их может быть 2 штуки: слева #[code.code .album_control__left] и справа #[code.code .album_control__right].
+                    li.list_item Обложка #[code.code .album_cover]. Изображение должно быть квадратным из-за анимации скругления.
+                    li.list_item Название #[code.code .album_title].
+                    li.list_item Исполнитель #[code.code .album_artist].
+                p.text Для того, чтобы все элменты правильно выстроились в список альбомов их необходимо обернуть в класс #[code.code .albums-list].
+            .cols__lg-3
+                +album(artists[0].albums[0].cover, artists[0].albums[0].title, artists[0].title)(style='max-width:250px;')
+        
+        +heading('h2')(class='heading__h3' id='album-cover') Обложка альбома
+        .row
+            .cols__lg-5
+                .album-cover.album-cover__disc
+                    img.image.image__fluid(src=artists[0].albums[0].cover)
+            .cols__lg-7
+                p.text Элемент, который не имеет почти ничего общего с предыдушим, за исключением названия. Его можно использовать на странице альбома, например, или в других местах для декоративных целей.
+                p.text Для его использования достаточно обернуть картинку:
+                pre.code.code__snippet
+                    | &lt;div class="album-cover album-cover__disc"&gt;
+                    |     &lt;img class="image image__fluid" src="./images/album-1__all.jpg"&gt;
+                    | &lt;/div&gt;
+                p.text Рядом с изображением появиться псевдоэлемент, изображающий виниловый диск.
+                .notification.notification__warning
+                    p.text Использовать необходимо исключительно квадратный изображения. Так как размер и форма псевдоэлемента (винилового диска) напрямую зависит от изображения.
+
+        +heading('h2')(class='heading__h3' id='article') Статья
+        p.text Это обертка, которую следует использовать для вывода массива текста или того же массива пользовательского ввода. В него уже зашиты заголовки и текста, поэтому нет необходимости каждый заголовок оборачивать в тег с классом #[code.code .heading], вместо этого можно просто использовать #[code.code &lt;h1&gt;...].
+        .row: .cols__lg-8
+            pre.code.code__snippet
+                | &lt;article class='article'&gt;
+                |     &lt;h1&gt;Hello world&lt;/h1&gt;
+                |     &lt;p&gt;Рукописи не горят&lt;/p&gt;
+                | &lt;/article&gt;
+        p.text Использовать тег article не обязательно для этого. Точно также можно использовать, скажем, в описании товара, просто, чтобы не добавлять код.
+        .notification.margin__bottom-1
+            p.text Попытка использования этого класса не к месту, например кинуть его в body, чтобы не писать руками каждый раз заголовок, может обернуться против вас. В данном случае происходит инкапсуляция, возможность закрытого типа.
+        p.text Точно также можно использовать вместе с, непосредственно, заголовками.
+
+        +heading('h2')(class='heading__h3' id='artist-card') Карточка исполнителя
+        .row
+            .cols__lg-9
+                p.text Данный блок также, как и альбом, имеет саму карточку и класс-обертку для списка исполнителей.
+                p.text Для того, чтобы вывести карточку исполнителя достаточно всего немного кода:
+                pre.code.code__snippet
+                    | &lt;a class="link artist-card" href="./artist.html" style="background-image:url(image);"&gt;
+                    |     &lt;span class="heading artist-card_title"&gt;Maverik Bowee&lt;/span&gt;
+                    | &lt;/a&gt;
+                p.text А для списка обернуть в #[code.code .artist-cards-list], а самой карточке присвоить #[code.code .artist-cards-list_item].
+                p.text Вне списка карточки имеют минимальную высоту небольшой, а в списке работают немного другие правила.
+            .cols__lg-3
+                +artist-card(artists[1].image, artists[1].title)
+        
+        +heading('h2')(class='heading__h3' id='comment') Комментарии
+        .row
+            .cols__lg-4
+                p.text Вот так они выводяться.
+            .cols__lg-8
+                .comments-list
+                    .comment
+                        .comment_header
+                            +user(users[1].thumb, users[1].name)
+                            small: em.date 26/08/2019
+                        .comment_body
+                            p.text Комментарии можно использовать по-отдельности, но разумнее прямо в коде.
+                        .comment_actions
+                            +link('#') Reply
+                            +link('#') Thumbs up
+                    .comment
+                        .comment_header
+                            +user(users[0].thumb, users[0].name)
+                            small: em.date 26/08/2019
+                        .comment_body
+                            pre.code.code__snippet
+                                | &lt;div class="comment"&gt;
+                                |     &lt;div class="comment_header"&gt;
+                                |         &lt;span class="user"&gt;
+                                |             &lt;span class="user_thumb" style="background-image:url(image)"&gt;&lt;/span&gt;
+                                |             &lt;span class="user_name"&gt;Vasya Vasutkin&lt;/span&gt;
+                                |         &lt;/span&gt;
+                                |         &lt;small&gt;&lt;em class="date"&gt;26/08/2019&lt;/em&gt;&lt;/small&gt;
+                                |     &lt;/div&gt;
+                                |     &lt;div class="comment_body"&gt;
+                                |         &lt;p class="text"&gt;Hi&lt;/p&gt;
+                                |     &lt;/div&gt;
+                                |     &lt;div class="comment_actions"&gt;
+                                |         &lt;a class="link" href="#"&gt;Reply&lt;/a&gt;
+                                |         &lt;a class="link" href="#"&gt;Thumbs up&lt;/a&gt;
+                                |     &lt;/div&gt;
+                                | &lt;/div&gt;
+                        .comment_actions
+                            +link('#') Reply
+                            +link('#') Thumbs up
+
+        +heading('h2')(class='heading__h3' id='dropdown') Выпадающий список (dropdown)
+        p.text Выпадающий список может быть простым: иконка, текст или более сложной, например блок юзера:
+        pre.code.code__snippet
+            | &lt;span class="dropdown"&gt;
+            |     &lt;span class="dropdown_control"&gt;
+            |         &lt;span class="user"&gt;
+            |             &lt;span class="user_thumb" style="background-image:url(image)"&gt;&lt;/span&gt;
+            |             &lt;span class="user_name"&gt;Vasya Vasutkin&lt;/span&gt;
+            |         &lt;/span&gt;
+            |         &lt;i class="icon rage rage-fw rage-chevron-bottom"&gt;&lt;/i&gt;
+            |     &lt;/span&gt;
+            |     &lt;span class="dropdown_list dropdown_list__right"&gt;
+            |         &lt;a class="link dropdown_list-item" href="./favorite.html"&gt;Favorite&lt;/a&gt;
+            |         &lt;a class="link dropdown_list-item" href="./playlists.html"&gt;Playlists&lt;/a&gt;
+            |     &lt;/span&gt;
+            | &lt;/span&gt;
+        p.text Выпадающий список построен на текстовом теге span для того, чтобы можно было использовать его в таких тегах, как к примеру #[code.code &lt;h2&gt;].
+
+        +heading('h2')(class='heading__h3' id='field') Поля ввода
+        p.text Ничего сложного, просто биз... поля для ввода данных. Тут предусмотрено использование без фидбека, т.е. без классов ошибок.
+        p.text Предусмотрено несколько вариантов использования:
+        ul.list
+            li.list_item Обычное поле типа text\password\email и другие однострочные.
+            li.list_item Форма с чекбоксами, переключателями
+            li.list_item Строчные формы (можно выстроить линию)
+            li.list_item Горизонтальное поле ввода.
+        p.text А также с label\без и подстрочником.
+        p.text Далее в примерах:
+        
+        +heading('h3') Обычное использование
+        .row.align-items__center
+            .cols__lg-6
+                pre.code.code__snippet
+                    | &lt;div class='field'&gt;
+                    |     &lt;label class='field_label' for='1'&gt;Hi&lt;/label&gt;
+                    |     &lt;input class='field_input' id='1'&gt;
+                    |     &lt;span class='field_helper'&gt;Вспомогательная информация, возможно информация об ошибке&lt;/span&gt;
+                    | &lt;/div&gt;
+            .cols__lg-6
+                .field
+                    label.field_label Hi
+                    input.field_input(type='text')
+                    span.field_helper Вспомогательная информация, возможно информация об ошибке
+        +heading('h3') Textarea
+        .row.align-items__center
+            .cols__lg-6
+                pre.code.code__snippet
+                    | &lt;div class='field'&gt;
+                    |     &lt;label class='field_label' for='1'&gt;Hi&lt;/label&gt;
+                    |     &lt;textarea class='field_input' id='1'&gt;&lt;/textarea&gt;
+                    | &lt;/div&gt;
+            .cols__lg-6
+                .field
+                    label.field_label Label
+                    textarea.field_input
+        +heading('h3') Checkbox
+        .row.align-items__center
+            .cols__lg-6
+                pre.code.code__snippet
+                    | &lt;div class='field field__row'&gt;
+                    |     &lt;input type='checkbox' class='field_input' id='1'&gt;
+                    |     &lt;label class='field_label' for='1'&gt;Hi&lt;/label&gt;
+                    | &lt;/div&gt;
+            .cols__lg-6
+                .field.field__row
+                    input.field_input(type='checkbox')
+                    label.field_label Select me
+        +heading('h3') Row
+        .row.align-items__center
+            .cols__lg-6
+                pre.code.code__snippet
+                    | &lt;div class='field field__row'&gt;
+                    |     &lt;label class='field_label' for='1'&gt;Hi&lt;/label&gt;
+                    |     &lt;input type='text' class='field_input' id='1'&gt;
+                    | &lt;/div&gt;
+            .cols__lg-6
+                .field.field__row
+                    label.field_label Padam
+                    input.field_input(type='text')
+        +heading('h3') Inline
+        .row.align-items__center
+            .cols__lg-6
+                pre.code.code__snippet
+                    | &lt;div class='field field__inline'&gt;
+                    |     &lt;input type='checkbox' class='field_input' id='1'&gt;
+                    |     &lt;label class='field_label' for='1'&gt;Hi&lt;/label&gt;
+                    | &lt;/div&gt;
+                    | &lt;div class='field field__inline'&gt;
+                    |     &lt;input type='checkbox' class='field_input' id='1'&gt;
+                    |     &lt;label class='field_label' for='1'&gt;Hi&lt;/label&gt;
+                    | &lt;/div&gt;
+            .cols__lg-6
+                .field.field__inline
+                    input.field_input(type='checkbox')
+                    label.field_label Select me
+                .field.field__inline
+                    input.field_input(type='checkbox')
+                    label.field_label Select me
+
+        +heading('h2')(class='heading__h3' id='heading') Заголовок
+        p.text Все очень просто. Заголовок = заголовок. Не заголовок = заголовок. Это маленький блок, которому по сути не важно, какой элемент вы используете, хоть блочный элемент.
+        p.text Также можно сделать заголовок h5 таким же на вид, как h1. Просто добавив ему класс. Это значит, что нет зависимости от тега заголовка, почти. Его отступы не переписываются.
+
+        +heading('h2')(class='heading__h3' id='icon') Иконки
+        p.text В проекте использованы только шрифтовое решение иконок Rage (нашего производства), следовательно, дополнительных стилей на данный момент нет.
+
+        +heading('h2')(class='heading__h3' id='image') Изображение
+        p.text В базовой комплектации сброшены стили изображений, чтобы они не создавали отступы. Но с помощью классов #[code.code .image.image__fit] или #[code.code .image.image__fluid] можно еще заставить их вписываться в область.
+
+        +heading('h2')(class='heading__h3' id='link') Ссылка
+        p.text Ссылка также, как и заголовок не привязан к тегу, но имеет завязки на его свойства. Это значит, что можно добавить класс #[code.code .link] к тегу span и выглядеть оно будет, как ссылка. Но мы все же не рекомендуем.
+
+        +heading('h2')(class='heading__h3' id='list') Список
+        p.text Список базируется на теге ul\ol и родителю присваивается класс #[code.code .list], а дочерним элементам списка класс #[code.code .list_item].
+
+        +heading('h2')(class='heading__h3' id='nav-trigger') Переключитель навигации
+        p.text Данный блок содержит в себе только JS-инструкцию по тому, как открывать и закрывать основную навигацию.
+
+        +heading('h2')(class='heading__h3' id='news') Новости
+        p.text Для визуализации новости 
+        .row
+            .cols__lg-9
+                p.text Для визуализации новости следует использовать следующий код:
+                pre.code.code__snippet
+                    | &lt;div class="news-item"&gt;
+                    |     &lt;a class="link news-item_cover" href="./news-item.html" style="background-image:url(image);"&gt;&lt;/a&gt;
+                    |     &lt;span class="news-item_date"&gt;25/05/2020&lt;/span&gt;
+                    |     &lt;a class="link news-item_title" href="#"&gt;A brief overview of new products in music.&lt;/a&gt;
+                    |     &lt;div class="news-item_author"&gt;
+                    |         &lt;span class="user"&gt;
+                    |             &lt;span class="user_thumb" style="background-image:url(image)"&gt;&lt;/span&gt;
+                    |             &lt;span class="user_name"&gt;Torin Duboshit&lt;/span&gt;
+                    |         &lt;/span&gt;
+                    |     &lt;/div&gt;
+                    | &lt;/div&gt;
+            .cols__lg-3
+                +news-item(news[0].cover, news[0].date, news[0].title, users[1])
+
+        +heading('h2')(class='heading__h3' id='player') Плеер
+        p.text Плеер имеет сложную конструкцию и выглядит так:
+        .padding__xx-4.padding__yy-3.block__background-light
+            +player(tracks[3])
+        pre.code.code__snippet
+            | &lt;div class="player"&gt;
+            |     &lt;div class="player_track-cover" style="background-image:url(image"&gt;&lt;/div&gt;
+            |     &lt;div class="player_controls margin__xx-2 align-items__center" hidden=""&gt;
+            |         &lt;span class="player_control"&gt;
+            |             &lt;i class="icon rage rage-fw rage-play-back"&gt;&lt;/i&gt;
+            |         &lt;/span&gt;
+            |         &lt;span class="player_control player_control__play-pause"&gt;
+            |             &lt;i class="icon rage rage-fw rage-play"&gt;&lt;/i&gt;
+            |         &lt;/span&gt;
+            |         &lt;span class="player_control"&gt;&lt;i class="icon rage rage-fw rage-play-forward"&gt;&lt;/i&gt;&lt;/span&gt;
+            |     &lt;/div&gt;
+            |     &lt;div class="player_meta"&gt;
+            |         &lt;span class="player_track-title"&gt;Hello world&lt;/span&gt;
+            |         &lt;a class="link player_track-artist" href="#"&gt;Link in Dark&lt;/a&gt;
+            |     &lt;/div&gt;
+            |     &lt;div class="player_duration"&gt;2:55&lt;/div&gt;
+            |     &lt;div class="player_additional-controls margin__left-3" hidden=""&gt;
+            |         &lt;span class="player_control"&gt;&lt;i class="icon rage rage-fw rage-mix"&gt;&lt;/i&gt;&lt;/span&gt;
+            |         &lt;span class="player_control"&gt;&lt;i class="icon rage rage-fw rage-loop"&gt;&lt;/i&gt;&lt;/span&gt;
+            |     &lt;/div&gt;
+            | &lt;/div&gt;
+        p.text В данном примере присутствует полный набор иконок из дизайна. Часть можно убрать, что-то добавить.
+        .notification
+            p.text Акцентируем внимание, данный плеер предназначен в первую очередь для полноэкранного разрешения, и описаны появления элементов от мобильного разрешения и до пк с учетом размера полного экрана.
+
+        +heading('h2')(class='heading__h3' id='tag') Теги
+        .row
+            .cols__lg-3
+                .tags-list
+                    +tag('Hello')(class='tags-list_item')
+                    +tag('World')(class='tags-list_item')
+                    +tag('Who')(class='tags-list_item')
+                    +tag('Where')(class='tags-list_item')
+                    +tag('ZZ')(class='tags-list_item')
+                    +tag('Bottom')(class='tags-list_item')
+            .cols__lg-6
+                p.text Куда в музыке и новостях без тегов? Никуда. А для качественного отображения для них есть еще и обертка #[code.code .tags-list], а чтобы элементы работали, как надо, необходимо добавить им класс #[code.code .tags-list_item].
+                p.text Впрочем их можно использовать и без обертки, по-отдельности или задавая уникальыне правила. Чтобы, к примеру, исключить отступ списка вниз.
+                p.text Одиночный тег может быть как span, так и a, достаточно присвоить ему класс #[code.code .tag].
+
+        +heading('h2')(class='heading__h3' id='track') Трек
+        .row
+            .cols__lg-7
+                p.text Основа данной сборки.
+                p.text Сам по себе трек не имеет ничего сложного, название, обложка и время. Можно добавить функционал типа выпадающих списков.
+                pre.code.code__snippet
+                    | &lt;div class="track"&gt;
+                    |     &lt;img class="image track_cover" src="./images/album-1__all.jpg" alt=""&gt;
+                    |     &lt;div class="track_meta"&gt;
+                    |         &lt;span class="track_title"&gt;Poster&lt;/span&gt;
+                    |         &lt;a class="link track_artist" href="./artist.html"&gt;Link in Dark&lt;/a&gt;
+                    |     &lt;/div&gt;
+                    |     &lt;div class="track_adds"&gt;2:42&lt;/div&gt;
+                    | &lt;/div&gt;
+                p.text Если использовать их одиночными, как на примере справа, то необходимо добавлять отступы, например #[code.code .margin__bottom-1].
+            .cols__lg-5
+                +track(tracks[6])(class='margin__bottom-1')
+                +track(tracks[4])(class='margin__bottom-1')
+                .track.track__played
+                    +image(tracks[10].cover)(class="track_cover")
+                    .track_meta
+                        span.track_title= tracks[10].title
+                        +link('#')(class='track_artist')= tracks[10].artist
+                    .track_adds= tracks[10].duration
+                .notification.notification__ok
+                    p.text: small В треках есть фича. Они могут крутиться, как активное состояние. Надо добавить класс #[code.code .track__played] к #[code.code .track].
+        p.text Но вообще для таких случаев у нас есть список треков #[code.code .tracks-list]. Он, как и все остальные списки, требует, чтобы у вложенных элементов были дополнительные от него классы #[code.code .tracks-list_item].
+        p.text В списке все треки нумеруются автоматически:
+        +tracks-list(tracks, 5)
+        .notification.notification__warning
+            p.text Список имеет отступы. Будьте аккуратны с ними.
+
+        +heading('h2')(class='heading__h3' id='user') Юзверь
+        p.text Изображение и имя. Вот и все, собственно, внимание код:
+        pre.code.code__snippet
+            | &lt;span class="user"&gt;
+            |     &lt;span class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"&gt;&lt;/span&gt;
+            |     &lt;span class="user_name"&gt;Torin Duboshit&lt;/span&gt;
+            | &lt;/span&gt;
+        .notification.notification__alert
+            p.text За использование неквадратных аватарок ментально награждаю минусом в 10к к карме.

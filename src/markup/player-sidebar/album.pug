@@ -1,0 +1,27 @@
+extends ../layouts/player-sidebar
+
+block prepend head
+    -var document_title = ': Album'
+
+block main
+    .container
+        .row
+            .cols__md-6.cols__lg-4.margin__bottom-2
+                .album-cover.album-cover__disc
+                    +image(artists[0].albums[0].cover)(class='image__fluid')
+                +heading('h1')
+                    +icon('rage', 'album')
+                    |  
+                    = artists[0].albums[0].title
+                
+                p.text
+                    em 15 track
+                    |  / 
+                    em 1952 year
+                p.text
+                    +link("./artist.html")(class="album_artist")
+                        = artists[0].title
+                p.text: small Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean.
+                a.button.button__primary Add to favorite
+            .cols__md-6.cols__lg-8
+                +tracks-list(tracks, 8)

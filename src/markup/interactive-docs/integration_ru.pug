@@ -1,0 +1,246 @@
+extends ../layouts/interactive-docs
+
+block prepend head
+    -var document_title = ': Интеграции'
+    -var docs_lang = 'ru'
+
+block main
+    .container
+        +heading('h1')(class='heading__h2') Интеграции
+        p.text
+            +link('#irage') Icons Rage
+            |  \ 
+            +link('#fakit') FA-Kit
+        +heading('h2')(class='heading__h3' id='irage') Icons Rage
+        p.text Как мы уже указали выше, этот набор — созданный нами для этого проекта. Хотя и начинал он создаваться задолго до этого. Данный набор содержит в себе 51 иконку.
+        
+        +heading('h3')(class='heading__h4') Использование шрифтов
+        p.text Чтобы использовать шрифты, вам необходимо подключить его к документу html.
+        p.text Затем с помощью тега &lt;i/&gt; вы сможете вставлять на страницу иконки. Достаточно указать классы:
+        p.text 
+            code.code &lt;i class="rage rage-[icon-name]'&gt;
+        p.text Обязательность тега i обусловлена тем, что это уже канонический способ использования шрифта и мы таким образом исключили возможность конфликтов с символами svg, которые также имеют класс .rage.
+        p.text Помимо этого вы можете использовать следующие классы:
+        ul.list
+            li.list_item rage-fw — Иконки будут фиксированной ширины
+            li.list_item rage-lg — Для увеличения иконки
+            li.list_item rage-2x — Для увеличения иконки в 2 раза
+            li.list_item rage-3x — Для увеличения иконки в 3 раза
+            li.list_item rage-4x — Для увеличения иконки в 4 раза
+            li.list_item rage-5x — Для увеличения иконки в 5 раз
+        +heading('h3')(class='heading__h4') Исчерпывающий список иконок
+        ul.list(style='columns:12em;')
+            li.list_item chevron-right
+            li.list_item chevron-left
+            li.list_item chevron-top
+            li.list_item chevron-bottom
+            li.list_item close
+            li.list_item burger
+            li.list_item arrow-right
+            li.list_item arrow-left
+            li.list_item arrow-top
+            li.list_item arrow-bottom
+            li.list_item dots
+            li.list_item checkboxes
+            li.list_item list
+            li.list_item maximize
+            li.list_item minimize
+            li.list_item video
+            li.list_item image
+            li.list_item heart
+            li.list_item heart-filled
+            li.list_item print
+            li.list_item envelope
+            li.list_item locked
+            li.list_item unlocked
+            li.list_item search
+            li.list_item download
+            li.list_item upload
+            li.list_item map-point
+            li.list_item user
+            li.list_item group
+            li.list_item settings
+            li.list_item dashboard
+            li.list_item compare
+            li.list_item busket-truck
+            li.list_item mobile
+            li.list_item play
+            li.list_item pause
+            li.list_item play-forward
+            li.list_item play-back
+            li.list_item mix
+            li.list_item loop
+            li.list_item volume
+            li.list_item soundtrack
+            li.list_item album
+            li.list_item ticket
+            li.list_item section
+            li.list_item folder
+            li.list_item book
+            li.list_item notes
+            li.list_item code
+            li.list_item branch
+            li.list_item hand-watches
+
+
+
+
+
+
+        +heading('h2')(class='heading__h3' id='fakit') FA-Kit
+        p.text
+            +link('#fakit_variables') Переменные
+            |  \ 
+            +link('#fakit_grid') Сетка
+            |  \ 
+            +link('#fakit_blocks') Блоки
+            |  \ 
+            +link('#fakit_breadcrumbs') Хлебные крошки
+            |  \ 
+            +link('#fakit_buttons') Buttons
+            |  \ 
+            +link('#fakit_helpers') Helpers
+            |  \ 
+            +link('#fakit_media') Media
+            |  \ 
+            +link('#fakit_notifications') Уведомления
+            |  \ 
+            +link('#fakit_pagination') Пагинация
+            |  \ 
+            +link('#fakit_utilites') Утилиты
+
+        p.text Мы иногда называем этот проект фреймворком, но на самом деле это просто библиотека\набор инструкций для стилей, который уже упрощают жизнь нам и должны помочь вам.
+        p.text Общий принцип построения должен быть вам знаком по bootstrap, но в нашем случае идет существенное переосмысление принципов подхода и реализации работы. Не хотим сильно хвастаться, но мы начали использовать flex до прихода его в bootstrap в последней версии.
+        .notification.notification__warning.margin__bottom-1
+            p.text Обращаем ваше внимание, данный фреймворк лишен js-файлов, все интеграции мы реализуем в самом проекте. Но все может изменится в будущем. Отслеживайте проект тут. А теперь об основном.
+        p.text В данном фреймворке мы использовали подход, на который вдохновил нас БЭМ:
+        ul.list
+            li.list_item Блок
+            li.list_item Элемент
+            li.list_item Модификатор
+        p.text В классах это выражено таким образом:
+        ul.list
+            li.list_item #[code.code .block] — условный блок
+            li.list_item #[code.code .block_link] — ссылка внутри этого блока
+            li.list_item #[code.code .block_link__hovered] — состояние ссылки
+        p.text Для того, чтобы обеспечить максимальную неконфликтность, все блоки оснащены префиксом .g-, и выглядит это уже так:
+        p.text #[code.code .g-block__background-light] — блок с таким самостоятельным классом будет отображаться со светло-серым фоном.
+        .notification.notification__warning.margin__bottom-1 
+            p.text Обращаем ваше внимание: мы почти не используем сокращений в построении классов. Это утяжеляет визуально перечень классов, но становится легче понять, что же происходит или должно происходить с элементом непосредственно на странице html. 
+        p.text В данном фреймворке представлены следующие основные секции:
+        
+        +heading('h3')(class='heading__h4' id='fak_variables') Переменные
+        p.text Ниже перечислены основные переменные, которые будут в дальнейшем описаны в классах библиотеки. За подробным списком передвигайтесь в секцию для продвинутого использования.
+        .row
+            .cols__xs-12.cols__xl-4
+                +heading('h4')(class='heading__h5' id='fak_colors') Цвета
+                p.text Цветов несколько, вот они:
+                ul.list
+                    li.list_item Primary — синий
+                    li.list_item Secondary — оранжевый
+                    li.list_item Alert — красный
+                    li.list_item Warning — оранжевый
+                    li.list_item Ok — зеленый
+                    li.list_item Black — черный
+                    li.list_item White —  белый
+                    li.list_item Light — светло-серый
+                    li.list_item Dark  — темно-серый
+            .cols__xs-12.cols__xl-4
+                +heading('h4')(class='heading__h5' id='fak_containers') Размеры контейнера
+                ul.list
+                    li.list_item xs: 100%
+                    li.list_item sm: 100%
+                    li.list_item md: 1000px
+                    li.list_item lg: 1200px
+            .cols__xs-12.cols__xl-4
+                +heading('h4')(class='heading__h5' id='fak_media') Ограничения переходов (медиазапросы)
+                ul.list
+                    li.list_item xs: 500px
+                    li.list_item sm: 900px
+                    li.list_item md: 1024px
+                    li.list_item lg: 1220px
+                    li.list_item xl: от 1220px
+
+        +heading('h3')(class='heading__h4' id='fak_grid') Сетка
+        p.text Это, пожалуй, самое главное, ради чего создавалась библиотека, позволяет манипулировать сеткой на странице. К слову, позволяет это делать проще, чем в бутстрап, от чего большой плюс в нашу карму.
+        p.text Классы оберток, которые тут присутствуют:
+        ul.list
+            li.list_item container — привычный нам контейнер, который руководствуется правилами размером в соответствии с размерами контейнера.
+                ul.list
+                    li.list_item #[code.code container__wide] — если применен этот класс, то контейнер растянется на всю ширину.
+            li.list_item #[code.code row] — строка для построения сетки.
+            li.list_item #[code.code column] — неожиданный элемент, сделан как и g-row, но для колонки.
+        p.text Классы построения сетки формируются следующим образом:
+        p.text #[code.code .cols__&#91;media&#93;-&#91;cols&#93;], где media — это медиазапросы типа xs, а cols — кол-вол колонок, или строк. Всего их может быть 12 (легко изменяется на продвинутом уровне.)
+
+        +heading('h3')(class='heading__h4' id='fak_blocks') Блоки
+        p.text В данной секции существует 1 класс с модификаторами #[code.code .block__background-color]. В качестве цвета вы можете использовать название переменной цвета, следующим образом:
+        p.text #[code.code .block__backgound-ok] — цвет фона будет зеленым.
+
+        +heading('h3')(class='heading__h4' id='fakit_breadcrumbs') Хлебные крошки
+        p.text Данный класс представлен названием #[code.code .breadcrumbs] и применяется к обложке списка, например тегу nav. Внутри него создается список ul, где в теги ссылок <a></a> вставляется символ стрелки →. 
+        p.text Пример использования в коде:
+        pre.code.code__snippet
+            | &lt;nav class="breadcrumbs">
+            |     &lt;ul>
+            |         &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+            |         &lt;li>&lt;span>Artist&lt;/span>&lt;/li>
+            |     &lt;/ul>
+            | &lt;/nav>
+
+        +heading('h3')(class='heading__h4' id='fakit_buttons') Кнопки
+        p.text Основной класс для создания кнопки — #[code.code .button]. Но, чтобы добавить к ней дизайн необходимо указать ее стиль, например #[code.code .button__primary] — тогда кнопка станет синей с белым текстом на ней (на примере справа). Или #[code.code .button__white] (на примере слева). 
+        p.text Код тогда будет выглядеть следующим образом:
+        pre.code.code__snippet
+            | &lt;a class="button button__white margin__right-1" href="#">
+            |     &lt;svg class="rage margin__right-1">
+            |         &lt;use xlink:href="#rage-mix">&lt;/use>
+            |     &lt;/svg>
+            |     &lt;span>Mix&lt;/span>
+            | &lt;/a>
+        p.text Также присутствует класс .button__disabled — он делает кнопку визуально недоступной для пользователя. Отлично работает в паре c html-свойством disabled.
+
+        +heading('h3')(class='heading__h4' id='fakit_helpers') Helpers
+        p.text Тут представлены классы:
+        ul.list
+            li.list_item hidden__[media]
+                ul.list
+                    li.list_item hidden__[media]-up
+                    li.list_item hidden__[media]-down
+            li.list_item g-visible__[media]
+                ul.list
+                    li.list_item visible__[media]-up
+                    li.list_item visible__[media]-down
+        p.text Вместо media подставьте необходимый вам размер. И тогда сможете скрывать и отображать элементы на странице. Стили класса visible находятся ниже, чем hidden, поэтому у них приоритет больше.
+
+        +heading('h3')(class='heading__h4' id='fakit_media') Media
+        p.text На данный момент присутствует только image с доп-классом #[code.code image__fluid], который ограничивает изображение по ширине внутри контейнера.
+
+        +heading('h3')(class='heading__h4' id='fakit_notifications') Уведомления
+        p.text У них основной класс .notification, у которого следующие модификаторы:
+        ul.list
+            li.list_item #[code.code .notification__top] — граница обводки будет сверху
+            li.list_item #[code.code .notification__left] — или снизу
+            li.list_item #[code.code .notification__alert] — ее цвет будет красный
+            li.list_item #[code.code .notification__warning] — оранжевый
+            li.list_item #[code.code .notification__ok] — или зеленый
+        p.text В это время у самого блока белый фон, тень и предусмотренные отступы внутрь и наружу.
+
+        +heading('h3')(class='heading__h4' id='fakit_pagination') Пагинация
+        p.text #[code.code .pagination] — обертка, которая обнуляет стили списка (ul или ol).
+        p.text #[code.code .pagination__center] — позволяет центрировать на странице список пагинации
+        p.text Элемент #[code.code .pagination_item] имеет границу, состояние #[code.code .pagination__active] и описание вложенной ссылки (item должен быть применен к элементу списка li).
+
+        +heading('h3')(class='heading__h4' id='fakit_utilites') Утилиты
+        p.text Блок, в котором указаны значения отступов, строится по этому принципу:
+        ul.list
+            li.list_item .[type]__[direction]-[offset-size]
+            li.list_item .[type]__[media]-[direction]-[offset-size]
+        p.text Где:
+        p.text type — margin или padding
+        p.text media — медиазапрос
+        p.text direction — направление (top, bottom, left, right, xx [в обе стороны по оси X], yy[в обе стороны по оси Y])
+        p.text Для отступа во все стороны мы рекомендуем использовать следующую конструкцию:
+        pre.code.code__snippet
+            | &lt;a class="margin__xx-5 margin__yy-5">
+            | &lt;/a>

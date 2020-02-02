@@ -1,35 +1,35 @@
 extends ../layouts/player-scroller
 
 block prepend head
-	-var document_title = ': Home'
+    -var document_title = ': Home'
 
 block main
-	.container
-		.row
-			.cols__xs-12.cols__xl-7
-				// Artists list
-				+heading('h2')(class='heading__uppercase margin__bottom-0')
-					| Artists
-					+dropdown(['Add', 'Remove'])(icon={type:'rage',value:'dots'})
-				+artist-cards-list(artists, 4)
-			.cols__xs-12.cols__xl-5
-				// Tracks list
-				+heading('h2')(class='heading__uppercase margin__bottom-0') Tracks list
-				+tracks-list(tracks, 6)
-				// Tags list
-				+heading('h2')(class='heading__uppercase margin__bottom-0') All tags
-				- ganres_array = Array.from(ganres)
-				+tags-list(ganres_array)
+    .container
+        .row
+            .cols__xs-12.cols__xl-7
+                // Artists list
+                +heading('h2')(class='heading__uppercase margin__bottom-0')
+                    | Artists
+                    +dropdown(['Add', 'Remove'])(icon={type:'rage',value:'dots'})
+                +artist-cards-list(artists, 4)
+            .cols__xs-12.cols__xl-5
+                // Tracks list
+                +heading('h2')(class='heading__uppercase margin__bottom-0') Tracks list
+                +tracks-list(tracks, 6)
+                // Tags list
+                +heading('h2')(class='heading__uppercase margin__bottom-0') All tags
+                - ganres_array = Array.from(ganres)
+                +tags-list(ganres_array)
 
-		// Albums list
-		+heading('h2')(class='heading__uppercase margin__bottom-0') Actual albums
-		+albums-list(albums, 10)
+        // Albums list
+        +heading('h2')(class='heading__uppercase margin__bottom-0') Actual albums
+        +albums-list(albums, 10)
 
-		// Tracks list
-		+heading('h2')(class='heading__uppercase margin__bottom-0') All tracks
-		+tracks-list(tracks, 20)
+        // Tracks list
+        +heading('h2')(class='heading__uppercase margin__bottom-0') All tracks
+        +tracks-list(tracks, 20)
 
-		// News list
-		+heading('h2')(class='heading__uppercase margin__bottom-0') Last news
-		- let news_tags=['History', 'Music']
-		+news-list(news, 5)(news_tags, users=users)
+        // News list
+        +heading('h2')(class='heading__uppercase margin__bottom-0') Last news
+        - let news_tags=['History', 'Music']
+        +news-list(news, 5)(news_tags, users=users)

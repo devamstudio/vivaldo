@@ -5,6 +5,6 @@ mixin news-list(array, limit)
 	else
 		- array = array
 	//- Markup
-	.news-list&attributes(attributes)
+	.news-list(class!=attributes.class)
 		for item in array
 			+news-item(item.cover, item.date, item.title, users[item.author])(class="news-list_item", news_tags)

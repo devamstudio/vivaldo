@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#3895FF">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./style.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto|Roboto:500">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" type="text/css" href="https://space.i-am.studio/font-icons-rage/releases/v1.0.1/css/font-rage.css">
     <script src="./scripts/build.js"></script>
   </head>
@@ -14,7 +14,7 @@
   <!-- Get DEMO data-->
   <!-- Get DEMO data END-->
   <body class="page">
-    <header class="header"><a class="link logo" href="/">
+    <header class="header"><a class="link logo" href="../">
           <svg class="logo_image" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 446.1 164.9" xml:space="preserve" height="50" width="120">
             <style type="text/css">
               .st0{fill:none;stroke:#005EDD;stroke-width:16;stroke-miterlimit:10;}
@@ -31,25 +31,25 @@
       <button class="button nav-trigger hidden__lg-up"><i class="icon rage rage-fw rage-burger"></i>
       </button>
     </header>
-    <sidebar class="sidebar">
+    <aside class="sidebar">
       <div class="sidebar_navigation">
-        <div class="navigation"><span class="navigation_title">App</span><a class="link navigation_item" href="./index.html">Home</a><a class="link navigation_item" href="./charts.html">Charts</a><a class="link navigation_item" href="./artists.html">Artists</a><a class="link navigation_item" href="./albums.html">Albums</a><a class="link navigation_item" href="./radio.html">Radio</a><a class="link navigation_item" href="./newslist.html">News</a>
+        <div class="navigation"><span class="navigation_title">App</span><a class="link navigation_item" href="./index.html">Home</a><a class="link navigation_item" href="./charts.html">Charts</a><a class="link navigation_item" href="./artists.html">Artists</a><a class="link navigation_item" href="./albums.html">Albums</a><a class="link navigation_item" href="./newslist.html">News</a>
         </div>
         <div class="navigation"><span class="navigation_title">Your space</span><a class="link navigation_item" href="./favorite.html">Favorite</a><a class="link navigation_item" href="./playlists.html">Playlists</a>
         </div>
       </div>
       <div class="sidebar_userspace">
-        <div class="navigation"><span class="navigation_title">User space</span><a class="link navigation_item" href="./signup.html">Sign up</a><a class="link navigation_item" href="./signup.html">Sign in</a>
+        <div class="navigation"><span class="navigation_title">User space</span><a class="link navigation_item" href="./signup.html">Sign up</a><a class="link navigation_item" href="./signin.html">Sign in</a>
         </div>
       </div>
-    </sidebar>
+    </aside>
     <main class="main">
       <div class="container padding__top-3 padding__bottom-2">
         <div class="row">
           <div class="cols__xs-12 cols__md-6">
               <div class="search">
                   <div class="field">
-                    <input class="field_input" id="field1764" type="search" placeholder="Type to search..."></input>
+                    <input class="field_input" id="field3522" type="search" placeholder="Type to search..."/>
                   </div>
               </div>
           </div>
@@ -59,16 +59,13 @@
         <!-- News list-->
           <h2 class="heading heading__uppercase margin__bottom-0">All news
           </h2>
-          <div class="news-list" news_tags users='[{"image":"https://fazarosta.com/wp-content/uploads/2018/01/chto-znachit-esli-muzhchina-nikogda-ne-pishet-pervym-no-vsegda-otvechaet-na-vashi-soobshhenija1.jpg","thumb":"./images/user-thumb-1__player.gif","name":"Vasya Vasutkin"},{"image":"https://fazarosta.com/wp-content/uploads/2018/01/chto-znachit-esli-muzhchina-nikogda-ne-pishet-pervym-no-vsegda-otvechaet-na-vashi-soobshhenija1.jpg","thumb":"./images/user-thumb-2__player.gif","name":"Torin Duboshit"}]'>
+          <div class="news-list">
               <div class="news-item news-list_item"><a class="link news-item_cover" href="./news-item.html" style="background-image:url(./images/news-1__player.jpg);">
                     <div class="news-item_tags-list">
                         <div class="tags-list"><span class="tag tags-list_item">History</span><span class="tag tags-list_item">Music</span>
                         </div>
                     </div></a><span class="news-item_date">25/05/2020</span><a class="link news-item_title" href="./news-item.html">A brief overview of new products in music.</a>
-                <div class="news-item_author">
-                    <div class="user">
-                      <div class="user_thumb" style="background-image:url(./images/user-thumb-1__player.gif)"></div><span class="user_name">Vasya Vasutkin</span>
-                    </div>
+                <div class="news-item_author"><span class="user"><span class="user_thumb" style="background-image:url(./images/user-thumb-1__player.gif)"></span><span class="user_name">Vasya Vasutkin</span></span>
                 </div>
               </div>
               <div class="news-item news-list_item"><a class="link news-item_cover" href="./news-item.html" style="background-image:url(./images/news-2__player.jpg);">
@@ -76,10 +73,7 @@
                         <div class="tags-list"><span class="tag tags-list_item">History</span><span class="tag tags-list_item">Music</span>
                         </div>
                     </div></a><span class="news-item_date">25/05/2020</span><a class="link news-item_title" href="./news-item.html">Meteorologists have found a new constellation</a>
-                <div class="news-item_author">
-                    <div class="user">
-                      <div class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></div><span class="user_name">Torin Duboshit</span>
-                    </div>
+                <div class="news-item_author"><span class="user"><span class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></span><span class="user_name">Torin Duboshit</span></span>
                 </div>
               </div>
               <div class="news-item news-list_item"><a class="link news-item_cover" href="./news-item.html" style="background-image:url(./images/news-3__player.jpg);">
@@ -87,10 +81,7 @@
                         <div class="tags-list"><span class="tag tags-list_item">History</span><span class="tag tags-list_item">Music</span>
                         </div>
                     </div></a><span class="news-item_date">25/05/2020</span><a class="link news-item_title" href="./news-item.html">How far does ignorance extend?</a>
-                <div class="news-item_author">
-                    <div class="user">
-                      <div class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></div><span class="user_name">Torin Duboshit</span>
-                    </div>
+                <div class="news-item_author"><span class="user"><span class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></span><span class="user_name">Torin Duboshit</span></span>
                 </div>
               </div>
               <div class="news-item news-list_item"><a class="link news-item_cover" href="./news-item.html" style="background-image:url(./images/news-4__player.jpg);">
@@ -98,10 +89,7 @@
                         <div class="tags-list"><span class="tag tags-list_item">History</span><span class="tag tags-list_item">Music</span>
                         </div>
                     </div></a><span class="news-item_date">25/05/2020</span><a class="link news-item_title" href="./news-item.html">Rock is fate?</a>
-                <div class="news-item_author">
-                    <div class="user">
-                      <div class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></div><span class="user_name">Torin Duboshit</span>
-                    </div>
+                <div class="news-item_author"><span class="user"><span class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></span><span class="user_name">Torin Duboshit</span></span>
                 </div>
               </div>
               <div class="news-item news-list_item"><a class="link news-item_cover" href="./news-item.html" style="background-image:url(./images/news-5__player.jpg);">
@@ -109,10 +97,7 @@
                         <div class="tags-list"><span class="tag tags-list_item">History</span><span class="tag tags-list_item">Music</span>
                         </div>
                     </div></a><span class="news-item_date">25/05/2020</span><a class="link news-item_title" href="./news-item.html">How far does ignorance extend?</a>
-                <div class="news-item_author">
-                    <div class="user">
-                      <div class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></div><span class="user_name">Torin Duboshit</span>
-                    </div>
+                <div class="news-item_author"><span class="user"><span class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></span><span class="user_name">Torin Duboshit</span></span>
                 </div>
               </div>
               <div class="news-item news-list_item"><a class="link news-item_cover" href="./news-item.html" style="background-image:url(./images/news-6__player.jpg);">
@@ -120,10 +105,7 @@
                         <div class="tags-list"><span class="tag tags-list_item">History</span><span class="tag tags-list_item">Music</span>
                         </div>
                     </div></a><span class="news-item_date">25/05/2021</span><a class="link news-item_title" href="./news-item.html">I got a power</a>
-                <div class="news-item_author">
-                    <div class="user">
-                      <div class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></div><span class="user_name">Torin Duboshit</span>
-                    </div>
+                <div class="news-item_author"><span class="user"><span class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></span><span class="user_name">Torin Duboshit</span></span>
                 </div>
               </div>
           </div>

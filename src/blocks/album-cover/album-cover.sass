@@ -1,0 +1,19 @@
+.album-cover
+    .image
+        box-shadow: 0 .5em 1.5em rgba(black, .16)
+    &.album-cover__disc
+        position: relative
+        .image
+            max-width: 60%
+            position: relative
+        &:before
+            content: ''
+            display: block
+            height: 99%
+            width: 59%
+            position: absolute
+            left: 25%
+            background-color: black
+            background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 20%, rgba(0,0,0,1) 20%, rgba(56,56,56,1) 55%, rgba(82,82,82,1) 89%, rgba(19,19,19,1) 100%)
+            border-radius: 50%
+            box-shadow: 0 .2em .3em rgba(black, .3)

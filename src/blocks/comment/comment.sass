@@ -1,0 +1,31 @@
+.comment
+    .comment_header
+        display: flex
+        align-items: center
+        .user
+            margin:
+                right: auto
+    // States
+    &:hover
+        & > .comment_actions
+            opacity: 1
+            height: auto
+    // Elements
+    .comment_body
+        margin:
+            left: 2.5rem
+    .comment_actions
+        padding:
+            bottom: 1rem
+        margin:
+            left: 2.5rem
+        @include media_query_up(lg)
+            opacity: 0
+            height: 0
+            transition: opacity .2s
+        .link
+            margin:
+                right: .5rem
+            font-size: .9em
+    .comments-list
+        margin-left: 2.5rem

@@ -1,0 +1,37 @@
+.layouts
+    .layouts_header
+        background-image: url('./images/layouts-home-top.gif')
+        display: flex
+        min-height: 400px
+        align-items: center
+        justify-content: center
+        color: white
+    .layouts_list
+        .layouts_list-item
+            padding: 2rem 0
+            @include media_query_up(lg)
+                display: grid
+                grid:
+                    template:
+                        columns: 1fr 1fr
+                        areas: "image description"
+                    gap: 2rem
+                padding: 4rem
+                .layouts_list-item_image
+                    grid-area: image
+                    .image
+                        filter: drop-shadow(0 .5em .5em rgba(black, .3))
+                .layouts_list-item_description
+                    grid-area: description
+                    align-self: center
+            &:nth-child(even)
+                @include media_query_up(lg)
+                    grid:
+                        template:
+                            areas: "description image"
+                    .layouts_list-item_description
+                        text-align: right
+    .layouts_footer
+        background-color: $color-gray__light
+        padding: 3rem
+        text-align: center

@@ -1,0 +1,14 @@
+extends ../layouts/interactive-docs
+
+block prepend head
+    -var document_title = ': Layouts'
+
+block main
+    .container
+        +heading('h1')(class='heading__h2') Layouts
+        p.text There are lots of methods for use this project. And there are ready to use templates:
+        ul.list
+            li.list_item all_clean — clean css and js
+            li.list_item player-scroller — secondary design for player
+            li.list_item player-sidebar — default design for player
+        p.text All them are placed in #[code.code dist] folder.

@@ -55,11 +55,11 @@ block markup
     // Get DEMO data END
     body.page
         header.header
-            +link("/")(class="logo" title=title)
+            +link("../")(class="logo" title=title)
                 include ../includes/logo
             button.button.nav-trigger.hidden__lg-up
                 +icon('rage', 'burger')
-        sidebar.sidebar
+        aside.sidebar
             .sidebar_navigation
                 for nav in navigation.app
                     .navigation
@@ -70,7 +70,7 @@ block markup
                 .navigation
                         span.navigation_title User space
                         +link('./signup.html')(class="navigation_item") Sign up
-                        +link('./signup.html')(class="navigation_item") Sign in
+                        +link('./signin.html')(class="navigation_item") Sign in
         main.main
             .container.padding__top-3.padding__bottom-2
                 .row: .cols__xs-12.cols__md-6

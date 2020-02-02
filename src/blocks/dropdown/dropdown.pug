@@ -1,12 +1,16 @@
 mixin dropdown(array)
-    .dropdown(class!=attributes.class)
-        .dropdown_control
+    span.dropdown(class!=attributes.class)
+        span.dropdown_control
             if attributes.icon
                 +icon(attributes.icon.type, attributes.icon.value)
             else if block
                 block
             else
                 span Dropdown
-        .dropdown_list(class!=attributes.list_class)
-            for item in array
-                +link('./index.html')(class='dropdown_list-item')= item
+        span.dropdown_list(class!=attributes.list_class)
+            if attributes.object
+                for item in array
+                    +link(item.url)(class='dropdown_list-item')= item.caption
+            else
+                for item in array
+                    +link('./index.html')(class='dropdown_list-item')= item

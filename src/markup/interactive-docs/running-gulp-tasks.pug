@@ -1,0 +1,13 @@
+extends ../layouts/interactive-docs
+
+block prepend head
+    -var document_title = ': Running Gulp tasks'
+
+block main
+    .container
+        +heading('h1')(class='heading__h2') Running Gulp tasks
+        p.text After you have installed all the necessary components, you can proceed with the assembly of the project.
+        p.text First of all, you must run the gulp flatten command — in order to copy all the final dependencies to the assets folder.
+        p.text Then you can already run just gulp — the default task will work, which includes watch all files. For convenient work with the project, we connected livereload with the server. Near the end of the development, we commented out the code that updated the page on the local server. You can enable this feature in gulpfile.js.
+        .notification.notification__alert
+            p.text If you quickly perform different tasks, then there may be a conflict of the task of compressing imagemin images. If you see that it did not work, start it manually.

@@ -4,6 +4,6 @@ mixin tags-list(array, limit)
 		- array = array.slice(0, limit)
 	else
 		- array = array
-	.tags-list
+	.tags-list(class!=attributes.class)
 		for item in array
 			+tag(item)(class="tags-list_item")

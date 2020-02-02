@@ -7,7 +7,7 @@ block main
     .container
         .row.padding__yy-2
             .cols__sm-5.cols__lg-3
-                +image('./images/artist-1__player.jpg')(class='image__fit')
+                +image(artists[0].image)(class='image__fit')
                 p.text.margin__top-1
                     em= tracks.length + ' Tracks'
             .cols__sm-7.cols__lg-9
