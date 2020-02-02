@@ -31,7 +31,8 @@ $body-background-color : $color-white
 
 
 //* 2. Grid */
-$grid-cols : 12
+$grid-square		: 8 // Module system value
+$grid-cols 			: 12
 $containers         : ( xs : 100%, sm : 100%, md : 1000px, lg : 1200px )
 $media-quaries      : ( xs, sm, md, lg, xl)
 $media-quaries_up   : ( xs : 0, sm : 500px, md : 900px, lg : 1024px, xl : 1220px )
@@ -40,25 +41,27 @@ $media-quaries_down : ( xs : 500px, sm : 900px, md : 1024px, lg : 1220px, xl : 1
 
 //* 3. Text */
 // Family
-$font-heading : Roboto, -apple-system, system-ui
-$font-main    : Roboto, -apple-system, system-ui
+$font-heading : Arial, -apple-system, system-ui
+$font-main    : Arial, -apple-system, system-ui
 // Size
-$font-base-size     : 16px
-$font-heading-sizes : ( h1 : 2.5rem, h2 : 2.1rem, h3 : 1.8rem, h4 : 1.5rem, h5 : 1.2rem, h6 : 1rem )
-$font_heading_margin_top: .5em
-$font_heading_line_height: 1.61
-$font-main-size     : 1rem
+$font-base-ratio   		 	: ( xs: 16, lg: 16 )
+$font-base-size    		 	: 1rem
+
+$font-heading-sizes 	 	: ( h1 : 2.5rem, h2 : 2.1rem, h3 : 1.8rem, h4 : 1.5rem, h5 : 1.2rem, h6 : 1rem )
+$font-heading-weight 	 	: ( 6 : normal, 5 : normal, 4 : bold, 3 : bold, 2 : bold, 1 : bold ) // May have reversed mode 1 eq h6 heading, h1 = 6
+$font-heading-lineheight 	: ( 6 : 2, 5 : 2, 4 : 2, 3 : 1, 2 : 1, 1 : 1 ) // May have reversed mode 1 eq h6 heading, h1 = 6
+$font_heading_margin_top 	: 2
+$font_heading_margin_bottom : 1
 
 // Align
 $text-align-list : left, right, center, justify
 $flex-align_items-list : ( start : flex-start , end : flex-end , center : center , baseline : baseline , stretch : stretch )
 // Other
-$text-line-height : 1.61
 
 
 //* 4. Margin and paddings */
 $directions       : left, right, top, bottom, yy, xx
-$direction-offset : ( 0 : 0 , 1 : 1rem , 2 : 1.5rem , 3 : 2rem , 4 : 3rem , 5 : 5rem )
+$direction-offset : ( 0: 0 , half: .5 , 1: 1 , 2: 2 , 3: 3 , 4: 4 , 5: 5 )
 
 
 //* 5. Design */
@@ -87,6 +90,6 @@ $fields-inset-x : $global-input-inset-x
 $fields-inset-y : $global-input-inset-y
 $fields-radius : ''
 @if $global-rounded
-	$fields-radius : 3rem
+	$fields-radius : $global-rounded-radius
 $fields-border-width : 0.1rem
 $fields-border-style : solid
