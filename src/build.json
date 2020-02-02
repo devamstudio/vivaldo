@@ -73,7 +73,8 @@
                     "./src/style/layouts/player-sidebar.sass",
                     "./src/submodules/fa-kit/sass/base/ghost.sass",
                     "./src/submodules/fa-kit/sass/base/utilites.sass",
-                    "./src/submodules/fa-kit/sass/base/display.sass"
+                    "./src/submodules/fa-kit/sass/base/display.sass",
+                    "./src/style/tests.sass"
                 ],
                 "scripts" : [
                     "./src/blocks/dropdown/*.js",
@@ -134,7 +135,8 @@
                     "./src/style/layouts/player-scroller.sass",
                     "./src/submodules/fa-kit/sass/base/ghost.sass",
                     "./src/submodules/fa-kit/sass/base/utilites.sass",
-                    "./src/submodules/fa-kit/sass/base/display.sass"
+                    "./src/submodules/fa-kit/sass/base/display.sass",
+                    "./src/style/tests.sass"
                 ],
                 "scripts" : [
                     "./src/blocks/dropdown/*.js",
@@ -194,7 +196,8 @@
                     "./src/submodules/fa-kit/sass/base/ghost.sass",
                     "./src/submodules/fa-kit/sass/base/utilites.sass",
                     "./src/submodules/fa-kit/sass/ui/notifications.sass",
-                    "./src/submodules/fa-kit/sass/base/display.sass"
+                    "./src/submodules/fa-kit/sass/base/display.sass",
+                    "./src/style/tests.sass"
                 ],
                 "scripts" : [
                     "./src/blocks/dropdown/*.js",
