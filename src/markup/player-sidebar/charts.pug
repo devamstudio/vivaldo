@@ -1,10 +1,7 @@
 extends ../layouts/player-sidebar
 
 block prepend head
-	-var document_title = ': Charts'
+	- var document_title = ': Charts'
 
 block main
-	.container
-		// Tracks list
-		+heading('h2') All tracks
-		+tracks-list(tracks)
+	include ../content-repeated/charts

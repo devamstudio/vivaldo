@@ -7,6 +7,7 @@
                 "styles" : [
                     "./src/style/fa-kit-class.sass",
                     "./src/style/fa-kit-config.sass",
+                    "./src/submodules/fa-kit/sass/config.sass",
                     "./src/submodules/fa-kit/sass/mixins.sass",
                     "./src/submodules/fa-kit/sass/base/root.sass",
                     "./src/submodules/fa-kit/sass/base/reset.sass",
@@ -15,7 +16,7 @@
                     "./src/submodules/fa-kit/sass/base/coloring.sass",
                     "./src/submodules/fa-kit/sass/base/article.sass",
                     "./src/submodules/fa-kit/sass/base/media_objects.sass",
-                    "./src/submodules/fa-kit/sass/ui/blocks.sass",
+                    "./src/submodules/fa-kit/sass/base/coloring.sass",
                     "./src/submodules/fa-kit/sass/ui/forms.sass",
                     "./src/blocks/link/link.sass",
                     "./src/submodules/fa-kit/sass/ui/buttons.sass",
@@ -41,13 +42,15 @@
                 "styles" : [
                     "./src/style/fa-kit-class.sass",
                     "./src/style/fa-kit-config.sass",
+                    "./src/submodules/fa-kit/sass/config.sass",
                     "./src/submodules/fa-kit/sass/mixins.sass",
                     "./src/submodules/fa-kit/sass/base/root.sass",
                     "./src/submodules/fa-kit/sass/base/reset.sass",
                     "./src/submodules/fa-kit/sass/base/grid.sass",
+                    "./src/submodules/fa-kit/sass/base/article.sass",
                     "./src/submodules/fa-kit/sass/base/typography.sass",
                     "./src/submodules/fa-kit/sass/base/coloring.sass",
-                    "./src/submodules/fa-kit/sass/ui/blocks.sass",
+                    "./src/submodules/fa-kit/sass/base/coloring.sass",
                     "./src/submodules/fa-kit/sass/ui/buttons.sass",
                     "./src/submodules/fa-kit/sass/ui/forms.sass",
                     "./src/blocks/link/link.sass",
@@ -73,7 +76,8 @@
                     "./src/style/layouts/player-sidebar.sass",
                     "./src/submodules/fa-kit/sass/base/ghost.sass",
                     "./src/submodules/fa-kit/sass/base/utilites.sass",
-                    "./src/submodules/fa-kit/sass/base/display.sass"
+                    "./src/submodules/fa-kit/sass/base/display.sass",
+                    "./src/style/tests.sass"
                 ],
                 "scripts" : [
                     "./src/blocks/dropdown/*.js",
@@ -105,13 +109,14 @@
                 "styles" : [
                     "./src/style/fa-kit-class.sass",
                     "./src/style/fa-kit-config.sass",
+                    "./src/submodules/fa-kit/sass/config.sass",
                     "./src/submodules/fa-kit/sass/mixins.sass",
                     "./src/submodules/fa-kit/sass/base/root.sass",
                     "./src/submodules/fa-kit/sass/base/reset.sass",
                     "./src/submodules/fa-kit/sass/base/grid.sass",
+                    "./src/submodules/fa-kit/sass/base/article.sass",
                     "./src/submodules/fa-kit/sass/base/typography.sass",
                     "./src/submodules/fa-kit/sass/base/coloring.sass",
-                    "./src/submodules/fa-kit/sass/ui/blocks.sass",
                     "./src/submodules/fa-kit/sass/ui/buttons.sass",
                     "./src/submodules/fa-kit/sass/ui/forms.sass",
                     "./src/blocks/link/link.sass",
@@ -131,10 +136,12 @@
                     "./src/blocks/news/news-list.sass",
                     "./src/blocks/player/player.sass",
                     "./src/blocks/dropdown/dropdown.sass",
+                    "./src/blocks/icon/icon.sass",
                     "./src/style/layouts/player-scroller.sass",
                     "./src/submodules/fa-kit/sass/base/ghost.sass",
                     "./src/submodules/fa-kit/sass/base/utilites.sass",
-                    "./src/submodules/fa-kit/sass/base/display.sass"
+                    "./src/submodules/fa-kit/sass/base/display.sass",
+                    "./src/style/tests.sass"
                 ],
                 "scripts" : [
                     "./src/blocks/dropdown/*.js",
@@ -148,6 +155,7 @@
                     "./src/markup/player-scroller/favorite.pug",
                     "./src/markup/player-scroller/playlists.pug",
                     "./src/markup/player-scroller/newslist.pug",
+                    "./src/markup/player-scroller/news-item.pug",
                     "./src/markup/player-scroller/blank.pug"
                 ],
                 "images" : "./src/images/**/*{__all,__player,__player-scroller}.{png,gif,jpg}",
@@ -161,13 +169,13 @@
                 "styles" : [
                     "./src/style/fa-kit-class.sass",
                     "./src/style/fa-kit-config.sass",
+                    "./src/submodules/fa-kit/sass/config.sass",
                     "./src/submodules/fa-kit/sass/mixins.sass",
                     "./src/submodules/fa-kit/sass/base/root.sass",
                     "./src/submodules/fa-kit/sass/base/reset.sass",
                     "./src/submodules/fa-kit/sass/base/grid.sass",
                     "./src/submodules/fa-kit/sass/base/typography.sass",
                     "./src/submodules/fa-kit/sass/base/coloring.sass",
-                    "./src/submodules/fa-kit/sass/ui/blocks.sass",
                     "./src/submodules/fa-kit/sass/ui/buttons.sass",
                     "./src/submodules/fa-kit/sass/ui/forms.sass",
                     "./src/blocks/link/link.sass",
@@ -190,11 +198,13 @@
                     "./src/blocks/comment/comment.sass",
                     "./src/blocks/comment/comments-list.sass",
                     "./src/blocks/dropdown/dropdown.sass",
+                    "./src/blocks/icon/icon.sass",
                     "./src/style/layouts/interactive-docs.sass",
                     "./src/submodules/fa-kit/sass/base/ghost.sass",
                     "./src/submodules/fa-kit/sass/base/utilites.sass",
                     "./src/submodules/fa-kit/sass/ui/notifications.sass",
-                    "./src/submodules/fa-kit/sass/base/display.sass"
+                    "./src/submodules/fa-kit/sass/base/display.sass",
+                    "./src/style/tests.sass"
                 ],
                 "scripts" : [
                     "./src/blocks/dropdown/*.js",
@@ -233,11 +243,14 @@
                 "styles" : [
                     "./src/style/fa-kit-class.sass",
                     "./src/style/fa-kit-config.sass",
+                    "./src/submodules/fa-kit/sass/config.sass",
                     "./src/submodules/fa-kit/sass/mixins.sass",
+                    "./src/submodules/fa-kit/sass/base/root.sass",
                     "./src/submodules/fa-kit/sass/base/reset.sass",
                     "./src/submodules/fa-kit/sass/base/grid.sass",
+                    "./src/submodules/fa-kit/sass/base/article.sass",
                     "./src/submodules/fa-kit/sass/base/typography.sass",
-                    "./src/submodules/fa-kit/sass/ui/blocks.sass",
+                    "./src/submodules/fa-kit/sass/base/coloring.sass",
                     "./src/submodules/fa-kit/sass/ui/buttons.sass",
                     "./src/blocks/link/link.sass",
                     "./src/blocks/dropdown/dropdown.sass",
@@ -259,6 +272,7 @@
                     "./src/blocks/dropdown/dropdown.sass",
                     "./src/blocks/comment/comment.sass",
                     "./src/blocks/comment/comments-list.sass",
+                    "./src/blocks/icon/icon.sass",
                     "./src/submodules/fa-kit/sass/base/ghost.sass",
                     "./src/submodules/fa-kit/sass/base/utilites.sass",
                     "./src/submodules/fa-kit/sass/base/display.sass"

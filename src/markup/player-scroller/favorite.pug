@@ -1,18 +1,8 @@
 extends ../layouts/player-scroller
 
 block prepend head
-	-var document_title = ': Favorite'
+	- var document_title = ': Favorite'
 
 block main
-	.container
-		// Artists list
-		+heading('h2')(class='heading__uppercase margin__bottom-0') Favorite artists
-		+artist-cards-list(artists, 4)
-
-		// Albums list
-		+heading('h2')(class='heading__uppercase margin__bottom-0') Favorite albums
-		+albums-list(albums, 10)
-
-		// Tracks list
-		+heading('h2')(class='heading__uppercase margin__bottom-0') Favorite tracks
-		+tracks-list(tracks)
+	.padding__top-1
+		include ../content-repeated/favorite

@@ -5,6 +5,8 @@
         .user
             margin:
                 right: auto
+        .comment_date
+            color: $color-gray
     // States
     &:hover
         & > .comment_actions
@@ -13,19 +15,20 @@
     // Elements
     .comment_body
         margin:
-            left: 2.5rem
+            left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.35rem)
+        // Elems
+        p:last-child
+            margin:
+                bottom: 0
     .comment_actions
         padding:
-            bottom: 1rem
+            bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
         margin:
-            left: 2.5rem
-        @include media_query_up(lg)
-            opacity: 0
-            height: 0
-            transition: opacity .2s
+            left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.35rem)
+        line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
         .link
             margin:
-                right: .5rem
+                right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .75rem)
             font-size: .9em
     .comments-list
-        margin-left: 2.5rem
+        margin-left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.35rem)

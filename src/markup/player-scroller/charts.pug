@@ -1,10 +1,8 @@
 extends ../layouts/player-scroller
 
 block prepend head
-	-var document_title = ': Charts'
+	- var document_title = ': Charts'
 
 block main
-	.container
-		// Tracks list
-		+heading('h2')(class='margin__bottom-0') All tracks
-		+tracks-list(tracks)
+	.padding__top-1
+		include ../content-repeated/charts

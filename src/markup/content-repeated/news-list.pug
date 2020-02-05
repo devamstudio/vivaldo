@@ -1,0 +1,5 @@
+.container
+    // News list
+    +heading('h1')(class='heading__h1 heading__uppercase margin__yy-0') All news
+    - let news_tags=['History', 'Music']
+    +news-list(news)(news_tags, users=users)

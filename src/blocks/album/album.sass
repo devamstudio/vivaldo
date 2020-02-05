@@ -8,12 +8,12 @@
 		@include media_query_up(lg)
 			box-shadow: 0 0 1.5em rgba(black, .16)
 			padding:
-				bottom: 1rem
-			margin-top: -1rem
+				bottom: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+			margin-top: calc(var(--grid-square) * 4 / var(--font-size) * -1rem)
 			border-radius: .5rem
 			.album_cover-image
 				border-radius: 50%
-				padding: 2rem
+				padding: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
 			.album_control
 				opacity: 1
 				transform: translateY(0)
@@ -31,22 +31,22 @@
 		background-color: $color-white
 		transition: all .2s
 		@include media_query_up(lg)
-			top: .5rem
+			top: calc(var(--grid-square) * 4 / var(--font-size) * .25rem)
 			background-color: $color-gray__light
 			opacity: 0
 			pointer-events: none
 		@include media_query_down(md)
-			top: 1rem
+			top: calc(var(--grid-square) * 4 / var(--font-size) * .5rem)
 		&.album_control__left
 			@include media_query_up(lg)
-				left: .5rem
+				left: calc(var(--grid-square) * 4 / var(--font-size) * .25rem)
 			@include media_query_down(md)
-				left: 1rem
+				left: calc(var(--grid-square) * 4 / var(--font-size) * .5rem)
 		&.album_control__right
 			@include media_query_up(lg)
-				right: .5rem
+				right: calc(var(--grid-square) * 4 / var(--font-size) * .25rem)
 			@include media_query_down(md)
-				right: 1rem
+				right: calc(var(--grid-square) * 4 / var(--font-size) * .5rem)
 		// States
 		&:hover
 			transition: all .2s
@@ -60,7 +60,7 @@
 			.icon.rage
 				font-size: 1.1em
 	.album_cover
-		margin-bottom: .7rem
+		margin-bottom: calc(var(--grid-square) * 4 / var(--font-size) * .25rem)
 		transition: all .3s
 		&-image
 			width: 100%
@@ -69,10 +69,13 @@
 		text-align: center
 		color: $color-black
 		font:
-			size: 1.2em
+			size: 1.1rem
 			family: $font-heading
+		line-height: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+		text-decoration: none
 	.album_artist
 		text-align: center
-		font-size: 1em
-		margin:
-			top: .25rem
+		line-height: calc(var(--grid-square) * 4 / var(--font-size) * .75rem)
+		font-size: .9rem
+		text-decoration: none
+		color: $color-gray

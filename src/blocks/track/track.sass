@@ -1,10 +1,12 @@
-$track-height: 4rem
+
+
 .track
+    --track-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 2rem)
     display: flex
     flex:
         wrap: nowrap
     align-items: center
-    border-radius: $track-height / 2
+    border-radius: calc(var(--track-height) / 2)
     transition: all 0.3s
     // States
     &:hover
@@ -13,34 +15,36 @@ $track-height: 4rem
     &:after
         content: ''
         display: block
-        width: $track-height / 3 + .75
+        width: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem)
         flex-shrink: 0
         @include media_query_up(lg)
-            width: $track-height / 2 + .75
+            width: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
     .track_cover
-        height: $track-height
-        width: $track-height
-        border-radius: $track-height / 2
+        height: var(--track-height)
+        width: var(--track-height)
+        border-radius: calc(var(--track-height) / 2)
         flex-shrink: 0
     .track_title
         display: block
-        height: 1.2em
+        line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .66rem)
         white-space: nowrap
         overflow-x: hidden
         text-overflow: ellipsis
         font:
-            size: 1.1em
+            size: 1.1rem
             family: $font-heading
     .track_artist
-        margin-top: .25em
-        font-size: .9rem
+        font-size: 1rem
+        line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .33rem)
+        color: $color-gray
+        text-decoration: none
     .track_meta
         min-width: 0
         flex: 1
         align-items: center
         margin:
-            left: 1rem
-            right: 1rem
+            left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem)
+            right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem)
     .track_adds
         display: flex
         align-items: center

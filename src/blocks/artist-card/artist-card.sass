@@ -1,6 +1,6 @@
 .artist-card
 	display: flex
-	min-height: 150px
+	min-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 4rem)
 	flex:
 		direction: column
 	justify-content: flex-end
@@ -25,5 +25,6 @@
 		border-radius: inherit
 	.artist-card_title
 		z-index: 1
-		margin: 1.5rem
+		margin: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .75rem)
 		color: white
+		font-size: 1.2rem
