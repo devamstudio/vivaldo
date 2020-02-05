@@ -613,11 +613,11 @@ body {
     line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1 * 1rem); }
   .heading.heading__h5 {
     font-size: 1.2rem;
-    font-weight: normal;
+    font-weight: bolder;
     line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1 * 1rem); }
   .heading.heading__h6 {
     font-size: 1rem;
-    font-weight: normal;
+    font-weight: bolder;
     line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1 * 1rem); }
 
 .text__primary {
@@ -890,7 +890,7 @@ article h5, .article h5 {
   font-family: Arial, -apple-system, system-ui;
   hyphens: auto;
   font-size: 1.2rem;
-  font-weight: normal;
+  font-weight: bolder;
   line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1 * 1rem); }
 
 article h6, .article h6 {
@@ -900,7 +900,7 @@ article h6, .article h6 {
   font-family: Arial, -apple-system, system-ui;
   hyphens: auto;
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: bolder;
   line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1 * 1rem); }
 
 article p, .article p {
@@ -984,8 +984,8 @@ article span, article strong, article i, article b, .article span, .article stro
     line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem);
     padding-top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 0 * 1rem);
     padding-bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 0 * 1rem);
-    padding-left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1 * 1rem);
-    padding-right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1 * 1rem);
+    padding-left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 0.25 * 1rem);
+    padding-right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 0.25 * 1rem);
     border: 0;
     font-size: 0.9rem; }
     .field .field_input.field_input__disabled {

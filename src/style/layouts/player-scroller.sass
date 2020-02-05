@@ -36,16 +36,19 @@
             @include media_query_up(sm)
                 margin-right: auto
             @include media_query_down(sm)
-                order: 4
+                order: 5
                 width: 100%
                 flex-shrink: 0
         // Block navigation
         .header_navigation
             @include media_query_down(sm)
-                order: 5
+                order: 4
                 width: 100%
                 flex-shrink: 0
                 overflow-x: auto
+                margin:
+                    top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .75rem)
+                    bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .75rem)  
             .navigation_second-level
                 list-style-type: none
                 padding: 0
@@ -65,6 +68,7 @@
                         right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .25rem) 
                     color: $color-primary
                     text-decoration: none
+                    line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem) 
                 .navigation_item
                     @include media_query_up(md)
                         position: relative
@@ -90,6 +94,9 @@
             align-items: center
             @include media_query_down(sm)
                 order: 2
+                margin-left: auto
+            @include media_query_up(md)
+                margin-left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.5rem) 
         .nav-trigger
             @include media_query_down(sm)
                 order: 3
