@@ -1149,26 +1149,6 @@ article span, article strong, article i, article b, .article span, .article stro
     border-top: 0;
     border-bottom: 0; }
 
-.album-cover .image {
-  box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.16); }
-
-.album-cover.album-cover__disc {
-  position: relative; }
-  .album-cover.album-cover__disc .image {
-    max-width: 60%;
-    position: relative; }
-  .album-cover.album-cover__disc:before {
-    content: '';
-    display: block;
-    height: 99%;
-    width: 59%;
-    position: absolute;
-    left: 25%;
-    background-color: black;
-    background: radial-gradient(ellipse at center, white 0%, white 20%, black 20%, #383838 55%, #525252 89%, #131313 100%);
-    border-radius: 50%;
-    box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.3); }
-
 .album {
   display: flex;
   flex-direction: column;
@@ -1255,6 +1235,60 @@ article span, article strong, article i, article b, .article span, .article stro
   grid-gap: calc(var(--grid-square) * 4 / var(--font-size) * 1rem);
   padding: calc(var(--grid-square) * 4 / var(--font-size) * 1rem) 0; }
 
+.artist-card {
+  display: flex;
+  min-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 4rem);
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  border-radius: 1em;
+  position: relative;
+  transition: all 0.3s;
+  text-decoration: none !important; }
+  .artist-card:hover {
+    box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.16); }
+  .artist-card:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: inherit; }
+  .artist-card .artist-card_title {
+    z-index: 1;
+    margin: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .75rem);
+    color: white;
+    font-size: 1.2rem; }
+
+.artist-cards-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 10rem), 1fr);
+  grid-gap: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) *  1rem);
+  padding: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem) 0; }
+
+.album-cover .image {
+  box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.16); }
+
+.album-cover.album-cover__disc {
+  position: relative; }
+  .album-cover.album-cover__disc .image {
+    max-width: 60%;
+    position: relative; }
+  .album-cover.album-cover__disc:before {
+    content: '';
+    display: block;
+    height: 99%;
+    width: 59%;
+    position: absolute;
+    left: 25%;
+    background-color: black;
+    background: radial-gradient(ellipse at center, white 0%, white 20%, black 20%, #383838 55%, #525252 89%, #131313 100%);
+    border-radius: 50%;
+    box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.3); }
+
 .comment .comment_header {
   display: flex;
   align-items: center; }
@@ -1307,7 +1341,8 @@ article span, article strong, article i, article b, .article span, .article stro
     pointer-events: none;
     font-size: initial;
     box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.16);
-    transition: all .3s; }
+    transition: all .3s;
+    border-radius: .5rem; }
     .dropdown .dropdown_list.dropdown_list__active {
       top: 100%;
       opacity: 1;
@@ -1333,9 +1368,6 @@ article span, article strong, article i, article b, .article span, .article stro
       .dropdown .dropdown_list .dropdown_list-item:hover {
         background-color: #fafafa; }
 
-.heading.heading__uppercase {
-  text-transform: uppercase; }
-
 .field .field_input {
   border-bottom: 1px solid #a4a4a4;
   transition: all .2s; }
@@ -1348,42 +1380,19 @@ article span, article strong, article i, article b, .article span, .article stro
 .rage {
   font-size: .9em; }
 
+.heading.heading__uppercase {
+  text-transform: uppercase; }
+
 .image.image__fit, .image.image__fluid {
   max-width: 100%; }
 
-.artist-card {
-  display: flex;
-  min-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 4rem);
-  flex-direction: column;
-  justify-content: flex-end;
-  background-size: cover;
-  border-radius: 1em;
-  position: relative;
-  transition: all 0.3s;
-  text-decoration: none !important; }
-  .artist-card:hover {
-    box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.16); }
-  .artist-card:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: inherit; }
-  .artist-card .artist-card_title {
-    z-index: 1;
-    margin: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .75rem);
-    color: white;
-    font-size: 1.2rem; }
-
-.artist-cards-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: minmax(calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 10rem), 1fr);
-  grid-gap: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) *  1rem);
-  padding: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem) 0; }
+.link {
+  color: #007bff;
+  text-decoration: none; }
+  .link:hover {
+    text-decoration: underline; }
+  .link:vidited {
+    color: #A300AD; }
 
 .news-item {
   display: flex;
@@ -1447,14 +1456,6 @@ article span, article strong, article i, article b, .article span, .article stro
     .news-list .news-list_item:first-child {
       grid-column: 1 / span 2;
       grid-row: 1 / span 2; } }
-
-.link {
-  color: #007bff;
-  text-decoration: none; }
-  .link:hover {
-    text-decoration: underline; }
-  .link:vidited {
-    color: #A300AD; }
 
 .track {
   --track-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 2rem);
@@ -1558,12 +1559,16 @@ article span, article strong, article i, article b, .article span, .article stro
     position: relative;
     width: calc(var(--grid-square) * 4 / var(--font-size) * 2.5rem);
     height: calc(var(--grid-square) * 4 / var(--font-size) * 2.5rem);
+    margin-bottom: calc(var(--grid-square) * 4 / var(--font-size) * -.25rem);
     border-radius: 50%;
-    align-self: center;
+    align-self: flex-end;
     overflow: hidden;
     color: white;
     font-size: 2.5rem;
     text-shadow: black 0 0 1em; }
+    @media (min-width: 900px) {
+      .player .player_track-cover {
+        margin-bottom: calc(var(--grid-square) * 4 / var(--font-size) * -.5rem); } }
     .player .player_track-cover .player_track-cover_overlay {
       display: inline-flex;
       align-items: center;
