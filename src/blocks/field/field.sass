@@ -1,72 +1,16 @@
 .field
-    display: flex
-    flex:
-        direction: column
     .field_label
-        margin:
-            bottom: $fields-inset-y * .5
-            left: $fields-inset-x
-        font-size : $font-main-size * 0.9
     .field_input
-        font-weight : inherit
-        color : $color-black
-        background-color: $color-gray__light
-        padding : $fields-inset-y $fields-inset-x * 1.5
-        margin:
-            bottom: $fields-inset-y
-        @if $global-rounded
-            border :
-                radius : $fields-radius
-                style : $fields-border-style
-                width : $fields-border-width
-                color : $color-gray__light
-        font-size : $font-main-size
-        border: .075em solid $color-gray__light
+        border-bottom: 1px solid $color-gray
         transition: all .2s
         &:hover
-            border-color: lighten($color-primary, 20%)
+            outline: 1px solid $color-primary
         &:focus
-            border-color: $color-primary
-            outline: none
-        // Rule for select
-        optgroup
-            font-size: 80%
-            option
-                font-size: initial
-                &:before
-                    content: '- '
-        &[type="file"]
-            padding:
-                top: $fields-inset-y
-                bottom: $fields-inset-y
-            background-color: white
-            font-size: .8em
-            //border: 1px solid red
     .field_helper
-        font-size : $font-main-size * 0.8
-        margin:
-            left: $fields-inset-x
-    // Rules
-    //&:not(:last-child):not(.field__inline)
-        margin-bottom: $fields-inset-y * 3
-    // States
     &__inline
-        display: inline-flex
-        flex:
-            direction: row
-        //margin-bottom: $fields-inset-y * 2
+        line-height: normal!important
         .field_input
-            margin: 0
-                right: $fields-inset-x / 2
         .field_label
-            margin: 0
     &__row
-        flex:
-            direction: row
-        align-items: center
         .field_label
-            margin:
-                left: 0
-                right: $fields-inset-x
             & + .field_input
-                flex-grow: 10

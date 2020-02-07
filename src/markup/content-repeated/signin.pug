@@ -1,0 +1,15 @@
+main.background__light
+    .container
+        .row.align-items__center(style='min-height:100vh;').padding__yy-2
+            .cols__xs-12.cols__md-6.offset__md-3.cols__lg-4.offset__lg-4
+                +link('index.html').link 
+                    +icon('rage', 'arrow-left')
+                    |  Back to site
+                .background__white.padding__xx-1.padding__yy-1.margin__yy-1_2
+                    +user(users[0].thumb, users[0].name)(class='margin__bottom-1')
+                    +field('input')(type='password', label='Enter password', class='margin__bottom-2')
+                    .text__center
+                        button.button.button__primary Log in
+                p.paragraph.text__center: small Don't have an account? 
+                    +link('signup.html').link Create
+                    | .

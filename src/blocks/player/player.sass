@@ -1,13 +1,15 @@
 .player
     display: flex
     align-items: center
-    height: 100%
+    height: calc(var(--grid-square) * 4 / var(--font-size) * 2rem)
     .player_controls
         @include media_query_up(sm)
             display: flex
     .player_control
         font-size: 1.8rem
-        padding: 0 .25rem
+        line-height: calc(var(--grid-square) * 4 / var(--font-size) * 2rem)
+        width: calc(var(--grid-square) * 4 / var(--font-size) * 1.5rem)
+        text-align: center
         opacity: .75
         transition: opacity .2s
         &:hover
@@ -17,14 +19,29 @@
             font-size: 2rem
             opacity: .8
     .player_track-cover
-        width: 5rem
-        height: 5rem
+        position: relative
+        width: calc(var(--grid-square) * 4 / var(--font-size) * 2.5rem)
+        height: calc(var(--grid-square) * 4 / var(--font-size) * 2.5rem)
         border-radius: 50%
-        align-self: flex-end
+        align-self: center
         overflow: hidden
-        margin-bottom: -.5em
+        color: white
+        font-size: 2.5rem
+        text-shadow: black 0 0 1em
+        .player_track-cover_overlay
+            display: inline-flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            background-color: rgba($color-primary, .5)
         @include media_query_up(md)
             margin-right: 1rem
+            width: calc(var(--grid-square) * 4 / var(--font-size) * 3rem)
+            height: calc(var(--grid-square) * 4 / var(--font-size) * 3rem)
     .player_track-title
         display: block
         height: 1.2em
@@ -35,6 +52,11 @@
             size: 1.1em
             family: $font-heading
     .player_track-artist
+        display: block
+        height: 1.2em
+        white-space: nowrap
+        overflow-x: hidden
+        text-overflow: ellipsis
         margin-top: .25em
         font-size: .9rem
         text-decoration: none

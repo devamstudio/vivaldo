@@ -92,6 +92,12 @@
         .header_user
             display: flex
             align-items: center
+            @include media_query_down(xs)
+                .user
+                    .user_thumb
+                        margin-right: 0
+                    .user_name
+                        display: none
             @include media_query_down(sm)
                 order: 2
                 margin-left: auto

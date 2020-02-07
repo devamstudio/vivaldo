@@ -2,28 +2,28 @@
     .row
         .cols__xs-12.cols__xl-7
             // Artists list
-            +heading('h2')(class='heading__h4 heading__uppercase margin__yy-0')
+            +heading('h2')(class='heading__h4 margin__yy-0')
                 +dropdown(['Add', 'Remove'])(icon={type:'rage',value:'dots'})
                 | Artists
             +artist-cards-list(artists, 4)
         .cols__xs-12.cols__xl-5
             // Tracks list
-            +heading('h2')(class='heading__h4 heading__uppercase margin__yy-0') Tracks list
+            +heading('h2')(class='heading__h4 margin__bottom-0 margin__top-1 margin__xl-yy-0') Tracks list
             +tracks-list(tracks, 6)
             // Tags list
-            +heading('h2')(class='heading__h4 heading__uppercase margin__yy-0') All tags
+            +heading('h2')(class='heading__h4 margin__bottom-1_2 margin__top-1') All tags
             - ganres_array = Array.from(ganres)
             +tags-list(ganres_array)
 
     // Albums list
-    +heading('h2')(class='heading__h4 heading__uppercase margin__yy-0') Actual albums
+    +heading('h2')(class='heading__h4 margin__bottom-0 margin__top-1') Actual albums
     +albums-list(albums, 10)
 
     // Tracks list
-    +heading('h2')(class='heading__h4 heading__uppercase margin__yy-0') All tracks
+    +heading('h2')(class='heading__h4 margin__bottom-0 margin__top-1') All tracks
     +tracks-list(tracks, 20)
 
     // Tracks list
-    +heading('h2')(class='heading__h4 heading__uppercase margin__yy-0') Last news
+    +heading('h2')(class='heading__h4 margin__bottom-0 margin__top-1') Last news
     - let news_tags=['History', 'Music']
     +news-list(news, 5)(news_tags, users=users)

@@ -66,7 +66,14 @@ block markup
                     .navigation
                         span.navigation_title= nav.caption
                         for subnav in nav.subnavigation
-                            +link(subnav.url)(class="navigation_item")= subnav.caption
+                            if subnav.caption == 'Home'
+                                +link(subnav.url).navigation_item.navigation_item__current
+                                    //-i.rage.rage-dashboard.margin__right-1_4
+                                    = subnav.caption
+                            else
+                                +link(subnav.url).navigation_item
+                                    //-i.rage.rage-dashboard.margin__right-1_4
+                                    = subnav.caption
             .sidebar_userspace
                 .navigation
                         span.navigation_title User space

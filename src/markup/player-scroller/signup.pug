@@ -1,0 +1,11 @@
+extends ../layouts/default
+include ../../blocks/heading/heading
+include ../../blocks/field/field
+include ../../blocks/link/link
+include ../../blocks/icon/icon
+
+block prepend head
+    -var document_title = ': Registration'
+
+block markup
+        include ../content-repeated/signup

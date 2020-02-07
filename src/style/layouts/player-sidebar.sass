@@ -18,20 +18,33 @@
     .header
         display: flex
         grid-area: header
-        padding: 3rem 2rem 0 2rem
+        padding: 
+            top: calc(var(--grid-square) * 4 / var(--font-size) * .5rem)
+            bottom: calc(var(--grid-square) * 4 / var(--font-size) * 0rem)
+            left: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+            right: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
         align-items: center
         @include media_query_down(md)
             padding:
-                top: 1rem
-                left: 1rem
-                right: 1rem
+                top: calc(var(--grid-square) * 4 / var(--font-size) * .5rem)
+                bottom: calc(var(--grid-square) * 4 / var(--font-size) * .5rem)
+                left: calc(var(--grid-square) * 4 / var(--font-size) * .5rem)
+                right: calc(var(--grid-square) * 4 / var(--font-size) * .5rem)
         .logo
-            display: inline-flex
-            margin-right: auto
+            margin:
+                right: auto
             .logo_image
-                max-width: 100%
+                max-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.5rem)
+                line-height: 1
+                vertical-align: middle
                 @include media_query_down(md)
-                    max-width: 5rem
+                    max-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
+                    max-width: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 3rem)
+            svg.logo_image
+                height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.5rem)
+                @include media_query_down(md)
+                    height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
+                    width: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 3rem)
         .nav-trigger
             *
                 pointer-events: none
@@ -39,7 +52,7 @@
         grid-area: sidebar
         display: flex
         flex-direction: column
-        overflow-y: auto
+        //overflow-y: auto
         @include media_query_down(md)
             position: fixed
             z-index: 100
@@ -59,7 +72,11 @@
             display: flex
             flex:
                 direction: column
-            padding: 2rem 2rem 3rem 2rem
+            padding:
+                top: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+                bottom: calc(var(--grid-square) * 4 / var(--font-size) * 2rem)
+                //left: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+                //right: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
             margin-bottom: auto
             @include media_query_up(lg)
                 position: sticky
@@ -68,36 +85,58 @@
             display: flex
             flex:
                 direction: column
-            padding: 2rem 2rem 3rem 2rem
+            padding:
+                top: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+                bottom: calc(var(--grid-square) * 4 / var(--font-size) * 2rem)
+                //left: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+                //right: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
             @include media_query_up(md)
                 position: sticky
-                bottom: 3rem
+                bottom: calc(var(--grid-square) * 4 / var(--font-size) * 2rem)
         // Block navigation
         .navigation
-            display: flex
-            flex:
+            //display: flex
+            //flex:
                 direction: column
-            align-items: flex-start
+            //align-items: flex-start
             &:not(:last-child)
                 margin:
                     bottom: 2.5rem
             .navigation_title
+                display: block
                 font-size: .8em
-                margin-bottom: 1.2rem
+                line-height: calc(var(--grid-square) * 4 / var(--font-size) * .75rem)
+                margin:
+                    //top: calc(var(--grid-square) * 4 / var(--font-size) * .25rem)
+                    //bottom: calc(var(--grid-square) * 4 / var(--font-size) * .25rem)
+                padding:
+                    left: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+                    right: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
             .navigation_item
+                display: block
                 text-decoration: none
                 color: black
+                line-height: calc(var(--grid-square) * 4 / var(--font-size) * .75rem)
+                padding:
+                    left: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+                    right: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+                    top: calc(var(--grid-square) * 4 / var(--font-size) * .25rem)
+                    bottom: calc(var(--grid-square) * 4 / var(--font-size) * .25rem)
                 &:not(:last-child)
-                    margin-bottom: 1.2rem
+                    //margin-bottom: 1.2rem
                 &:hover
-                    text-decoration: underline
+                    //text-decoration: underline
+                    background-color: $color-gray__light
+                // States
+                &.navigation_item__current
+                    border-left: 2px solid $color-primary
     .main
         grid-area: main
-        @include media_query_up(sm)
+        //@include media_query_up(sm)
             padding:
                 left: 1em
                 right: 1em
-        @include media_query_up(lg)
+        //@include media_query_up(lg)
             padding:
                 left: 3em
                 right: 5em
@@ -143,7 +182,7 @@
                 margin-top: 2rem
     .player-area
         grid-area: player
-        position: sticky
+        position: sticky //sticky
         bottom: 0
         z-index: 99
         // Size
@@ -153,8 +192,8 @@
         background-color: $color-white
         box-shadow: 0 0 .5em rgba(black, .05)
         padding:
-            left: 1rem
-            right: 1.5rem
-        @include media_query_up(sm)
+            left: calc(var(--grid-square) * 4 / var(--font-size) * .25rem)
+            right: calc(var(--grid-square) * 4 / var(--font-size) * .5rem)
+        @include media_query_up(md)
             padding:
-                left: 2.5rem
+                left: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)

@@ -1,0 +1,18 @@
+main.background__light
+    .container
+        .row.align-items__center(style='min-height:100vh;').padding__yy-2
+            .cols__xs-12.cols__md-6.offset__md-3.cols__lg-4.offset__lg-4
+                +link('index.html').link
+                    +icon('rage', 'arrow-left')
+                    |  Back to site
+                .background__white.padding__xx-1.padding__yy-1.margin__yy-1_2
+                    +heading('h1').heading__h4.margin__yy-0: strong Hello there
+                    p.paragraph.margin__bottom-1 Connect to our team
+                    +field('input')(type='text', label='What is your name?', class='margin__bottom-1')
+                    +field('input')(type='email', label='What is your email?', class='margin__bottom-1')
+                    +field('input')(type='password', label='Enter password', class='margin__bottom-1')
+                    +field('input')(type='checkbox', label='I accept with privacy policy and terms of use.', class='margin__bottom-1')
+                    button.button.button__primary Give me access
+                p.paragraph.text__center: small Are you already have an account? 
+                    +link('signin.html').link Sign in
+                    | .

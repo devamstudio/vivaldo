@@ -6,12 +6,12 @@ block prepend head
 block main
     .container
         +heading('h1')(class='heading__h2') Setting dependencies
-        p.text To work with the project, you must install all the dependencies that are required to run the code. Their list is stored in the package.json file. And to install — just open the command line and run the npm install command in the project root. This command will create the node_modules folder. in the root of the project.
-        p.text We use Windows environment with Ubuntu installed in it. This allows us to easily operate the command line. We open it directly from the folder by pressing Ctrl + RCM, and, having received such a context menu, select the item from Shell.
-        p.text Then enter the bash command, after which all the other commands for unix.
-        p.text To work you need a node, you can install it using the instructions of the site: 
-            +link('https://nodejs.org/en/') https://nodejs.org/en/
+        p.paragraph To work with the project, you must install all the dependencies that are required to run the code. Their list is stored in the package.json file. And to install — just open the command line and run the npm install command in the project root. This command will create the node_modules folder. in the root of the project.
+        p.paragraph We use Windows environment with Ubuntu installed in it. This allows us to easily operate the command line. We open it directly from the folder by pressing Ctrl + RCM, and, having received such a context menu, select the item from Shell.
+        p.paragraph Then enter the bash command, after which all the other commands for unix.
+        p.paragraph To work you need a node, you can install it using the instructions of the site: 
+            +link('https://nodejs.org/en/').link https://nodejs.org/en/
             | . Follow the instructions. We use the latest version — 10.3.0. Although the modules that we use so far and can give out conflicts.
-        p.text You will also need git if you want to manually update the dependencies that are our projects. At the moment we did not post them in the npm environment. Their list was listed above, in usual use.
-        p.text Also we give a link to the list of the projects that we use — 
-            +link('https://github.com/devamstudio') github.com/devamstudio
+        p.paragraph You will also need git if you want to manually update the dependencies that are our projects. At the moment we did not post them in the npm environment. Their list was listed above, in usual use.
+        p.paragraph Also we give a link to the list of the projects that we use — 
+            +link('https://github.com/devamstudio').link github.com/devamstudio

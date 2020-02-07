@@ -4,7 +4,5 @@ block prepend head
 	-var document_title = ': Albums'
 
 block main
-	.container
-		// Albums list
-		+heading('h2')(class='margin__bottom-0') All albums
-		+albums-list(albums)
+	.padding__top-2
+		include ../content-repeated/albums

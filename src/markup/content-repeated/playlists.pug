@@ -2,19 +2,19 @@
     .row.padding__yy-2
         .cols__sm-5.cols__lg-3
             +image(artists[0].image)(class='image__fit')
-            p.text.margin__top-1
+            p.paragraph.margin__top-1
                 em= tracks.length + ' Tracks'
         .cols__sm-7.cols__lg-9
-            +heading('h2')(class='heading__h4 heading__uppercase margin__yy-0')
+            +heading('h2')(class='heading__h4 margin__yy-0')
                 +dropdown(['Rename', 'Remove', 'Clean'])(icon={type:'rage',value:'dots'})
                 | Playlist name
             +tracks-list(tracks, 10)
 //- .container.container__wide.background__light
-    +heading('h2')(class='heading__h5 heading__uppercase margin__bottom-0 margin__top-1 text__center') Your other playlists
+    +heading('h2')(class='heading__h5 margin__bottom-0 margin__top-1 text__center') Your other playlists
     .row.padding__yy-2
         each i in [0, 1, 2, 3]
             .cols__xs-6.cols__lg-3.cols__xl-2
                 +link('#')
                     +image(artists[i].image)(class='image__fit')
-                p.text.margin__top-1
+                p.paragraph.margin__top-1
                     em= tracks.length + ' Tracks'

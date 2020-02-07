@@ -34,7 +34,7 @@
     </header>
     <aside class="sidebar">
       <div class="sidebar_navigation">
-        <div class="navigation"><span class="navigation_title">App</span><a class="navigation_item" href="./index.html">Home</a><a class="navigation_item" href="./charts.html">Charts</a><a class="navigation_item" href="./artists.html">Artists</a><a class="navigation_item" href="./albums.html">Albums</a><a class="navigation_item" href="./newslist.html">News</a>
+        <div class="navigation"><span class="navigation_title">App</span><a class="navigation_item navigation_item__current" href="./index.html">Home</a><a class="navigation_item" href="./charts.html">Charts</a><a class="navigation_item" href="./artists.html">Artists</a><a class="navigation_item" href="./albums.html">Albums</a><a class="navigation_item" href="./newslist.html">News</a>
         </div>
         <div class="navigation"><span class="navigation_title">Your space</span><a class="navigation_item" href="./favorite.html">Favorite</a><a class="navigation_item" href="./playlists.html">Playlists</a>
         </div>
@@ -50,7 +50,7 @@
           <div class="cols__xs-12 cols__md-6">
               <div class="search">
                   <div class="field">
-                    <input class="field_input" id="field1481" type="search" placeholder="Type to search..."/>
+                    <input class="field_input" id="field3638" type="search" placeholder="Type to search..."/>
                   </div>
               </div>
           </div>
@@ -60,7 +60,7 @@
         <div class="row">
           <div class="cols__xs-12 cols__xl-7">
             <!-- Artists list-->
-              <h2 class="heading heading__h4 heading__uppercase margin__yy-0"><span class="dropdown"><span class="dropdown_control"><i class="icon rage rage-fw rage-dots"></i></span><span class="dropdown_list"><a class="dropdown_list-item" href="./index.html">Add</a><a class="dropdown_list-item" href="./index.html">Remove</a></span></span>Artists
+              <h2 class="heading heading__h4 margin__yy-0"><span class="dropdown"><span class="dropdown_control"><i class="icon rage rage-fw rage-dots"></i></span><span class="dropdown_list"><a class="dropdown_list-item" href="./index.html">Add</a><a class="dropdown_list-item" href="./index.html">Remove</a></span></span>Artists
               </h2>
               <div class="artist-cards-list"><a class="artist-card" href="./artist.html" style="background-image:url(./images/artist-1__player.jpg);">
                         <span class="heading artist-card_title">Link in Dark
@@ -75,7 +75,7 @@
           </div>
           <div class="cols__xs-12 cols__xl-5">
             <!-- Tracks list-->
-              <h2 class="heading heading__h4 heading__uppercase margin__yy-0">Tracks list
+              <h2 class="heading heading__h4 margin__bottom-0 margin__top-1 margin__xl-yy-0">Tracks list
               </h2>
               <div class="tracks-list">
                   <div class="track tracks-list_item"><img class="image track_cover" src="./images/album-1__all.jpg" alt="image">
@@ -110,14 +110,14 @@
                   </div>
               </div>
             <!-- Tags list-->
-              <h2 class="heading heading__h4 heading__uppercase margin__yy-0">All tags
+              <h2 class="heading heading__h4 margin__bottom-1_2 margin__top-1">All tags
               </h2>
               <div class="tags-list"><span class="tag tags-list_item">Rock</span><span class="tag tags-list_item">Hard-rock</span><span class="tag tags-list_item">New age</span><span class="tag tags-list_item">Hello world</span><span class="tag tags-list_item">Pop</span><span class="tag tags-list_item">Dance</span><span class="tag tags-list_item">Metall</span><span class="tag tags-list_item">Heave metall</span>
               </div>
           </div>
         </div>
         <!-- Albums list-->
-          <h2 class="heading heading__h4 heading__uppercase margin__yy-0">Actual albums
+          <h2 class="heading heading__h4 margin__bottom-0 margin__top-1">Actual albums
           </h2>
           <div class="albums-list">
               <div class="album albums-list_item">
@@ -182,7 +182,7 @@
               </div>
           </div>
         <!-- Tracks list-->
-          <h2 class="heading heading__h4 heading__uppercase margin__yy-0">All tracks
+          <h2 class="heading heading__h4 margin__bottom-0 margin__top-1">All tracks
           </h2>
           <div class="tracks-list">
               <div class="track tracks-list_item"><img class="image track_cover" src="./images/album-1__all.jpg" alt="image">
@@ -287,7 +287,7 @@
               </div>
           </div>
         <!-- Tracks list-->
-          <h2 class="heading heading__h4 heading__uppercase margin__yy-0">Last news
+          <h2 class="heading heading__h4 margin__bottom-0 margin__top-1">Last news
           </h2>
           <div class="news-list">
               <div class="news-item news-list_item"><a class="news-item_cover" href="./news-item.html" style="background-image:url(./images/news-1__player.jpg);">
@@ -339,8 +339,12 @@
     </footer>
     <div class="player-area">
         <div class="player">
-          <div class="player_track-cover" style="background-image:url(./images/album-1__all.jpg)"></div>
-          <div class="player_controls margin__xx-2 align-items__center" hidden><span class="player_control"><i class="icon rage rage-fw rage-play-back"></i></span><span class="player_control player_control__play-pause"><i class="icon rage rage-fw rage-play"></i></span><span class="player_control"><i class="icon rage rage-fw rage-play-forward"></i></span></div>
+          <div class="player_controls hidden__xs"><span class="player_control hidden__md-up"><i class="icon rage rage-fw rage-play-back"></i></span></div>
+          <div class="player_track-cover" style="background-image:url(./images/album-1__all.jpg)">
+            <div class="player_track-cover_overlay hidden__md-up"><i class="icon rage rage-fw rage-pause"></i>
+            </div>
+          </div>
+          <div class="player_controls"><span class="player_control hidden__sm-down"><i class="icon rage rage-fw rage-play-back"></i></span><span class="player_control player_control__play-pause hidden__sm-down"><i class="icon rage rage-fw rage-play"></i></span><span class="player_control"><i class="icon rage rage-fw rage-play-forward"></i></span></div>
           <div class="player_meta"><span class="player_track-title">Hello world</span><a class="player_track-artist" href="./artist.html">Link in Dark</a>
           </div>
           <div class="player_duration">2:55</div>

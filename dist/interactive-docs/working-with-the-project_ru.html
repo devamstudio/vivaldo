@@ -31,34 +31,34 @@
           </svg></a>
       <nav class="interactive-docs_header-nav">
         <ul class="list">
-          <li class="list_item"><a href="./index_ru.html">К началу</a>
+          <li class="list_item"><a class="link" href="./index_ru.html">К началу</a>
           </li>
-          <li class="list_item"><a href="./uu_ru.html">Обычное использование
+          <li class="list_item"><a class="link" href="./uu_ru.html">Обычное использование
                 <ul class="list">
-                  <li class="list_item"><a href="./integration_ru.html">Зависимости</a>
+                  <li class="list_item"><a class="link" href="./integration_ru.html">Зависимости</a>
                   </li>
-                  <li class="list_item"><a href="./blocks_ru.html">Блоки</a>
+                  <li class="list_item"><a class="link" href="./blocks_ru.html">Блоки</a>
                   </li>
-                  <li class="list_item"><a href="./layouts_ru.html">Шаблоны</a>
+                  <li class="list_item"><a class="link" href="./layouts_ru.html">Шаблоны</a>
                   </li>
                 </ul></a>
           </li>
-          <li class="list_item"><a href="./au_ru.html">Продвинутое использование
+          <li class="list_item"><a class="link" href="./au_ru.html">Продвинутое использование
                 <ul class="list">
-                  <li class="list_item"><a href="./setting-dependencies_ru.html">Установка зависимостей</a>
+                  <li class="list_item"><a class="link" href="./setting-dependencies_ru.html">Установка зависимостей</a>
                   </li>
-                  <li class="list_item"><a href="./running-gulp-tasks_ru.html">Запуск Gulp-задач</a>
+                  <li class="list_item"><a class="link" href="./running-gulp-tasks_ru.html">Запуск Gulp-задач</a>
                   </li>
-                  <li class="list_item"><a href="./working-with-the-project_ru.html">Работа с проектом</a>
+                  <li class="list_item"><a class="link" href="./working-with-the-project_ru.html">Работа с проектом</a>
                   </li>
                 </ul></a>
           </li>
-          <li class="list_item"><a href="./changelog_ru.html">Changelog</a>
+          <li class="list_item"><a class="link" href="./changelog_ru.html">Changelog</a>
           </li>
         </ul>
       </nav>
       <div class="margin__top-auto">
-        <p class="text"><a href="./index.html">EN</a> \ <a href="./index_ru.html">RU</a>
+        <p class="paragraph"><a href="./index.html">EN</a> \ <a href="./index_ru.html">RU</a>
         </p>
       </div>
     </header>
@@ -68,13 +68,13 @@
           </h1>
           <h2 class="heading heading__h3">Верстка
           </h2>
-        <p class="text">Рабочие файлы проекта — оформлены на pug-синтаксисе. Это короткая запись, которая кроме короткости позволяет делать много крутых штук, например наследование шаблонов, использование миксинов, частичное использование js-синтаксиса для верстки проекта.</p>
-        <p class="text">Полную и подробную документацию о том, как работать с проектом вы можете найти на <a href="https://pugjs.org">официальном сайте</a>.
+        <p class="paragraph">Рабочие файлы проекта — оформлены на pug-синтаксисе. Это короткая запись, которая кроме короткости позволяет делать много крутых штук, например наследование шаблонов, использование миксинов, частичное использование js-синтаксиса для верстки проекта.</p>
+        <p class="paragraph">Полную и подробную документацию о том, как работать с проектом вы можете найти на <a class="link" href="https://pugjs.org">официальном сайте</a>.
         </p>
-        <p class="text">У нас же все реализовано по следующей логике:</p>
+        <p class="paragraph">У нас же все реализовано по следующей логике:</p>
           <h3 class="heading heading__h4">Шаблоны
           </h3>
-        <p class="text">Элементы шаблонов расположены в нескольких местах:</p>
+        <p class="paragraph">Элементы шаблонов расположены в нескольких местах:</p>
         <ul class="list">
           <li class="list_item"><code class="code">src/markup/layouts/</code> верстка</li>
           <li class="list_item"><code class="code">src/style/layouts/</code> стили</li>
@@ -82,28 +82,28 @@
         </ul>
           <h3 class="heading heading__h4">Блоки
           </h3>
-        <p class="text">Помимо использованных заготовок из FA-Kit в данном проекте создано множество уникальных блоков (читай БЭМ). Все они находяться в папке <code class="code">src/blocks/</code>. Где каждый проименован и содержит в себе набор зависимостей для проекта.</p>
-        <p class="text">Например для заголовка создан миксин, который принимает аргументы и выводит их при рендере. Для его использования в проекте необходимо подключить в шаблоне(<code class="code">src/markup/layouts/&#91;название шаблона&#93;</code>) или в странице (<code class="code">src/markup/&#91;название шаблона&#93;/&#91;название страницы&#93;</code>).</p>
-        <p class="text">В самой же папке блока содержиться файл heading.pug. Именно и его и надо подключать для использования миксина следующим образом: <code class="code">+heading('h1') Заголовок</code></p>
+        <p class="paragraph">Помимо использованных заготовок из FA-Kit в данном проекте создано множество уникальных блоков (читай БЭМ). Все они находяться в папке <code class="code">src/blocks/</code>. Где каждый проименован и содержит в себе набор зависимостей для проекта.</p>
+        <p class="paragraph">Например для заголовка создан миксин, который принимает аргументы и выводит их при рендере. Для его использования в проекте необходимо подключить в шаблоне(<code class="code">src/markup/layouts/&#91;название шаблона&#93;</code>) или в странице (<code class="code">src/markup/&#91;название шаблона&#93;/&#91;название страницы&#93;</code>).</p>
+        <p class="paragraph">В самой же папке блока содержиться файл heading.pug. Именно и его и надо подключать для использования миксина следующим образом: <code class="code">+heading('h1') Заголовок</code></p>
           <h3 class="heading heading__h4">Демо
           </h3>
-        <p class="text">Демо-данные, на которых происходит построение шаблонов находятся в папке <code class="code">src/data</code>.</p>
+        <p class="paragraph">Демо-данные, на которых происходит построение шаблонов находятся в папке <code class="code">src/data</code>.</p>
           <h3 class="heading heading__h4">Манифест билда
           </h3>
-        <p class="text">Логика проекта собирается вручную. Т.е. для сборки демо использован манифест <code class="code">src/build.js</code>.</p>
+        <p class="paragraph">Логика проекта собирается вручную. Т.е. для сборки демо использован манифест <code class="code">src/build.js</code>.</p>
           <h3 class="heading heading__h4">FA-Kit
           </h3>
-        <p class="text">Данный фреймворк находится в постоянно разработке, поэтому имеет смысл проверять обновления на странице проекта.</p>
-        <p class="text">Помимо указанных классов и компонентов в документации для обычного пользования темой, там присутствуют еще возможности и для продвинутого. В частности — изменять переменные, дабы получить на выходе дизайн со своими стилями.</p>
-        <p class="text">Но не менее важными являются миксины:</p>
+        <p class="paragraph">Данный фреймворк находится в постоянно разработке, поэтому имеет смысл проверять обновления на странице проекта.</p>
+        <p class="paragraph">Помимо указанных классов и компонентов в документации для обычного пользования темой, там присутствуют еще возможности и для продвинутого. В частности — изменять переменные, дабы получить на выходе дизайн со своими стилями.</p>
+        <p class="paragraph">Но не менее важными являются миксины:</p>
         <ul class="list">
           <li class="list_item"><code class="code">media_query_up</code> — для размеров экрана больше точки отсчета</li>
           <li class="list_item"><code class="code">media_query_down</code> — для размеров экрана меньше точки отсчета</li>
           <li class="list_item"><code class="code">media_query_between</code> — медиазапрос между двух точек, например от xs до lg</li>
           <li class="list_item"><code class="code">touch_grid</code> — для создания колонок</li>
         </ul>
-        <p class="text">Также присутствуют классы типа ghost:</p>
-        <p class="text">%none-select — его можно наследовать при создании других классов таким образом чтобы пользователь не мог выделять содержимое</p>
+        <p class="paragraph">Также присутствуют классы типа ghost:</p>
+        <p class="paragraph">%none-select — его можно наследовать при создании других классов таким образом чтобы пользователь не мог выделять содержимое</p>
       </div>
     </main>
   </body>
