@@ -1478,12 +1478,16 @@ body {
     position: relative;
     width: calc(var(--grid-square) * 4 / var(--font-size) * 2.5rem);
     height: calc(var(--grid-square) * 4 / var(--font-size) * 2.5rem);
+    margin-bottom: calc(var(--grid-square) * 4 / var(--font-size) * -.25rem);
     border-radius: 50%;
-    align-self: center;
+    align-self: flex-end;
     overflow: hidden;
     color: white;
     font-size: 2.5rem;
     text-shadow: black 0 0 1em; }
+    @media (min-width: 900px) {
+      .player .player_track-cover {
+        margin-bottom: calc(var(--grid-square) * 4 / var(--font-size) * -.5rem); } }
     .player .player_track-cover .player_track-cover_overlay {
       display: inline-flex;
       align-items: center;
