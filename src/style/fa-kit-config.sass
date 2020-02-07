@@ -44,11 +44,11 @@ $media-quaries_down : ( xs : 500px, sm : 900px, md : 1024px, lg : 1220px, xl : 1
 $font-heading : Arial, -apple-system, system-ui
 $font-main    : Arial, -apple-system, system-ui
 // Size
-$font-base-ratio   		 	: ( xs: 16, lg: 16 )
+$font-base-ratio   		 	: ( xs: 16, lg: 17 )
 $font-base-size    		 	: 1rem
 
-$font-heading-sizes 	 	: ( h1 : 2.5rem, h2 : 2.1rem, h3 : 1.8rem, h4 : 1.5rem, h5 : 1.2rem, h6 : 1rem )
-$font-heading-weight 	 	: ( 6 : normal, 5 : normal, 4 : bold, 3 : bold, 2 : bold, 1 : bold ) // May have reversed mode 1 eq h6 heading, h1 = 6
+$font-heading-sizes 	 	: ( h1 : 2.5rem, h2 : 2.1rem, h3 : 1.8rem, h4 : 1.5rem, h5 : 1.1rem, h6 : 1rem )
+$font-heading-weight 	 	: ( 6 : normal, 5 : normal, 4 : normal, 3 : normal, 2 : bolder, 1 : bolder ) // May have reversed mode 1 eq h6 heading, h1 = 6
 $font-heading-lineheight 	: ( 6 : 2, 5 : 2, 4 : 2, 3 : 1, 2 : 1, 1 : 1 ) // May have reversed mode 1 eq h6 heading, h1 = 6
 $font_heading_margin_top 	: 2
 $font_heading_margin_bottom : 1
@@ -61,7 +61,7 @@ $flex-align_items-list : ( start : flex-start , end : flex-end , center : center
 
 //* 4. Margin and paddings */
 $directions       : left, right, top, bottom, yy, xx
-$direction-offset : ( 0: 0 , half: .5 , 1: 1 , 2: 2 , 3: 3 , 4: 4 , 5: 5 )
+$direction-offset : ( 0: 0 , 1_4: .25 , 1_2: .5 , 3_4: .75 , 1: 1 , 2: 2 , 3: 3 , 4: 4 , 5: 5 )
 
 
 //* 5. Design */
@@ -72,8 +72,8 @@ $global-rounded-radius : 0.2rem
 $global-animation : true
 $global-animation-delay : 0.2s
 //Inputs
-$global-input-inset-y: .5rem
-$global-input-inset-x: 1rem
+$global-input-inset-y: 0
+$global-input-inset-x: 1
 
 
 //* 6. Buttons */
@@ -86,7 +86,7 @@ $buttons-radius : ''
 
 
 //* 7. Fields */
-$fields-inset-x : $global-input-inset-x
+$fields-inset-x : .25
 $fields-inset-y : $global-input-inset-y
 $fields-radius : ''
 @if $global-rounded

@@ -55,39 +55,40 @@ block markup
     // Get DEMO data END
     - var language = docs_lang ? docs_lang : 'en'
     body.interactive-docs(lang=language)
+        .grid-checkout
         header.interactive-docs_header
             +link("../")(class="logo" title=title)
                 include ../includes/logo
             nav.interactive-docs_header-nav
                 ul.list
                     if docs_lang == 'ru'
-                        li.list_item: +link('./index_ru.html') К началу
-                        li.list_item: +link('./uu_ru.html') Обычное использование
+                        li.list_item: +link('./index_ru.html').link К началу
+                        li.list_item: +link('./uu_ru.html').link Обычное использование
                             ul.list
-                                li.list_item: +link('./integration_ru.html') Зависимости
-                                li.list_item: +link('./blocks_ru.html') Блоки
-                                li.list_item: +link('./layouts_ru.html') Шаблоны
-                        li.list_item: +link('./au_ru.html') Продвинутое использование
+                                li.list_item: +link('./integration_ru.html').link Зависимости
+                                li.list_item: +link('./blocks_ru.html').link Блоки
+                                li.list_item: +link('./layouts_ru.html').link Шаблоны
+                        li.list_item: +link('./au_ru.html').link Продвинутое использование
                              ul.list
-                                li.list_item: +link('./setting-dependencies_ru.html') Установка зависимостей
-                                li.list_item: +link('./running-gulp-tasks_ru.html') Запуск Gulp-задач
-                                li.list_item: +link('./working-with-the-project_ru.html') Работа с проектом
-                        li.list_item: +link('./changelog_ru.html') Changelog
+                                li.list_item: +link('./setting-dependencies_ru.html').link Установка зависимостей
+                                li.list_item: +link('./running-gulp-tasks_ru.html').link Запуск Gulp-задач
+                                li.list_item: +link('./working-with-the-project_ru.html').link Работа с проектом
+                        li.list_item: +link('./changelog_ru.html').link Changelog
                     else
-                        li.list_item: +link('./index.html') Home
-                        li.list_item: +link('./uu.html') Usual Uses
+                        li.list_item: +link('./index.html').link Home
+                        li.list_item: +link('./uu.html').link Usual Uses
                             ul.list
-                                li.list_item: +link('./integration.html') Integration
-                                li.list_item: +link('./blocks.html') Blocks
-                                li.list_item: +link('./layouts.html') Layouts
-                        li.list_item: +link('./au.html') Advanced use
+                                li.list_item: +link('./integration.html').link Integration
+                                li.list_item: +link('./blocks.html').link Blocks
+                                li.list_item: +link('./layouts.html').link Layouts
+                        li.list_item: +link('./au.html').link Advanced use
                              ul.list
-                                li.list_item: +link('./setting-dependencies.html') Setting dependencies
-                                li.list_item: +link('./running-gulp-tasks.html') Running Gulp tasks
-                                li.list_item: +link('./working-with-the-project.html') Working with the project
-                        li.list_item: +link('./changelog.html') Changelog
+                                li.list_item: +link('./setting-dependencies.html').link Setting dependencies
+                                li.list_item: +link('./running-gulp-tasks.html').link Running Gulp tasks
+                                li.list_item: +link('./working-with-the-project.html').link Working with the project
+                        li.list_item: +link('./changelog.html').link Changelog
             .margin__top-auto
-                p.text
+                p.paragraph
                     +link('./index.html') EN
                     |  \ 
                     +link('./index_ru.html') RU

@@ -6,17 +6,17 @@ block prepend head
 block main
     .container
         +heading('h1')(class='heading__h2') Integrations
-        p.text
-            +link('#irage') Icons Rage
+        p.paragraph
+            +link('#irage').link Icons Rage
             |  \ 
-            +link('#fakit') FA-Kit
+            +link('#fakit').link FA-Kit
             
         +heading('h2')(class='heading__h3' id='irage') Icons Rage
-        p.text As we already mentioned above, this set is the one we created for this project. Although it began to be created long before that. This set contains 51 icons.
+        p.paragraph As we already mentioned above, this set is the one we created for this project. Although it began to be created long before that. This set contains 51 icons.
         
         +heading('h3')(class='heading__h4') Using fonts
-        p.text To use fonts, you need to connect it to the html document.
-        p.text Then, using the &lt;i/&gt; tag, you can add icons into the page. And you can specify the classes:
+        p.paragraph To use fonts, you need to connect it to the html document.
+        p.paragraph Then, using the &lt;i/&gt; tag, you can add icons into the page. And you can specify the classes:
         ul.list
             li.list_item rage-fw — Icons will be fixed width
             li.list_item rage-lg — To make larger icon
@@ -85,53 +85,53 @@ block main
 
 
         +heading('h2')(class='heading__h3' id='fakit') FA-Kit
-        p.text
-            +link('#fakit_variables') Переменные
+        p.paragraph
+            +link('#fakit_variables').link Variables
             |  \ 
-            +link('#fakit_grid') Сетка
+            +link('#fakit_grid').link Grid
             |  \ 
-            +link('#fakit_blocks') Блоки
+            +link('#fakit_blocks').link Blocks
             |  \ 
-            +link('#fakit_breadcrumbs') Хлебные крошки
+            +link('#fakit_breadcrumbs').link Vreadcrumbs
             |  \ 
-            +link('#fakit_buttons') Buttons
+            +link('#fakit_buttons').link Buttons
             |  \ 
-            +link('#fakit_helpers') Helpers
+            +link('#fakit_helpers').link Helpers
             |  \ 
-            +link('#fakit_media') Media
+            +link('#fakit_media').link Media
             |  \ 
-            +link('#fakit_notifications') Уведомления
+            +link('#fakit_notifications').link Notifications
             |  \ 
-            +link('#fakit_pagination') Пагинация
+            +link('#fakit_pagination').link Pagination
             |  \ 
-            +link('#fakit_utilites') Утилиты
+            +link('#fakit_utilites').link Utilites
             
-        p.text Sometimes we call this project a framework, but in fact it's just a library \ set of instructions for styles that already simplify the life for us and should help you.
-        p.text The general principle of construction should be familiar to you on bootstrap, but in our case there is a significant rethinking of the principles of approach and implementation of the work. We do not want to brag much, but we started using flex before it came to bootstrap in the latest version.
+        p.paragraph Sometimes we call this project a framework, but in fact it's just a library \ set of instructions for styles that already simplify the life for us and should help you.
+        p.paragraph The general principle of construction should be familiar to you on bootstrap, but in our case there is a significant rethinking of the principles of approach and implementation of the work. We do not want to brag much, but we started using flex before it came to bootstrap in the latest version.
         .notification.notification__warning.margin__bottom-1
-            p.text Draw your attention, this framework is devoid of js-files, we implement all the integration in the project itself. But everything can change in the future. Track the project here. And now about the main thing.
-        p.text In this framework, we used the approach that BEM inspired us:
+            p.paragraph Draw your attention, this framework is devoid of js-files, we implement all the integration in the project itself. But everything can change in the future. Track the project here. And now about the main thing.
+        p.paragraph In this framework, we used the approach that BEM inspired us:
         ul.list
             li.list_item Block
             li.list_item Element
             li.list_item Modifier
-        p.text In classes this is expressed in such way:
+        p.paragraph In classes this is expressed in such way:
         ul.list
             li.list_item .block — conditional block
             li.list_item .block_link — link within this block
             li.list_item .block_link__hovered — link state
-        p.text In order to ensure maximum non-conflict, all blocks are equipped with the prefix ., and it looks like this:
-        p.text .block__background-light — A block with such an independent class will be displayed with a light gray background.
+        p.paragraph In order to ensure maximum non-conflict, all blocks are equipped with the prefix ., and it looks like this:
+        p.paragraph .block__background-light — A block with such an independent class will be displayed with a light gray background.
         .notification.notification__warning.margin__bottom-1
-            p.text Draw your attention: we almost do not use abbreviations in the construction of classes. This visually makes the list of classes heavier, but it becomes easier to understand what is happening or should happen to the element directly on the html page.
-        p.text The following main sections are represented in this framework:
+            p.paragraph Draw your attention: we almost do not use abbreviations in the construction of classes. This visually makes the list of classes heavier, but it becomes easier to understand what is happening or should happen to the element directly on the html page.
+        p.paragraph The following main sections are represented in this framework:
 
         +heading('h3')(class='heading__h4' id='fakit_variables') Variables
-        p.text The following are the main variables that will be further described in the library classes. For a detailed list, move to the section for advanced use.
+        p.paragraph The following are the main variables that will be further described in the library classes. For a detailed list, move to the section for advanced use.
         .row
             .cols__xs-12.cols__xl-4
                 +heading('h4')(class='heading__h5' id='fak_colors') Colors
-                p.text There are several colors, here they are:
+                p.paragraph There are several colors, here they are:
                 ul.list
                     li.list_item Primary — sapphirine
                     li.list_item Secondary — orange
@@ -160,26 +160,26 @@ block main
                     li.list_item xl: от 1220px
 
         +heading('h3')(class='heading__h4' id='fakit_grid') Grid
-        p.text This, perhaps, the most important thing for which the library was created, allows you to manipulate the grid on the page. By the way, allows you to do this easier than in the bootstrap, which is a big plus in our karma.
-        p.text The classes of wrappers that are present here:
+        p.paragraph This, perhaps, the most important thing for which the library was created, allows you to manipulate the grid on the page. By the way, allows you to do this easier than in the bootstrap, which is a big plus in our karma.
+        p.paragraph The classes of wrappers that are present here:
         ul.list
             li.list_item #[code.code container] is a container that we are familiar with, which follows the rules of the size in accordance with the dimensions of the container.
                 ul.list
                     li.list_item #[code.code container__wide] — if this class is applied, the container will stretch to the full width.
             li.list_item #[code.code row] is a string for building a grid.
             li.list_item #[code.code column] is an unexpected element, made like row, but for a column.
-        p.text The classes of grid construction are formed as follows:
-        p.text #[code.code .cols__&#91;media&#93;-&#91;cols&#93;], where media are media inquiries of type xs, and cols is the count of columns or rows. A total of them can be 12 (easily changed at an advanced level.)
+        p.paragraph The classes of grid construction are formed as follows:
+        p.paragraph #[code.code .cols__&#91;media&#93;-&#91;cols&#93;], where media are media inquiries of type xs, and cols is the count of columns or rows. A total of them can be 12 (easily changed at an advanced level.)
 
 
         +heading('h3')(class='heading__h4' id='fakit_blocks') Blocks
-        p.text In this section, there is a class with modifiers .g-block__background-color. As a color, you can use the name of the color variable, as follows:
-        p.text .block__backgound-ok — the background color will be green.
+        p.paragraph In this section, there is a class with modifiers .g-block__background-color. As a color, you can use the name of the color variable, as follows:
+        p.paragraph .block__backgound-ok — the background color will be green.
 
         
         +heading('h3')(class='heading__h4' id='fakit_breadcrumbs') Bread crumbs
-        p.text This class is represented by the name .g-breadcrumbs and is applied to the cover of the list, for example, the tag nav. A list ul is created inside it, where the arrow symbol → is inserted in the <a> </a> link tags.
-        p.text Example of usage in the code:
+        p.paragraph This class is represented by the name .g-breadcrumbs and is applied to the cover of the list, for example, the tag nav. A list ul is created inside it, where the arrow symbol → is inserted in the <a> </a> link tags.
+        p.paragraph Example of usage in the code:
         pre.code.code__snippet
             | &lt;nav class="breadcrumbs">
             |     &lt;ul>
@@ -190,8 +190,8 @@ block main
 
 
         +heading('h3')(class='heading__h4' id='fakit_buttons') Buttons
-        p.text The main class for creating a button is the .g-button. But, in order to add a design to it, you need to specify its style, for example .g-button__primary — then the button will turn blue with white text on it (for example, on the right). Or .g-button__white (for example, on the left).
-        p.text The code will then look like this:
+        p.paragraph The main class for creating a button is the .g-button. But, in order to add a design to it, you need to specify its style, for example .g-button__primary — then the button will turn blue with white text on it (for example, on the right). Or .g-button__white (for example, on the left).
+        p.paragraph The code will then look like this:
         pre.code.code__snippet
             | &lt;a class="button button__white margin__right-1" href="#">
             |     &lt;svg class="rage margin__right-1">
@@ -199,10 +199,10 @@ block main
             |     &lt;/svg>
             |     &lt;span>Mix&lt;/span>
             | &lt;/a>
-        p.text Also there is a class .button__disabled — it makes the button visually inaccessible to the user. Works fine in pairs with the html-property disabled.
+        p.paragraph Also there is a class .button__disabled — it makes the button visually inaccessible to the user. Works fine in pairs with the html-property disabled.
 
         +heading('h3')(class='heading__h4' id='fakit_helpers') Helpers
-        p.text Here are the classes:
+        p.paragraph Here are the classes:
         ul.list
             li.list_item hidden__[media]
                 ul.list
@@ -212,36 +212,36 @@ block main
                 ul.list
                     li.list_item visible__[media]-up
                     li.list_item visible__[media]-down
-        p.text Instead of media, substitute the size you need. And then you can hide and display items on the page. The styles of the visible class are lower than hidden, so they have a higher priority.
+        p.paragraph Instead of media, substitute the size you need. And then you can hide and display items on the page. The styles of the visible class are lower than hidden, so they have a higher priority.
 
         +heading('h3')(class='heading__h4' id='fakit_media') Media
-        p.text At the moment, there is only #[code.code .image] with the extra class #[code.code .image__fluid], which limits the image to the width inside the container.
+        p.paragraph At the moment, there is only #[code.code .image] with the extra class #[code.code .image__fluid], which limits the image to the width inside the container.
         
         +heading('h3')(class='heading__h4' id='fakit_notifications') Notifications
-        p.text They have the main class .g-notification, which has the following modifiers:
+        p.paragraph They have the main class .g-notification, which has the following modifiers:
         ul.list
             li.list_item .notification__top — the border of the stroke will be on top
             li.list_item .notification__left — or from below
             li.list_item .notification__alert — its color will be red
             li.list_item .notification__warning — orange
             li.list_item .notification__ok — or green
-        p.text At this time, the block itself has a white background, a shadow and indented indentations in and out.
+        p.paragraph At this time, the block itself has a white background, a shadow and indented indentations in and out.
 
         +heading('h3')(class='heading__h4' id='fakit_pagination') Pagination
-        p.text #[code.code .pagination] — A wrapper that nulls list styles (ul or ol)
-        p.text #[code.code .pagination__center] — allows you to center on the page a list of pagination
-        p.text The #[code.code .pagination_item] element has a boundary, a #[code.code .pagination__active] state, and a description of the nested reference (item must be applied to the element of the list li).
+        p.paragraph #[code.code .pagination] — A wrapper that nulls list styles (ul or ol)
+        p.paragraph #[code.code .pagination__center] — allows you to center on the page a list of pagination
+        p.paragraph The #[code.code .pagination_item] element has a boundary, a #[code.code .pagination__active] state, and a description of the nested reference (item must be applied to the element of the list li).
 
         +heading('h3')(class='heading__h4' id='fakit_utilites') Utilities
-        p.text The block, in which the values of the indents are indicated, is constructed next to this logic:
+        p.paragraph The block, in which the values of the indents are indicated, is constructed next to this logic:
         ul.list
             li.list_item .[type]__[direction]-[offset-size]
             li.list_item .[type]__[media]-[direction]-[offset-size]
-        p.text Where is:
-        p.text type — margin или padding
-        p.text media — media queries 
-        p.text direction — direction (top, bottom, left, right, xx [in both directions along the X axis], yy [in both directions along the Y axis])
-        p.text For indentation in all directions, we recommend using the following construction:
+        p.paragraph Where is:
+        p.paragraph type — margin или padding
+        p.paragraph media — media queries 
+        p.paragraph direction — direction (top, bottom, left, right, xx [in both directions along the X axis], yy [in both directions along the Y axis])
+        p.paragraph For indentation in all directions, we recommend using the following construction:
         pre.code.code__snippet
             | &lt;a class="margin__xx-5 margin__yy-5">
             | &lt;/a>

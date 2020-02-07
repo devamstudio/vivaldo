@@ -55,6 +55,7 @@ block markup
     // Get DEMO data END
 
     body.page
+        .grid-checkout
         header.header
             +link("../")(class="logo" title=title)
                 include ../includes/logo
@@ -64,7 +65,7 @@ block markup
                     for nav, index in navigation.app[0].subnavigation
                         li.navigation_item
                             +link(nav.url)= nav.caption
-            .header_user.margin__left-3
+            .header_user
                 +dropdown(navigation.app[1].subnavigation)(list_class="dropdown_list__right", object=true)
                     +user(users[0].thumb, users[0].name)
                     +icon('rage','chevron-bottom')

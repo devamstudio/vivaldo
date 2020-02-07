@@ -22,10 +22,7 @@
 		opacity: 0
 		pointer-events: none
 		font-size: initial
-		background-color: $color-white
 		box-shadow: 0 .5em 1.5em rgba(black, .16)
-		border-radius: .5rem
-		padding: .25 rem 0
 		transition: all .3s
 		&.dropdown_list__active
 			top: 100%
@@ -39,4 +36,19 @@
 		// Items
 		.dropdown_list-item
 			display: block
-			padding: .5rem 1rem
+			padding: 
+				left: calc(var(--grid-square) * 4 / var(--font-size) * .5rem)
+				right: calc(var(--grid-square) * 4 / var(--font-size) * .5rem)
+			line-height: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+			color: inherit
+			background-color: $color-white
+			text-decoration: none
+			&:first-child
+				border-top-left-radius: .5rem
+				border-top-right-radius: .5rem
+			&:last-child
+				border-bottom-left-radius: .5rem
+				border-bottom-right-radius: .5rem
+			&:hover
+				background:
+					color: $color-gray__light

@@ -14,7 +14,8 @@
   <!-- Get DEMO data-->
   <!-- Get DEMO data END-->
   <body class="interactive-docs" lang="en">
-    <header class="interactive-docs_header"><a class="link logo" href="../">
+    <div class="grid-checkout"></div>
+    <header class="interactive-docs_header"><a class="logo" href="../">
           <svg class="logo_image" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 446.1 164.9" xml:space="preserve" height="50" width="120">
             <style type="text/css">
               .st0{fill:none;stroke:#005EDD;stroke-width:16;stroke-miterlimit:10;}
@@ -57,7 +58,7 @@
         </ul>
       </nav>
       <div class="margin__top-auto">
-        <p class="text"><a class="link" href="./index.html">EN</a> \ <a class="link" href="./index_ru.html">RU</a>
+        <p class="paragraph"><a href="./index.html">EN</a> \ <a href="./index_ru.html">RU</a>
         </p>
       </div>
     </header>
@@ -65,15 +66,15 @@
       <div class="container">
           <h1 class="heading heading__h2">Integrations
           </h1>
-        <p class="text"><a class="link" href="#irage">Icons Rage</a> \ <a class="link" href="#fakit">FA-Kit</a>
+        <p class="paragraph"><a class="link" href="#irage">Icons Rage</a> \ <a class="link" href="#fakit">FA-Kit</a>
         </p>
           <h2 class="heading heading__h3" id="irage">Icons Rage
           </h2>
-        <p class="text">As we already mentioned above, this set is the one we created for this project. Although it began to be created long before that. This set contains 51 icons.</p>
+        <p class="paragraph">As we already mentioned above, this set is the one we created for this project. Although it began to be created long before that. This set contains 51 icons.</p>
           <h3 class="heading heading__h4">Using fonts
           </h3>
-        <p class="text">To use fonts, you need to connect it to the html document.</p>
-        <p class="text">Then, using the &lt;i/&gt; tag, you can add icons into the page. And you can specify the classes:</p>
+        <p class="paragraph">To use fonts, you need to connect it to the html document.</p>
+        <p class="paragraph">Then, using the &lt;i/&gt; tag, you can add icons into the page. And you can specify the classes:</p>
         <ul class="list">
           <li class="list_item">rage-fw — Icons will be fixed width</li>
           <li class="list_item">rage-lg — To make larger icon</li>
@@ -139,39 +140,39 @@
         </ul>
           <h2 class="heading heading__h3" id="fakit">FA-Kit
           </h2>
-        <p class="text"><a class="link" href="#fakit_variables">Переменные</a> \ <a class="link" href="#fakit_grid">Сетка</a> \ <a class="link" href="#fakit_blocks">Блоки</a> \ <a class="link" href="#fakit_breadcrumbs">Хлебные крошки</a> \ <a class="link" href="#fakit_buttons">Buttons</a> \ <a class="link" href="#fakit_helpers">Helpers</a> \ <a class="link" href="#fakit_media">Media</a> \ <a class="link" href="#fakit_notifications">Уведомления</a> \ <a class="link" href="#fakit_pagination">Пагинация</a> \ <a class="link" href="#fakit_utilites">Утилиты</a>
+        <p class="paragraph"><a class="link" href="#fakit_variables">Variables</a> \ <a class="link" href="#fakit_grid">Grid</a> \ <a class="link" href="#fakit_blocks">Blocks</a> \ <a class="link" href="#fakit_breadcrumbs">Vreadcrumbs</a> \ <a class="link" href="#fakit_buttons">Buttons</a> \ <a class="link" href="#fakit_helpers">Helpers</a> \ <a class="link" href="#fakit_media">Media</a> \ <a class="link" href="#fakit_notifications">Notifications</a> \ <a class="link" href="#fakit_pagination">Pagination</a> \ <a class="link" href="#fakit_utilites">Utilites</a>
         </p>
-        <p class="text">Sometimes we call this project a framework, but in fact it's just a library \ set of instructions for styles that already simplify the life for us and should help you.</p>
-        <p class="text">The general principle of construction should be familiar to you on bootstrap, but in our case there is a significant rethinking of the principles of approach and implementation of the work. We do not want to brag much, but we started using flex before it came to bootstrap in the latest version.</p>
+        <p class="paragraph">Sometimes we call this project a framework, but in fact it's just a library \ set of instructions for styles that already simplify the life for us and should help you.</p>
+        <p class="paragraph">The general principle of construction should be familiar to you on bootstrap, but in our case there is a significant rethinking of the principles of approach and implementation of the work. We do not want to brag much, but we started using flex before it came to bootstrap in the latest version.</p>
         <div class="notification notification__warning margin__bottom-1">
-          <p class="text">Draw your attention, this framework is devoid of js-files, we implement all the integration in the project itself. But everything can change in the future. Track the project here. And now about the main thing.</p>
+          <p class="paragraph">Draw your attention, this framework is devoid of js-files, we implement all the integration in the project itself. But everything can change in the future. Track the project here. And now about the main thing.</p>
         </div>
-        <p class="text">In this framework, we used the approach that BEM inspired us:</p>
+        <p class="paragraph">In this framework, we used the approach that BEM inspired us:</p>
         <ul class="list">
           <li class="list_item">Block</li>
           <li class="list_item">Element</li>
           <li class="list_item">Modifier</li>
         </ul>
-        <p class="text">In classes this is expressed in such way:</p>
+        <p class="paragraph">In classes this is expressed in such way:</p>
         <ul class="list">
           <li class="list_item">.block — conditional block</li>
           <li class="list_item">.block_link — link within this block</li>
           <li class="list_item">.block_link__hovered — link state</li>
         </ul>
-        <p class="text">In order to ensure maximum non-conflict, all blocks are equipped with the prefix ., and it looks like this:</p>
-        <p class="text">.block__background-light — A block with such an independent class will be displayed with a light gray background.</p>
+        <p class="paragraph">In order to ensure maximum non-conflict, all blocks are equipped with the prefix ., and it looks like this:</p>
+        <p class="paragraph">.block__background-light — A block with such an independent class will be displayed with a light gray background.</p>
         <div class="notification notification__warning margin__bottom-1">
-          <p class="text">Draw your attention: we almost do not use abbreviations in the construction of classes. This visually makes the list of classes heavier, but it becomes easier to understand what is happening or should happen to the element directly on the html page.</p>
+          <p class="paragraph">Draw your attention: we almost do not use abbreviations in the construction of classes. This visually makes the list of classes heavier, but it becomes easier to understand what is happening or should happen to the element directly on the html page.</p>
         </div>
-        <p class="text">The following main sections are represented in this framework:</p>
+        <p class="paragraph">The following main sections are represented in this framework:</p>
           <h3 class="heading heading__h4" id="fakit_variables">Variables
           </h3>
-        <p class="text">The following are the main variables that will be further described in the library classes. For a detailed list, move to the section for advanced use.</p>
+        <p class="paragraph">The following are the main variables that will be further described in the library classes. For a detailed list, move to the section for advanced use.</p>
         <div class="row">
           <div class="cols__xs-12 cols__xl-4">
               <h4 class="heading heading__h5" id="fak_colors">Colors
               </h4>
-            <p class="text">There are several colors, here they are:</p>
+            <p class="paragraph">There are several colors, here they are:</p>
             <ul class="list">
               <li class="list_item">Primary — sapphirine</li>
               <li class="list_item">Secondary — orange</li>
@@ -208,8 +209,8 @@
         </div>
           <h3 class="heading heading__h4" id="fakit_grid">Grid
           </h3>
-        <p class="text">This, perhaps, the most important thing for which the library was created, allows you to manipulate the grid on the page. By the way, allows you to do this easier than in the bootstrap, which is a big plus in our karma.</p>
-        <p class="text">The classes of wrappers that are present here:</p>
+        <p class="paragraph">This, perhaps, the most important thing for which the library was created, allows you to manipulate the grid on the page. By the way, allows you to do this easier than in the bootstrap, which is a big plus in our karma.</p>
+        <p class="paragraph">The classes of wrappers that are present here:</p>
         <ul class="list">
           <li class="list_item"><code class="code">container</code> is a container that we are familiar with, which follows the rules of the size in accordance with the dimensions of the container.
             <ul class="list">
@@ -219,16 +220,16 @@
           <li class="list_item"><code class="code">row</code> is a string for building a grid.</li>
           <li class="list_item"><code class="code">column</code> is an unexpected element, made like row, but for a column.</li>
         </ul>
-        <p class="text">The classes of grid construction are formed as follows:</p>
-        <p class="text"><code class="code">.cols__&#91;media&#93;-&#91;cols&#93;</code>, where media are media inquiries of type xs, and cols is the count of columns or rows. A total of them can be 12 (easily changed at an advanced level.)</p>
+        <p class="paragraph">The classes of grid construction are formed as follows:</p>
+        <p class="paragraph"><code class="code">.cols__&#91;media&#93;-&#91;cols&#93;</code>, where media are media inquiries of type xs, and cols is the count of columns or rows. A total of them can be 12 (easily changed at an advanced level.)</p>
           <h3 class="heading heading__h4" id="fakit_blocks">Blocks
           </h3>
-        <p class="text">In this section, there is a class with modifiers .g-block__background-color. As a color, you can use the name of the color variable, as follows:</p>
-        <p class="text">.block__backgound-ok — the background color will be green.</p>
+        <p class="paragraph">In this section, there is a class with modifiers .g-block__background-color. As a color, you can use the name of the color variable, as follows:</p>
+        <p class="paragraph">.block__backgound-ok — the background color will be green.</p>
           <h3 class="heading heading__h4" id="fakit_breadcrumbs">Bread crumbs
           </h3>
-        <p class="text">This class is represented by the name .g-breadcrumbs and is applied to the cover of the list, for example, the tag nav. A list ul is created inside it, where the arrow symbol → is inserted in the <a> </a> link tags.</p>
-        <p class="text">Example of usage in the code:</p>
+        <p class="paragraph">This class is represented by the name .g-breadcrumbs and is applied to the cover of the list, for example, the tag nav. A list ul is created inside it, where the arrow symbol → is inserted in the <a> </a> link tags.</p>
+        <p class="paragraph">Example of usage in the code:</p>
         <pre class="code code__snippet">&lt;nav class="breadcrumbs">
     &lt;ul>
         &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
@@ -237,18 +238,18 @@
 &lt;/nav></pre>
           <h3 class="heading heading__h4" id="fakit_buttons">Buttons
           </h3>
-        <p class="text">The main class for creating a button is the .g-button. But, in order to add a design to it, you need to specify its style, for example .g-button__primary — then the button will turn blue with white text on it (for example, on the right). Or .g-button__white (for example, on the left).</p>
-        <p class="text">The code will then look like this:</p>
+        <p class="paragraph">The main class for creating a button is the .g-button. But, in order to add a design to it, you need to specify its style, for example .g-button__primary — then the button will turn blue with white text on it (for example, on the right). Or .g-button__white (for example, on the left).</p>
+        <p class="paragraph">The code will then look like this:</p>
         <pre class="code code__snippet">&lt;a class="button button__white margin__right-1" href="#">
     &lt;svg class="rage margin__right-1">
         &lt;use xlink:href="#rage-mix">&lt;/use>
     &lt;/svg>
     &lt;span>Mix&lt;/span>
 &lt;/a></pre>
-        <p class="text">Also there is a class .button__disabled — it makes the button visually inaccessible to the user. Works fine in pairs with the html-property disabled.</p>
+        <p class="paragraph">Also there is a class .button__disabled — it makes the button visually inaccessible to the user. Works fine in pairs with the html-property disabled.</p>
           <h3 class="heading heading__h4" id="fakit_helpers">Helpers
           </h3>
-        <p class="text">Here are the classes:</p>
+        <p class="paragraph">Here are the classes:</p>
         <ul class="list">
           <li class="list_item">hidden__[media]
             <ul class="list">
@@ -263,13 +264,13 @@
             </ul>
           </li>
         </ul>
-        <p class="text">Instead of media, substitute the size you need. And then you can hide and display items on the page. The styles of the visible class are lower than hidden, so they have a higher priority.</p>
+        <p class="paragraph">Instead of media, substitute the size you need. And then you can hide and display items on the page. The styles of the visible class are lower than hidden, so they have a higher priority.</p>
           <h3 class="heading heading__h4" id="fakit_media">Media
           </h3>
-        <p class="text">At the moment, there is only <code class="code">.image</code> with the extra class <code class="code">.image__fluid</code>, which limits the image to the width inside the container.</p>
+        <p class="paragraph">At the moment, there is only <code class="code">.image</code> with the extra class <code class="code">.image__fluid</code>, which limits the image to the width inside the container.</p>
           <h3 class="heading heading__h4" id="fakit_notifications">Notifications
           </h3>
-        <p class="text">They have the main class .g-notification, which has the following modifiers:</p>
+        <p class="paragraph">They have the main class .g-notification, which has the following modifiers:</p>
         <ul class="list">
           <li class="list_item">.notification__top — the border of the stroke will be on top</li>
           <li class="list_item">.notification__left — or from below</li>
@@ -277,24 +278,24 @@
           <li class="list_item">.notification__warning — orange</li>
           <li class="list_item">.notification__ok — or green</li>
         </ul>
-        <p class="text">At this time, the block itself has a white background, a shadow and indented indentations in and out.</p>
+        <p class="paragraph">At this time, the block itself has a white background, a shadow and indented indentations in and out.</p>
           <h3 class="heading heading__h4" id="fakit_pagination">Pagination
           </h3>
-        <p class="text"><code class="code">.pagination</code> — A wrapper that nulls list styles (ul or ol)</p>
-        <p class="text"><code class="code">.pagination__center</code> — allows you to center on the page a list of pagination</p>
-        <p class="text">The <code class="code">.pagination_item</code> element has a boundary, a <code class="code">.pagination__active</code> state, and a description of the nested reference (item must be applied to the element of the list li).</p>
+        <p class="paragraph"><code class="code">.pagination</code> — A wrapper that nulls list styles (ul or ol)</p>
+        <p class="paragraph"><code class="code">.pagination__center</code> — allows you to center on the page a list of pagination</p>
+        <p class="paragraph">The <code class="code">.pagination_item</code> element has a boundary, a <code class="code">.pagination__active</code> state, and a description of the nested reference (item must be applied to the element of the list li).</p>
           <h3 class="heading heading__h4" id="fakit_utilites">Utilities
           </h3>
-        <p class="text">The block, in which the values of the indents are indicated, is constructed next to this logic:</p>
+        <p class="paragraph">The block, in which the values of the indents are indicated, is constructed next to this logic:</p>
         <ul class="list">
           <li class="list_item">.[type]__[direction]-[offset-size]</li>
           <li class="list_item">.[type]__[media]-[direction]-[offset-size]</li>
         </ul>
-        <p class="text">Where is:</p>
-        <p class="text">type — margin или padding</p>
-        <p class="text">media — media queries </p>
-        <p class="text">direction — direction (top, bottom, left, right, xx [in both directions along the X axis], yy [in both directions along the Y axis])</p>
-        <p class="text">For indentation in all directions, we recommend using the following construction:</p>
+        <p class="paragraph">Where is:</p>
+        <p class="paragraph">type — margin или padding</p>
+        <p class="paragraph">media — media queries </p>
+        <p class="paragraph">direction — direction (top, bottom, left, right, xx [in both directions along the X axis], yy [in both directions along the Y axis])</p>
+        <p class="paragraph">For indentation in all directions, we recommend using the following construction:</p>
         <pre class="code code__snippet">&lt;a class="margin__xx-5 margin__yy-5">
 &lt;/a></pre>
       </div>

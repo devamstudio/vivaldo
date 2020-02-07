@@ -14,7 +14,8 @@
   <!-- Get DEMO data-->
   <!-- Get DEMO data END-->
   <body class="interactive-docs" lang="ru">
-    <header class="interactive-docs_header"><a class="link logo" href="../">
+    <div class="grid-checkout"></div>
+    <header class="interactive-docs_header"><a class="logo" href="../">
           <svg class="logo_image" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 446.1 164.9" xml:space="preserve" height="50" width="120">
             <style type="text/css">
               .st0{fill:none;stroke:#005EDD;stroke-width:16;stroke-miterlimit:10;}
@@ -57,7 +58,7 @@
         </ul>
       </nav>
       <div class="margin__top-auto">
-        <p class="text"><a class="link" href="./index.html">EN</a> \ <a class="link" href="./index_ru.html">RU</a>
+        <p class="paragraph"><a href="./index.html">EN</a> \ <a href="./index_ru.html">RU</a>
         </p>
       </div>
     </header>
@@ -65,14 +66,14 @@
       <div class="container">
           <h1 class="heading heading__h2">Блоки
           </h1>
-        <p class="text"><a class="link" href="#album">Альбом</a> \ <a class="link" href="#album-cover">Обложка альбома</a> \ <a class="link" href="#article">Статья</a> \ <a class="link" href="#artist-card">Карточка исполнителя</a> \ <a class="link" href="#comment">Комментарии</a> \ <a class="link" href="#dropdown">Выпадающий список</a> \ <a class="link" href="#field">Поля ввода</a> \ <a class="link" href="#heading">Заголовок</a> \ <a class="link" href="#icon">Иконки</a> \ <a class="link" href="#image">Изображение</a> \ <a class="link" href="#link">Ссылка</a> \ <a class="link" href="#list">Список</a> \ <a class="link" href="#nav-trigger">Переключитель навигации</a> \ <a class="link" href="#news">Новости</a> \ <a class="link" href="#player">Плеер</a> \ <a class="link" href="#tag">Теги</a> \ <a class="link" href="#track">Трек</a> \ <a class="link" href="#user">Юзверь</a>
+        <p class="paragraph"><a class="link" href="#album">Альбом</a> \ <a class="link" href="#album-cover">Обложка альбома</a> \ <a class="link" href="#article">Статья</a> \ <a class="link" href="#artist-card">Карточка исполнителя</a> \ <a class="link" href="#comment">Комментарии</a> \ <a class="link" href="#dropdown">Выпадающий список</a> \ <a class="link" href="#field">Поля ввода</a> \ <a class="link" href="#heading">Заголовок</a> \ <a class="link" href="#icon">Иконки</a> \ <a class="link" href="#image">Изображение</a> \ <a class="link" href="#link">Ссылка</a> \ <a class="link" href="#list">Список</a> \ <a class="link" href="#nav-trigger">Переключитель навигации</a> \ <a class="link" href="#news">Новости</a> \ <a class="link" href="#player">Плеер</a> \ <a class="link" href="#tag">Теги</a> \ <a class="link" href="#track">Трек</a> \ <a class="link" href="#user">Юзверь</a>
         </p>
           <h2 class="heading heading__h3" id="album">Альбом
           </h2>
         <div class="row">
           <div class="cols__lg-9">
-            <p class="text">В данном разделе есть как альбомы, так и их обертка для списка.</p>
-            <p class="text">Для того, чтобы использовать альбом необходимо использовать следующий код для сборки:</p>
+            <p class="paragraph">В данном разделе есть как альбомы, так и их обертка для списка.</p>
+            <p class="paragraph">Для того, чтобы использовать альбом необходимо использовать следующий код для сборки:</p>
             <pre class="code code__snippet">&lt;div class="album"&gt;
     &lt;div class="album_control album_control__left"&gt;
         &lt;i class="icon rage rage-fw rage-heart"&gt;&lt;/i&gt;
@@ -92,21 +93,21 @@
     &lt;a class="link album_title" href="./album.html"&gt;Matras&lt;/a&gt;
     &lt;a class="link album_artist" href="./artist.html"&gt;Link in Dark&lt;/a&gt;
 &lt;/div&gt;</pre>
-            <p class="text">Тут есть 1 уровень обертки, это класс <code class="code">.album</code> все элементы находятся внутри. В блоке альбома есть несколько элементов:</p>
+            <p class="paragraph">Тут есть 1 уровень обертки, это класс <code class="code">.album</code> все элементы находятся внутри. В блоке альбома есть несколько элементов:</p>
             <ul class="list">
               <li class="list_item">Контролы <code class="code">.album_control</code>. Их может быть 2 штуки: слева <code class="code">.album_control__left</code> и справа <code class="code">.album_control__right</code>.</li>
               <li class="list_item">Обложка <code class="code">.album_cover</code>. Изображение должно быть квадратным из-за анимации скругления.</li>
               <li class="list_item">Название <code class="code">.album_title</code>.</li>
               <li class="list_item">Исполнитель <code class="code">.album_artist</code>.</li>
             </ul>
-            <p class="text">Для того, чтобы все элменты правильно выстроились в список альбомов их необходимо обернуть в класс <code class="code">.albums-list</code>.</p>
+            <p class="paragraph">Для того, чтобы все элменты правильно выстроились в список альбомов их необходимо обернуть в класс <code class="code">.albums-list</code>.</p>
           </div>
           <div class="cols__lg-3">
               <div class="album" style="max-width:250px;">
                 <div class="album_control album_control__left"><i class="icon rage rage-fw rage-heart"></i>
                 </div>
-                <div class="album_control album_control__right"><span class="dropdown"><span class="dropdown_control"><i class="icon rage rage-fw rage-dots"></i></span><span class="dropdown_list dropdown_list__right"><a class="link dropdown_list-item" href="./index.html">Add</a><a class="link dropdown_list-item" href="./index.html">Remove</a></span></span>
-                </div><a class="link album_cover" href="./album.html"><img class="image album_cover-image" src="./images/album-1__all.jpg" alt="image"></a><a class="link album_title" href="./album.html">Matras</a><a class="link album_artist" href="./artist.html">Link in Dark</a>
+                <div class="album_control album_control__right"><span class="dropdown"><span class="dropdown_control"><i class="icon rage rage-fw rage-dots"></i></span><span class="dropdown_list dropdown_list__right"><a class="dropdown_list-item" href="./index.html">Add</a><a class="dropdown_list-item" href="./index.html">Remove</a></span></span>
+                </div><a class="album_cover" href="./album.html"><img class="image album_cover-image" src="./images/album-1__all.jpg" alt="image"></a><a class="album_title" href="./album.html">Matras</a><a class="album_artist" href="./artist.html">Link in Dark</a>
               </div>
           </div>
         </div>
@@ -117,20 +118,20 @@
             <div class="album-cover album-cover__disc"><img class="image image__fluid" src="./images/album-1__all.jpg"></div>
           </div>
           <div class="cols__lg-7">
-            <p class="text">Элемент, который не имеет почти ничего общего с предыдушим, за исключением названия. Его можно использовать на странице альбома, например, или в других местах для декоративных целей.</p>
-            <p class="text">Для его использования достаточно обернуть картинку:</p>
+            <p class="paragraph">Элемент, который не имеет почти ничего общего с предыдушим, за исключением названия. Его можно использовать на странице альбома, например, или в других местах для декоративных целей.</p>
+            <p class="paragraph">Для его использования достаточно обернуть картинку:</p>
             <pre class="code code__snippet">&lt;div class="album-cover album-cover__disc"&gt;
     &lt;img class="image image__fluid" src="./images/album-1__all.jpg"&gt;
 &lt;/div&gt;</pre>
-            <p class="text">Рядом с изображением появиться псевдоэлемент, изображающий виниловый диск.</p>
+            <p class="paragraph">Рядом с изображением появиться псевдоэлемент, изображающий виниловый диск.</p>
             <div class="notification notification__warning">
-              <p class="text">Использовать необходимо исключительно квадратный изображения. Так как размер и форма псевдоэлемента (винилового диска) напрямую зависит от изображения.</p>
+              <p class="paragraph">Использовать необходимо исключительно квадратный изображения. Так как размер и форма псевдоэлемента (винилового диска) напрямую зависит от изображения.</p>
             </div>
           </div>
         </div>
           <h2 class="heading heading__h3" id="article">Статья
           </h2>
-        <p class="text">Это обертка, которую следует использовать для вывода массива текста или того же массива пользовательского ввода. В него уже зашиты заголовки и текста, поэтому нет необходимости каждый заголовок оборачивать в тег с классом <code class="code">.heading</code>, вместо этого можно просто использовать <code class="code">&lt;h1&gt;...</code>.</p>
+        <p class="paragraph">Это обертка, которую следует использовать для вывода массива текста или того же массива пользовательского ввода. В него уже зашиты заголовки и текста, поэтому нет необходимости каждый заголовок оборачивать в тег с классом <code class="code">.heading</code>, вместо этого можно просто использовать <code class="code">&lt;h1&gt;...</code>.</p>
         <div class="row">
           <div class="cols__lg-8">
             <pre class="code code__snippet">&lt;article class='article'&gt;
@@ -139,24 +140,24 @@
 &lt;/article&gt;</pre>
           </div>
         </div>
-        <p class="text">Использовать тег article не обязательно для этого. Точно также можно использовать, скажем, в описании товара, просто, чтобы не добавлять код.</p>
+        <p class="paragraph">Использовать тег article не обязательно для этого. Точно также можно использовать, скажем, в описании товара, просто, чтобы не добавлять код.</p>
         <div class="notification margin__bottom-1">
-          <p class="text">Попытка использования этого класса не к месту, например кинуть его в body, чтобы не писать руками каждый раз заголовок, может обернуться против вас. В данном случае происходит инкапсуляция, возможность закрытого типа.</p>
+          <p class="paragraph">Попытка использования этого класса не к месту, например кинуть его в body, чтобы не писать руками каждый раз заголовок, может обернуться против вас. В данном случае происходит инкапсуляция, возможность закрытого типа.</p>
         </div>
-        <p class="text">Точно также можно использовать вместе с, непосредственно, заголовками.</p>
+        <p class="paragraph">Точно также можно использовать вместе с, непосредственно, заголовками.</p>
           <h2 class="heading heading__h3" id="artist-card">Карточка исполнителя
           </h2>
         <div class="row">
           <div class="cols__lg-9">
-            <p class="text">Данный блок также, как и альбом, имеет саму карточку и класс-обертку для списка исполнителей.</p>
-            <p class="text">Для того, чтобы вывести карточку исполнителя достаточно всего немного кода:</p>
+            <p class="paragraph">Данный блок также, как и альбом, имеет саму карточку и класс-обертку для списка исполнителей.</p>
+            <p class="paragraph">Для того, чтобы вывести карточку исполнителя достаточно всего немного кода:</p>
             <pre class="code code__snippet">&lt;a class="link artist-card" href="./artist.html" style="background-image:url(image);"&gt;
     &lt;span class="heading artist-card_title"&gt;Maverik Bowee&lt;/span&gt;
 &lt;/a&gt;</pre>
-            <p class="text">А для списка обернуть в <code class="code">.artist-cards-list</code>, а самой карточке присвоить <code class="code">.artist-cards-list_item</code>.</p>
-            <p class="text">Вне списка карточки имеют минимальную высоту небольшой, а в списке работают немного другие правила.</p>
+            <p class="paragraph">А для списка обернуть в <code class="code">.artist-cards-list</code>, а самой карточке присвоить <code class="code">.artist-cards-list_item</code>.</p>
+            <p class="paragraph">Вне списка карточки имеют минимальную высоту небольшой, а в списке работают немного другие правила.</p>
           </div>
-          <div class="cols__lg-3"><a class="link artist-card" href="./artist.html" style="background-image:url(./images/artist-2__player.jpg);">
+          <div class="cols__lg-3"><a class="artist-card" href="./artist.html" style="background-image:url(./images/artist-2__player.jpg);">
                     <span class="heading artist-card_title">Maverik Bowee
                     </span></a>
           </div>
@@ -165,7 +166,7 @@
           </h2>
         <div class="row">
           <div class="cols__lg-4">
-            <p class="text">Вот так они выводяться.</p>
+            <p class="paragraph">Вот так они выводяться.</p>
           </div>
           <div class="cols__lg-8">
             <div class="comments-list">
@@ -173,7 +174,7 @@
                 <div class="comment_header"><span class="user"><span class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></span><span class="user_name">Torin Duboshit</span></span><small><em class="date">26/08/2019</em></small>
                 </div>
                 <div class="comment_body">
-                  <p class="text">Комментарии можно использовать по-отдельности, но разумнее прямо в коде.</p>
+                  <p class="paragraph">Комментарии можно использовать по-отдельности, но разумнее прямо в коде.</p>
                 </div>
                 <div class="comment_actions"><a class="link" href="#">Reply</a><a class="link" href="#">Thumbs up</a>
                 </div>
@@ -207,7 +208,7 @@
         </div>
           <h2 class="heading heading__h3" id="dropdown">Выпадающий список (dropdown)
           </h2>
-        <p class="text">Выпадающий список может быть простым: иконка, текст или более сложной, например блок юзера:</p>
+        <p class="paragraph">Выпадающий список может быть простым: иконка, текст или более сложной, например блок юзера:</p>
         <pre class="code code__snippet">&lt;span class="dropdown"&gt;
     &lt;span class="dropdown_control"&gt;
         &lt;span class="user"&gt;
@@ -221,19 +222,19 @@
         &lt;a class="link dropdown_list-item" href="./playlists.html"&gt;Playlists&lt;/a&gt;
     &lt;/span&gt;
 &lt;/span&gt;</pre>
-        <p class="text">Выпадающий список построен на текстовом теге span для того, чтобы можно было использовать его в таких тегах, как к примеру <code class="code">&lt;h2&gt;</code>.</p>
+        <p class="paragraph">Выпадающий список построен на текстовом теге span для того, чтобы можно было использовать его в таких тегах, как к примеру <code class="code">&lt;h2&gt;</code>.</p>
           <h2 class="heading heading__h3" id="field">Поля ввода
           </h2>
-        <p class="text">Ничего сложного, просто биз... поля для ввода данных. Тут предусмотрено использование без фидбека, т.е. без классов ошибок.</p>
-        <p class="text">Предусмотрено несколько вариантов использования:</p>
+        <p class="paragraph">Ничего сложного, просто биз... поля для ввода данных. Тут предусмотрено использование без фидбека, т.е. без классов ошибок.</p>
+        <p class="paragraph">Предусмотрено несколько вариантов использования:</p>
         <ul class="list">
           <li class="list_item">Обычное поле типа text\password\email и другие однострочные.</li>
           <li class="list_item">Форма с чекбоксами, переключателями</li>
           <li class="list_item">Строчные формы (можно выстроить линию)</li>
           <li class="list_item">Горизонтальное поле ввода.</li>
         </ul>
-        <p class="text">А также с label\без и подстрочником.</p>
-        <p class="text">Далее в примерах:</p>
+        <p class="paragraph">А также с label\без и подстрочником.</p>
+        <p class="paragraph">Далее в примерах:</p>
           <h3 class="heading">Обычное использование
           </h3>
         <div class="row align-items__center">
@@ -325,29 +326,29 @@
         </div>
           <h2 class="heading heading__h3" id="heading">Заголовок
           </h2>
-        <p class="text">Все очень просто. Заголовок = заголовок. Не заголовок = заголовок. Это маленький блок, которому по сути не важно, какой элемент вы используете, хоть блочный элемент.</p>
-        <p class="text">Также можно сделать заголовок h5 таким же на вид, как h1. Просто добавив ему класс. Это значит, что нет зависимости от тега заголовка, почти. Его отступы не переписываются.</p>
+        <p class="paragraph">Все очень просто. Заголовок = заголовок. Не заголовок = заголовок. Это маленький блок, которому по сути не важно, какой элемент вы используете, хоть блочный элемент.</p>
+        <p class="paragraph">Также можно сделать заголовок h5 таким же на вид, как h1. Просто добавив ему класс. Это значит, что нет зависимости от тега заголовка, почти. Его отступы не переписываются.</p>
           <h2 class="heading heading__h3" id="icon">Иконки
           </h2>
-        <p class="text">В проекте использованы только шрифтовое решение иконок Rage (нашего производства), следовательно, дополнительных стилей на данный момент нет.</p>
+        <p class="paragraph">В проекте использованы только шрифтовое решение иконок Rage (нашего производства), следовательно, дополнительных стилей на данный момент нет.</p>
           <h2 class="heading heading__h3" id="image">Изображение
           </h2>
-        <p class="text">В базовой комплектации сброшены стили изображений, чтобы они не создавали отступы. Но с помощью классов <code class="code">.image.image__fit</code> или <code class="code">.image.image__fluid</code> можно еще заставить их вписываться в область.</p>
+        <p class="paragraph">В базовой комплектации сброшены стили изображений, чтобы они не создавали отступы. Но с помощью классов <code class="code">.image.image__fit</code> или <code class="code">.image.image__fluid</code> можно еще заставить их вписываться в область.</p>
           <h2 class="heading heading__h3" id="link">Ссылка
           </h2>
-        <p class="text">Ссылка также, как и заголовок не привязан к тегу, но имеет завязки на его свойства. Это значит, что можно добавить класс <code class="code">.link</code> к тегу span и выглядеть оно будет, как ссылка. Но мы все же не рекомендуем.</p>
+        <p class="paragraph">Ссылка также, как и заголовок не привязан к тегу, но имеет завязки на его свойства. Это значит, что можно добавить класс <code class="code">.link</code> к тегу span и выглядеть оно будет, как ссылка. Но мы все же не рекомендуем.</p>
           <h2 class="heading heading__h3" id="list">Список
           </h2>
-        <p class="text">Список базируется на теге ul\ol и родителю присваивается класс <code class="code">.list</code>, а дочерним элементам списка класс <code class="code">.list_item</code>.</p>
+        <p class="paragraph">Список базируется на теге ul\ol и родителю присваивается класс <code class="code">.list</code>, а дочерним элементам списка класс <code class="code">.list_item</code>.</p>
           <h2 class="heading heading__h3" id="nav-trigger">Переключитель навигации
           </h2>
-        <p class="text">Данный блок содержит в себе только JS-инструкцию по тому, как открывать и закрывать основную навигацию.</p>
+        <p class="paragraph">Данный блок содержит в себе только JS-инструкцию по тому, как открывать и закрывать основную навигацию.</p>
           <h2 class="heading heading__h3" id="news">Новости
           </h2>
-        <p class="text">Для визуализации новости </p>
+        <p class="paragraph">Для визуализации новости </p>
         <div class="row">
           <div class="cols__lg-9">
-            <p class="text">Для визуализации новости следует использовать следующий код:</p>
+            <p class="paragraph">Для визуализации новости следует использовать следующий код:</p>
             <pre class="code code__snippet">&lt;div class="news-item"&gt;
     &lt;a class="link news-item_cover" href="./news-item.html" style="background-image:url(image);"&gt;&lt;/a&gt;
     &lt;span class="news-item_date"&gt;25/05/2020&lt;/span&gt;
@@ -361,7 +362,7 @@
 &lt;/div&gt;</pre>
           </div>
           <div class="cols__lg-3">
-              <div class="news-item"><a class="link news-item_cover" href="./news-item.html" style="background-image:url(./images/news-1__player.jpg);"></a><span class="news-item_date">25/05/2020</span><a class="link news-item_title" href="./news-item.html">A brief overview of new products in music.</a>
+              <div class="news-item"><a class="news-item_cover" href="./news-item.html" style="background-image:url(./images/news-1__player.jpg);"></a><span class="news-item_date">25/05/2020</span><a class="news-item_title" href="./news-item.html">A brief overview of new products in music.</a>
                 <div class="news-item_author"><span class="user"><span class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"></span><span class="user_name">Torin Duboshit</span></span>
                 </div>
               </div>
@@ -369,12 +370,16 @@
         </div>
           <h2 class="heading heading__h3" id="player">Плеер
           </h2>
-        <p class="text">Плеер имеет сложную конструкцию и выглядит так:</p>
+        <p class="paragraph">Плеер имеет сложную конструкцию и выглядит так:</p>
         <div class="padding__xx-4 padding__yy-3 block__background-light">
             <div class="player">
-              <div class="player_track-cover" style="background-image:url(./images/album-1__all.jpg)"></div>
-              <div class="player_controls margin__xx-2 align-items__center" hidden><span class="player_control"><i class="icon rage rage-fw rage-play-back"></i></span><span class="player_control player_control__play-pause"><i class="icon rage rage-fw rage-play"></i></span><span class="player_control"><i class="icon rage rage-fw rage-play-forward"></i></span></div>
-              <div class="player_meta"><span class="player_track-title">Hello world</span><a class="link player_track-artist" href="./artist.html">Link in Dark</a>
+              <div class="player_controls hidden__xs"><span class="player_control hidden__md-up"><i class="icon rage rage-fw rage-play-back"></i></span></div>
+              <div class="player_track-cover" style="background-image:url(./images/album-1__all.jpg)">
+                <div class="player_track-cover_overlay hidden__md-up"><i class="icon rage rage-fw rage-pause"></i>
+                </div>
+              </div>
+              <div class="player_controls"><span class="player_control hidden__sm-down"><i class="icon rage rage-fw rage-play-back"></i></span><span class="player_control player_control__play-pause hidden__sm-down"><i class="icon rage rage-fw rage-play"></i></span><span class="player_control"><i class="icon rage rage-fw rage-play-forward"></i></span></div>
+              <div class="player_meta"><span class="player_track-title">Hello world</span><a class="player_track-artist" href="./artist.html">Link in Dark</a>
               </div>
               <div class="player_duration">2:55</div>
               <div class="player_additional-controls margin__left-3" hidden><span class="player_control"><i class="icon rage rage-fw rage-mix"></i></span><span class="player_control"><i class="icon rage rage-fw rage-loop"></i></span></div>
@@ -401,9 +406,9 @@
         &lt;span class="player_control"&gt;&lt;i class="icon rage rage-fw rage-loop"&gt;&lt;/i&gt;&lt;/span&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
-        <p class="text">В данном примере присутствует полный набор иконок из дизайна. Часть можно убрать, что-то добавить.</p>
+        <p class="paragraph">В данном примере присутствует полный набор иконок из дизайна. Часть можно убрать, что-то добавить.</p>
         <div class="notification">
-          <p class="text">Акцентируем внимание, данный плеер предназначен в первую очередь для полноэкранного разрешения, и описаны появления элементов от мобильного разрешения и до пк с учетом размера полного экрана.</p>
+          <p class="paragraph">Акцентируем внимание, данный плеер предназначен в первую очередь для полноэкранного разрешения, и описаны появления элементов от мобильного разрешения и до пк с учетом размера полного экрана.</p>
         </div>
           <h2 class="heading heading__h3" id="tag">Теги
           </h2>
@@ -413,17 +418,17 @@
             </div>
           </div>
           <div class="cols__lg-6">
-            <p class="text">Куда в музыке и новостях без тегов? Никуда. А для качественного отображения для них есть еще и обертка <code class="code">.tags-list</code>, а чтобы элементы работали, как надо, необходимо добавить им класс <code class="code">.tags-list_item</code>.</p>
-            <p class="text">Впрочем их можно использовать и без обертки, по-отдельности или задавая уникальыне правила. Чтобы, к примеру, исключить отступ списка вниз.</p>
-            <p class="text">Одиночный тег может быть как span, так и a, достаточно присвоить ему класс <code class="code">.tag</code>.</p>
+            <p class="paragraph">Куда в музыке и новостях без тегов? Никуда. А для качественного отображения для них есть еще и обертка <code class="code">.tags-list</code>, а чтобы элементы работали, как надо, необходимо добавить им класс <code class="code">.tags-list_item</code>.</p>
+            <p class="paragraph">Впрочем их можно использовать и без обертки, по-отдельности или задавая уникальыне правила. Чтобы, к примеру, исключить отступ списка вниз.</p>
+            <p class="paragraph">Одиночный тег может быть как span, так и a, достаточно присвоить ему класс <code class="code">.tag</code>.</p>
           </div>
         </div>
           <h2 class="heading heading__h3" id="track">Трек
           </h2>
         <div class="row">
           <div class="cols__lg-7">
-            <p class="text">Основа данной сборки.</p>
-            <p class="text">Сам по себе трек не имеет ничего сложного, название, обложка и время. Можно добавить функционал типа выпадающих списков.</p>
+            <p class="paragraph">Основа данной сборки.</p>
+            <p class="paragraph">Сам по себе трек не имеет ничего сложного, название, обложка и время. Можно добавить функционал типа выпадающих списков.</p>
             <pre class="code code__snippet">&lt;div class="track"&gt;
     &lt;img class="image track_cover" src="./images/album-1__all.jpg" alt=""&gt;
     &lt;div class="track_meta"&gt;
@@ -432,70 +437,70 @@
     &lt;/div&gt;
     &lt;div class="track_adds"&gt;2:42&lt;/div&gt;
 &lt;/div&gt;</pre>
-            <p class="text">Если использовать их одиночными, как на примере справа, то необходимо добавлять отступы, например <code class="code">.margin__bottom-1</code>.</p>
+            <p class="paragraph">Если использовать их одиночными, как на примере справа, то необходимо добавлять отступы, например <code class="code">.margin__bottom-1</code>.</p>
           </div>
           <div class="cols__lg-5">
               <div class="track margin__bottom-1"><img class="image track_cover" src="./images/album-1__all.jpg" alt="image">
-                <div class="track_meta"><span class="track_title">Poster</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                <div class="track_meta"><span class="track_title">Poster</span><a class="track_artist" href="./artist.html">Link in Dark</a>
                 </div>
                 <div class="track_adds">2:42</div>
               </div>
               <div class="track margin__bottom-1"><img class="image track_cover" src="./images/album-1__all.jpg" alt="image">
-                <div class="track_meta"><span class="track_title">Knock the floor</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                <div class="track_meta"><span class="track_title">Knock the floor</span><a class="track_artist" href="./artist.html">Link in Dark</a>
                 </div>
                 <div class="track_adds">2:44</div>
               </div>
             <div class="track track__played"><img class="image track_cover" src="./images/album-1__all.jpg" alt="image">
-              <div class="track_meta"><span class="track_title">Go go gogogogo</span><a class="link track_artist" href="#">Link in Dark</a>
+              <div class="track_meta"><span class="track_title">Go go gogogogo</span><a class="track_artist" href="#">Link in Dark</a>
               </div>
               <div class="track_adds">2:58</div>
             </div>
             <div class="notification notification__ok">
-              <p class="text"><small>В треках есть фича. Они могут крутиться, как активное состояние. Надо добавить класс <code class="code">.track__played</code> к <code class="code">.track</code>.</small></p>
+              <p class="paragraph"><small>В треках есть фича. Они могут крутиться, как активное состояние. Надо добавить класс <code class="code">.track__played</code> к <code class="code">.track</code>.</small></p>
             </div>
           </div>
         </div>
-        <p class="text">Но вообще для таких случаев у нас есть список треков <code class="code">.tracks-list</code>. Он, как и все остальные списки, требует, чтобы у вложенных элементов были дополнительные от него классы <code class="code">.tracks-list_item</code>.</p>
-        <p class="text">В списке все треки нумеруются автоматически:</p>
+        <p class="paragraph">Но вообще для таких случаев у нас есть список треков <code class="code">.tracks-list</code>. Он, как и все остальные списки, требует, чтобы у вложенных элементов были дополнительные от него классы <code class="code">.tracks-list_item</code>.</p>
+        <p class="paragraph">В списке все треки нумеруются автоматически:</p>
           <div class="tracks-list">
               <div class="track tracks-list_item"><img class="image track_cover" src="./images/album-1__all.jpg" alt="image">
-                <div class="track_meta"><span class="track_title">Forewer old</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                <div class="track_meta"><span class="track_title">Forewer old</span><a class="track_artist" href="./artist.html">Link in Dark</a>
                 </div>
                 <div class="track_adds">0:13</div>
               </div>
               <div class="track tracks-list_item"><img class="image track_cover" src="./images/album-1__all.jpg" alt="image">
-                <div class="track_meta"><span class="track_title">Dont Go</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                <div class="track_meta"><span class="track_title">Dont Go</span><a class="track_artist" href="./artist.html">Link in Dark</a>
                 </div>
                 <div class="track_adds">3:08</div>
               </div>
               <div class="track tracks-list_item"><img class="image track_cover" src="./images/album-1__all.jpg" alt="image">
-                <div class="track_meta"><span class="track_title">Somewere i belive</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                <div class="track_meta"><span class="track_title">Somewere i belive</span><a class="track_artist" href="./artist.html">Link in Dark</a>
                 </div>
                 <div class="track_adds">3:34</div>
               </div>
               <div class="track tracks-list_item"><img class="image track_cover" src="./images/album-1__all.jpg" alt="image">
-                <div class="track_meta"><span class="track_title">Hello world</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                <div class="track_meta"><span class="track_title">Hello world</span><a class="track_artist" href="./artist.html">Link in Dark</a>
                 </div>
                 <div class="track_adds">2:55</div>
               </div>
               <div class="track tracks-list_item"><img class="image track_cover" src="./images/album-1__all.jpg" alt="image">
-                <div class="track_meta"><span class="track_title">Knock the floor</span><a class="link track_artist" href="./artist.html">Link in Dark</a>
+                <div class="track_meta"><span class="track_title">Knock the floor</span><a class="track_artist" href="./artist.html">Link in Dark</a>
                 </div>
                 <div class="track_adds">2:44</div>
               </div>
           </div>
         <div class="notification notification__warning">
-          <p class="text">Список имеет отступы. Будьте аккуратны с ними.</p>
+          <p class="paragraph">Список имеет отступы. Будьте аккуратны с ними.</p>
         </div>
           <h2 class="heading heading__h3" id="user">Юзверь
           </h2>
-        <p class="text">Изображение и имя. Вот и все, собственно, внимание код:</p>
+        <p class="paragraph">Изображение и имя. Вот и все, собственно, внимание код:</p>
         <pre class="code code__snippet">&lt;span class="user"&gt;
     &lt;span class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"&gt;&lt;/span&gt;
     &lt;span class="user_name"&gt;Torin Duboshit&lt;/span&gt;
 &lt;/span&gt;</pre>
         <div class="notification notification__alert">
-          <p class="text">За использование неквадратных аватарок ментально награждаю минусом в 10к к карме.</p>
+          <p class="paragraph">За использование неквадратных аватарок ментально награждаю минусом в 10к к карме.</p>
         </div>
       </div>
     </main>

@@ -1,10 +1,15 @@
 mixin player(track)
 	.player
-		.player_track-cover(style='background-image:url('+track.cover+')')
-		.player_controls.margin__xx-2.align-items__center(hidden)
-			span.player_control
+		.player_controls.hidden__xs
+			span.player_control.hidden__md-up
 				+icon('rage', 'play-back')
-			span.player_control.player_control__play-pause
+		.player_track-cover(style='background-image:url('+track.cover+')')
+			.player_track-cover_overlay.hidden__md-up
+				+icon('rage', 'pause')
+		.player_controls
+			span.player_control.hidden__sm-down
+				+icon('rage', 'play-back')
+			span.player_control.player_control__play-pause.hidden__sm-down
 				+icon('rage', 'play')
 			span.player_control
 				+icon('rage', 'play-forward')

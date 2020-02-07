@@ -7,49 +7,49 @@ block prepend head
 block main
     .container
         +heading('h1')(class='heading__h2') Блоки
-        p.text
-            +link('#album') Альбом
+        p.paragraph
+            +link('#album').link Альбом
             |  \ 
-            +link('#album-cover') Обложка альбома
+            +link('#album-cover').link Обложка альбома
             |  \ 
-            +link('#article') Статья
+            +link('#article').link Статья
             |  \ 
-            +link('#artist-card') Карточка исполнителя
+            +link('#artist-card').link Карточка исполнителя
             |  \ 
-            +link('#comment') Комментарии
+            +link('#comment').link Комментарии
             |  \ 
-            +link('#dropdown') Выпадающий список
+            +link('#dropdown').link Выпадающий список
             |  \ 
-            +link('#field') Поля ввода
+            +link('#field').link Поля ввода
             |  \ 
-            +link('#heading') Заголовок
+            +link('#heading').link Заголовок
             |  \ 
-            +link('#icon') Иконки
+            +link('#icon').link Иконки
             |  \ 
-            +link('#image') Изображение
+            +link('#image').link Изображение
             |  \ 
-            +link('#link') Ссылка
+            +link('#link').link Ссылка
             |  \ 
-            +link('#list') Список
+            +link('#list').link Список
             |  \ 
-            +link('#nav-trigger') Переключитель навигации
+            +link('#nav-trigger').link Переключитель навигации
             |  \ 
-            +link('#news') Новости
+            +link('#news').link Новости
             |  \ 
-            +link('#player') Плеер
+            +link('#player').link Плеер
             |  \ 
-            +link('#tag') Теги
+            +link('#tag').link Теги
             |  \ 
-            +link('#track') Трек
+            +link('#track').link Трек
             |  \ 
-            +link('#user') Юзверь
+            +link('#user').link Юзверь
         
         
         +heading('h2')(class='heading__h3' id='album') Альбом
         .row
             .cols__lg-9
-                p.text В данном разделе есть как альбомы, так и их обертка для списка.
-                p.text Для того, чтобы использовать альбом необходимо использовать следующий код для сборки:
+                p.paragraph В данном разделе есть как альбомы, так и их обертка для списка.
+                p.paragraph Для того, чтобы использовать альбом необходимо использовать следующий код для сборки:
                 pre.code.code__snippet
                     | &lt;div class="album"&gt;
                     |     &lt;div class="album_control album_control__left"&gt;
@@ -70,13 +70,13 @@ block main
                     |     &lt;a class="link album_title" href="./album.html"&gt;Matras&lt;/a&gt;
                     |     &lt;a class="link album_artist" href="./artist.html"&gt;Link in Dark&lt;/a&gt;
                     | &lt;/div&gt;
-                p.text Тут есть 1 уровень обертки, это класс #[code.code .album] все элементы находятся внутри. В блоке альбома есть несколько элементов:
+                p.paragraph Тут есть 1 уровень обертки, это класс #[code.code .album] все элементы находятся внутри. В блоке альбома есть несколько элементов:
                 ul.list
                     li.list_item Контролы #[code.code .album_control]. Их может быть 2 штуки: слева #[code.code .album_control__left] и справа #[code.code .album_control__right].
                     li.list_item Обложка #[code.code .album_cover]. Изображение должно быть квадратным из-за анимации скругления.
                     li.list_item Название #[code.code .album_title].
                     li.list_item Исполнитель #[code.code .album_artist].
-                p.text Для того, чтобы все элменты правильно выстроились в список альбомов их необходимо обернуть в класс #[code.code .albums-list].
+                p.paragraph Для того, чтобы все элменты правильно выстроились в список альбомов их необходимо обернуть в класс #[code.code .albums-list].
             .cols__lg-3
                 +album(artists[0].albums[0].cover, artists[0].albums[0].title, artists[0].title)(style='max-width:250px;')
         
@@ -86,47 +86,47 @@ block main
                 .album-cover.album-cover__disc
                     img.image.image__fluid(src=artists[0].albums[0].cover)
             .cols__lg-7
-                p.text Элемент, который не имеет почти ничего общего с предыдушим, за исключением названия. Его можно использовать на странице альбома, например, или в других местах для декоративных целей.
-                p.text Для его использования достаточно обернуть картинку:
+                p.paragraph Элемент, который не имеет почти ничего общего с предыдушим, за исключением названия. Его можно использовать на странице альбома, например, или в других местах для декоративных целей.
+                p.paragraph Для его использования достаточно обернуть картинку:
                 pre.code.code__snippet
                     | &lt;div class="album-cover album-cover__disc"&gt;
                     |     &lt;img class="image image__fluid" src="./images/album-1__all.jpg"&gt;
                     | &lt;/div&gt;
-                p.text Рядом с изображением появиться псевдоэлемент, изображающий виниловый диск.
+                p.paragraph Рядом с изображением появиться псевдоэлемент, изображающий виниловый диск.
                 .notification.notification__warning
-                    p.text Использовать необходимо исключительно квадратный изображения. Так как размер и форма псевдоэлемента (винилового диска) напрямую зависит от изображения.
+                    p.paragraph Использовать необходимо исключительно квадратный изображения. Так как размер и форма псевдоэлемента (винилового диска) напрямую зависит от изображения.
 
         +heading('h2')(class='heading__h3' id='article') Статья
-        p.text Это обертка, которую следует использовать для вывода массива текста или того же массива пользовательского ввода. В него уже зашиты заголовки и текста, поэтому нет необходимости каждый заголовок оборачивать в тег с классом #[code.code .heading], вместо этого можно просто использовать #[code.code &lt;h1&gt;...].
+        p.paragraph Это обертка, которую следует использовать для вывода массива текста или того же массива пользовательского ввода. В него уже зашиты заголовки и текста, поэтому нет необходимости каждый заголовок оборачивать в тег с классом #[code.code .heading], вместо этого можно просто использовать #[code.code &lt;h1&gt;...].
         .row: .cols__lg-8
             pre.code.code__snippet
                 | &lt;article class='article'&gt;
                 |     &lt;h1&gt;Hello world&lt;/h1&gt;
                 |     &lt;p&gt;Рукописи не горят&lt;/p&gt;
                 | &lt;/article&gt;
-        p.text Использовать тег article не обязательно для этого. Точно также можно использовать, скажем, в описании товара, просто, чтобы не добавлять код.
+        p.paragraph Использовать тег article не обязательно для этого. Точно также можно использовать, скажем, в описании товара, просто, чтобы не добавлять код.
         .notification.margin__bottom-1
-            p.text Попытка использования этого класса не к месту, например кинуть его в body, чтобы не писать руками каждый раз заголовок, может обернуться против вас. В данном случае происходит инкапсуляция, возможность закрытого типа.
-        p.text Точно также можно использовать вместе с, непосредственно, заголовками.
+            p.paragraph Попытка использования этого класса не к месту, например кинуть его в body, чтобы не писать руками каждый раз заголовок, может обернуться против вас. В данном случае происходит инкапсуляция, возможность закрытого типа.
+        p.paragraph Точно также можно использовать вместе с, непосредственно, заголовками.
 
         +heading('h2')(class='heading__h3' id='artist-card') Карточка исполнителя
         .row
             .cols__lg-9
-                p.text Данный блок также, как и альбом, имеет саму карточку и класс-обертку для списка исполнителей.
-                p.text Для того, чтобы вывести карточку исполнителя достаточно всего немного кода:
+                p.paragraph Данный блок также, как и альбом, имеет саму карточку и класс-обертку для списка исполнителей.
+                p.paragraph Для того, чтобы вывести карточку исполнителя достаточно всего немного кода:
                 pre.code.code__snippet
                     | &lt;a class="link artist-card" href="./artist.html" style="background-image:url(image);"&gt;
                     |     &lt;span class="heading artist-card_title"&gt;Maverik Bowee&lt;/span&gt;
                     | &lt;/a&gt;
-                p.text А для списка обернуть в #[code.code .artist-cards-list], а самой карточке присвоить #[code.code .artist-cards-list_item].
-                p.text Вне списка карточки имеют минимальную высоту небольшой, а в списке работают немного другие правила.
+                p.paragraph А для списка обернуть в #[code.code .artist-cards-list], а самой карточке присвоить #[code.code .artist-cards-list_item].
+                p.paragraph Вне списка карточки имеют минимальную высоту небольшой, а в списке работают немного другие правила.
             .cols__lg-3
                 +artist-card(artists[1].image, artists[1].title)
         
         +heading('h2')(class='heading__h3' id='comment') Комментарии
         .row
             .cols__lg-4
-                p.text Вот так они выводяться.
+                p.paragraph Вот так они выводяться.
             .cols__lg-8
                 .comments-list
                     .comment
@@ -134,10 +134,10 @@ block main
                             +user(users[1].thumb, users[1].name)
                             small: em.date 26/08/2019
                         .comment_body
-                            p.text Комментарии можно использовать по-отдельности, но разумнее прямо в коде.
+                            p.paragraph Комментарии можно использовать по-отдельности, но разумнее прямо в коде.
                         .comment_actions
-                            +link('#') Reply
-                            +link('#') Thumbs up
+                            +link('#').link Reply
+                            +link('#').link Thumbs up
                     .comment
                         .comment_header
                             +user(users[0].thumb, users[0].name)
@@ -161,11 +161,11 @@ block main
                                 |     &lt;/div&gt;
                                 | &lt;/div&gt;
                         .comment_actions
-                            +link('#') Reply
-                            +link('#') Thumbs up
+                            +link('#').link Reply
+                            +link('#').link Thumbs up
 
         +heading('h2')(class='heading__h3' id='dropdown') Выпадающий список (dropdown)
-        p.text Выпадающий список может быть простым: иконка, текст или более сложной, например блок юзера:
+        p.paragraph Выпадающий список может быть простым: иконка, текст или более сложной, например блок юзера:
         pre.code.code__snippet
             | &lt;span class="dropdown"&gt;
             |     &lt;span class="dropdown_control"&gt;
@@ -180,18 +180,18 @@ block main
             |         &lt;a class="link dropdown_list-item" href="./playlists.html"&gt;Playlists&lt;/a&gt;
             |     &lt;/span&gt;
             | &lt;/span&gt;
-        p.text Выпадающий список построен на текстовом теге span для того, чтобы можно было использовать его в таких тегах, как к примеру #[code.code &lt;h2&gt;].
+        p.paragraph Выпадающий список построен на текстовом теге span для того, чтобы можно было использовать его в таких тегах, как к примеру #[code.code &lt;h2&gt;].
 
         +heading('h2')(class='heading__h3' id='field') Поля ввода
-        p.text Ничего сложного, просто биз... поля для ввода данных. Тут предусмотрено использование без фидбека, т.е. без классов ошибок.
-        p.text Предусмотрено несколько вариантов использования:
+        p.paragraph Ничего сложного, просто биз... поля для ввода данных. Тут предусмотрено использование без фидбека, т.е. без классов ошибок.
+        p.paragraph Предусмотрено несколько вариантов использования:
         ul.list
             li.list_item Обычное поле типа text\password\email и другие однострочные.
             li.list_item Форма с чекбоксами, переключателями
             li.list_item Строчные формы (можно выстроить линию)
             li.list_item Горизонтальное поле ввода.
-        p.text А также с label\без и подстрочником.
-        p.text Далее в примерах:
+        p.paragraph А также с label\без и подстрочником.
+        p.paragraph Далее в примерах:
         
         +heading('h3') Обычное использование
         .row.align-items__center
@@ -264,29 +264,29 @@ block main
                     label.field_label Select me
 
         +heading('h2')(class='heading__h3' id='heading') Заголовок
-        p.text Все очень просто. Заголовок = заголовок. Не заголовок = заголовок. Это маленький блок, которому по сути не важно, какой элемент вы используете, хоть блочный элемент.
-        p.text Также можно сделать заголовок h5 таким же на вид, как h1. Просто добавив ему класс. Это значит, что нет зависимости от тега заголовка, почти. Его отступы не переписываются.
+        p.paragraph Все очень просто. Заголовок = заголовок. Не заголовок = заголовок. Это маленький блок, которому по сути не важно, какой элемент вы используете, хоть блочный элемент.
+        p.paragraph Также можно сделать заголовок h5 таким же на вид, как h1. Просто добавив ему класс. Это значит, что нет зависимости от тега заголовка, почти. Его отступы не переписываются.
 
         +heading('h2')(class='heading__h3' id='icon') Иконки
-        p.text В проекте использованы только шрифтовое решение иконок Rage (нашего производства), следовательно, дополнительных стилей на данный момент нет.
+        p.paragraph В проекте использованы только шрифтовое решение иконок Rage (нашего производства), следовательно, дополнительных стилей на данный момент нет.
 
         +heading('h2')(class='heading__h3' id='image') Изображение
-        p.text В базовой комплектации сброшены стили изображений, чтобы они не создавали отступы. Но с помощью классов #[code.code .image.image__fit] или #[code.code .image.image__fluid] можно еще заставить их вписываться в область.
+        p.paragraph В базовой комплектации сброшены стили изображений, чтобы они не создавали отступы. Но с помощью классов #[code.code .image.image__fit] или #[code.code .image.image__fluid] можно еще заставить их вписываться в область.
 
         +heading('h2')(class='heading__h3' id='link') Ссылка
-        p.text Ссылка также, как и заголовок не привязан к тегу, но имеет завязки на его свойства. Это значит, что можно добавить класс #[code.code .link] к тегу span и выглядеть оно будет, как ссылка. Но мы все же не рекомендуем.
+        p.paragraph Ссылка также, как и заголовок не привязан к тегу, но имеет завязки на его свойства. Это значит, что можно добавить класс #[code.code .link] к тегу span и выглядеть оно будет, как ссылка. Но мы все же не рекомендуем.
 
         +heading('h2')(class='heading__h3' id='list') Список
-        p.text Список базируется на теге ul\ol и родителю присваивается класс #[code.code .list], а дочерним элементам списка класс #[code.code .list_item].
+        p.paragraph Список базируется на теге ul\ol и родителю присваивается класс #[code.code .list], а дочерним элементам списка класс #[code.code .list_item].
 
         +heading('h2')(class='heading__h3' id='nav-trigger') Переключитель навигации
-        p.text Данный блок содержит в себе только JS-инструкцию по тому, как открывать и закрывать основную навигацию.
+        p.paragraph Данный блок содержит в себе только JS-инструкцию по тому, как открывать и закрывать основную навигацию.
 
         +heading('h2')(class='heading__h3' id='news') Новости
-        p.text Для визуализации новости 
+        p.paragraph Для визуализации новости 
         .row
             .cols__lg-9
-                p.text Для визуализации новости следует использовать следующий код:
+                p.paragraph Для визуализации новости следует использовать следующий код:
                 pre.code.code__snippet
                     | &lt;div class="news-item"&gt;
                     |     &lt;a class="link news-item_cover" href="./news-item.html" style="background-image:url(image);"&gt;&lt;/a&gt;
@@ -303,7 +303,7 @@ block main
                 +news-item(news[0].cover, news[0].date, news[0].title, users[1])
 
         +heading('h2')(class='heading__h3' id='player') Плеер
-        p.text Плеер имеет сложную конструкцию и выглядит так:
+        p.paragraph Плеер имеет сложную конструкцию и выглядит так:
         .padding__xx-4.padding__yy-3.block__background-light
             +player(tracks[3])
         pre.code.code__snippet
@@ -328,9 +328,9 @@ block main
             |         &lt;span class="player_control"&gt;&lt;i class="icon rage rage-fw rage-loop"&gt;&lt;/i&gt;&lt;/span&gt;
             |     &lt;/div&gt;
             | &lt;/div&gt;
-        p.text В данном примере присутствует полный набор иконок из дизайна. Часть можно убрать, что-то добавить.
+        p.paragraph В данном примере присутствует полный набор иконок из дизайна. Часть можно убрать, что-то добавить.
         .notification
-            p.text Акцентируем внимание, данный плеер предназначен в первую очередь для полноэкранного разрешения, и описаны появления элементов от мобильного разрешения и до пк с учетом размера полного экрана.
+            p.paragraph Акцентируем внимание, данный плеер предназначен в первую очередь для полноэкранного разрешения, и описаны появления элементов от мобильного разрешения и до пк с учетом размера полного экрана.
 
         +heading('h2')(class='heading__h3' id='tag') Теги
         .row
@@ -343,15 +343,15 @@ block main
                     +tag('ZZ')(class='tags-list_item')
                     +tag('Bottom')(class='tags-list_item')
             .cols__lg-6
-                p.text Куда в музыке и новостях без тегов? Никуда. А для качественного отображения для них есть еще и обертка #[code.code .tags-list], а чтобы элементы работали, как надо, необходимо добавить им класс #[code.code .tags-list_item].
-                p.text Впрочем их можно использовать и без обертки, по-отдельности или задавая уникальыне правила. Чтобы, к примеру, исключить отступ списка вниз.
-                p.text Одиночный тег может быть как span, так и a, достаточно присвоить ему класс #[code.code .tag].
+                p.paragraph Куда в музыке и новостях без тегов? Никуда. А для качественного отображения для них есть еще и обертка #[code.code .tags-list], а чтобы элементы работали, как надо, необходимо добавить им класс #[code.code .tags-list_item].
+                p.paragraph Впрочем их можно использовать и без обертки, по-отдельности или задавая уникальыне правила. Чтобы, к примеру, исключить отступ списка вниз.
+                p.paragraph Одиночный тег может быть как span, так и a, достаточно присвоить ему класс #[code.code .tag].
 
         +heading('h2')(class='heading__h3' id='track') Трек
         .row
             .cols__lg-7
-                p.text Основа данной сборки.
-                p.text Сам по себе трек не имеет ничего сложного, название, обложка и время. Можно добавить функционал типа выпадающих списков.
+                p.paragraph Основа данной сборки.
+                p.paragraph Сам по себе трек не имеет ничего сложного, название, обложка и время. Можно добавить функционал типа выпадающих списков.
                 pre.code.code__snippet
                     | &lt;div class="track"&gt;
                     |     &lt;img class="image track_cover" src="./images/album-1__all.jpg" alt=""&gt;
@@ -361,7 +361,7 @@ block main
                     |     &lt;/div&gt;
                     |     &lt;div class="track_adds"&gt;2:42&lt;/div&gt;
                     | &lt;/div&gt;
-                p.text Если использовать их одиночными, как на примере справа, то необходимо добавлять отступы, например #[code.code .margin__bottom-1].
+                p.paragraph Если использовать их одиночными, как на примере справа, то необходимо добавлять отступы, например #[code.code .margin__bottom-1].
             .cols__lg-5
                 +track(tracks[6])(class='margin__bottom-1')
                 +track(tracks[4])(class='margin__bottom-1')
@@ -372,19 +372,19 @@ block main
                         +link('#')(class='track_artist')= tracks[10].artist
                     .track_adds= tracks[10].duration
                 .notification.notification__ok
-                    p.text: small В треках есть фича. Они могут крутиться, как активное состояние. Надо добавить класс #[code.code .track__played] к #[code.code .track].
-        p.text Но вообще для таких случаев у нас есть список треков #[code.code .tracks-list]. Он, как и все остальные списки, требует, чтобы у вложенных элементов были дополнительные от него классы #[code.code .tracks-list_item].
-        p.text В списке все треки нумеруются автоматически:
+                    p.paragraph: small В треках есть фича. Они могут крутиться, как активное состояние. Надо добавить класс #[code.code .track__played] к #[code.code .track].
+        p.paragraph Но вообще для таких случаев у нас есть список треков #[code.code .tracks-list]. Он, как и все остальные списки, требует, чтобы у вложенных элементов были дополнительные от него классы #[code.code .tracks-list_item].
+        p.paragraph В списке все треки нумеруются автоматически:
         +tracks-list(tracks, 5)
         .notification.notification__warning
-            p.text Список имеет отступы. Будьте аккуратны с ними.
+            p.paragraph Список имеет отступы. Будьте аккуратны с ними.
 
         +heading('h2')(class='heading__h3' id='user') Юзверь
-        p.text Изображение и имя. Вот и все, собственно, внимание код:
+        p.paragraph Изображение и имя. Вот и все, собственно, внимание код:
         pre.code.code__snippet
             | &lt;span class="user"&gt;
             |     &lt;span class="user_thumb" style="background-image:url(./images/user-thumb-2__player.gif)"&gt;&lt;/span&gt;
             |     &lt;span class="user_name"&gt;Torin Duboshit&lt;/span&gt;
             | &lt;/span&gt;
         .notification.notification__alert
-            p.text За использование неквадратных аватарок ментально награждаю минусом в 10к к карме.
+            p.paragraph За использование неквадратных аватарок ментально награждаю минусом в 10к к карме.

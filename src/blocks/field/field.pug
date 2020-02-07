@@ -1,7 +1,7 @@
 mixin field(tag='input')
     - let randomNumber = Math.floor(Math.random() * 5000)
     if attributes.type == 'checkbox' || attributes.type == 'radio'
-        .field.field__row(class!=attributes.class)
+        .field.field__inline(class!=attributes.class)
             #{tag}.field_input(id='field'+randomNumber, type!=attributes.type placeholder!=attributes.placeholder, value!=attributes.value)/
             if attributes.label
                 label.field_label(for='field'+randomNumber)= attributes.label

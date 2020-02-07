@@ -14,7 +14,8 @@
   <!-- Get DEMO data-->
   <!-- Get DEMO data END-->
   <body class="interactive-docs" lang="en">
-    <header class="interactive-docs_header"><a class="link logo" href="../">
+    <div class="grid-checkout"></div>
+    <header class="interactive-docs_header"><a class="logo" href="../">
           <svg class="logo_image" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 446.1 164.9" xml:space="preserve" height="50" width="120">
             <style type="text/css">
               .st0{fill:none;stroke:#005EDD;stroke-width:16;stroke-miterlimit:10;}
@@ -57,7 +58,7 @@
         </ul>
       </nav>
       <div class="margin__top-auto">
-        <p class="text"><a class="link" href="./index.html">EN</a> \ <a class="link" href="./index_ru.html">RU</a>
+        <p class="paragraph"><a href="./index.html">EN</a> \ <a href="./index_ru.html">RU</a>
         </p>
       </div>
     </header>
@@ -67,13 +68,13 @@
           </h1>
           <h2 class="heading heading__h3">Markup
           </h2>
-        <p class="text">The project's working files are in pug syntax. This is a short entry, which, in addition to short, allows you to do many cool things, for example template inheritance, use of mixins, partial use the js-syntax for project layout.</p>
-        <p class="text">Full and detailed documentation on how to work with the project you can find on <a class="link" href="https://pugjs.org">the official website</a>.
+        <p class="paragraph">The project's working files are in pug syntax. This is a short entry, which, in addition to short, allows you to do many cool things, for example template inheritance, use of mixins, partial use the js-syntax for project layout.</p>
+        <p class="paragraph">Full and detailed documentation on how to work with the project you can find on <a class="link" href="https://pugjs.org">the official website</a>.
         </p>
-        <p class="text">At us all is implemented by the following logic:</p>
+        <p class="paragraph">At us all is implemented by the following logic:</p>
           <h3 class="heading heading__h4">Templates
           </h3>
-        <p class="text">Template partials are placed in diferent folders:</p>
+        <p class="paragraph">Template partials are placed in diferent folders:</p>
         <ul class="list">
           <li class="list_item"><code class="code">src/markup/layouts/</code> markup</li>
           <li class="list_item"><code class="code">src/style/layouts/</code> styles</li>
@@ -81,28 +82,28 @@
         </ul>
           <h3 class="heading heading__h4">Blocks
           </h3>
-        <p class="text">In this project used lots of blocks from FA-Kit library, and we created many uniq blocks (read BEM-methodology). All them placed in <code class="code">src/blocks/</code>. Every has its name and set of dependencies.</p>
-        <p class="text">For example we created mixin for heading. It gets aruments and output after render simple heading. To use it you need to add attach it in template (<code class="code">src/markup/layouts/&#91;template name&#93;</code>) or in page (<code class="code">src/markup/layouts/&#91;template name&#93;/&#91;page name&#93;</code>).</p>
-        <p class="text">In the block's folder you can find pug file heading.pug. Upper we talked about it, that you need to attach. And after use like this <code class="code">+heading('h1') Heading content</code></p>
+        <p class="paragraph">In this project used lots of blocks from FA-Kit library, and we created many uniq blocks (read BEM-methodology). All them placed in <code class="code">src/blocks/</code>. Every has its name and set of dependencies.</p>
+        <p class="paragraph">For example we created mixin for heading. It gets aruments and output after render simple heading. To use it you need to add attach it in template (<code class="code">src/markup/layouts/&#91;template name&#93;</code>) or in page (<code class="code">src/markup/layouts/&#91;template name&#93;/&#91;page name&#93;</code>).</p>
+        <p class="paragraph">In the block's folder you can find pug file heading.pug. Upper we talked about it, that you need to attach. And after use like this <code class="code">+heading('h1') Heading content</code></p>
           <h3 class="heading heading__h4">Demo
           </h3>
-        <p class="text">All demo data you can find here: <code class="code">src/data</code>.</p>
+        <p class="paragraph">All demo data you can find here: <code class="code">src/data</code>.</p>
           <h3 class="heading heading__h4">Build manifest
           </h3>
-        <p class="text">Mostly files in build connects by hand. It means we used manifest, that you can find here <code class="code">src/build.js</code>.</p>
+        <p class="paragraph">Mostly files in build connects by hand. It means we used manifest, that you can find here <code class="code">src/build.js</code>.</p>
           <h3 class="heading heading__h4">FA-Kit
           </h3>
-        <p class="text">This framework is in constant development, so it makes sense to check for updates on the project page.</p>
-        <p class="text">In addition to these classes and components in the documentation for the usual use of the topic, there are still opportunities for the advanced. In particular — to change variables, in order to get the output design with their styles.</p>
-        <p class="text">But no less important are myxins:</p>
+        <p class="paragraph">This framework is in constant development, so it makes sense to check for updates on the project page.</p>
+        <p class="paragraph">In addition to these classes and components in the documentation for the usual use of the topic, there are still opportunities for the advanced. In particular — to change variables, in order to get the output design with their styles.</p>
+        <p class="paragraph">But no less important are myxins:</p>
         <ul class="list">
           <li class="list_item"><code class="code">media_query_up</code> — for screen sizes larger than the reference point</li>
           <li class="list_item"><code class="code">media_query_down</code> — for screen sizes smaller than the reference point</li>
           <li class="list_item"><code class="code">media_query_between</code> — media query between two points, for example, from xs to lg</li>
           <li class="list_item"><code class="code">touch_grid</code> — to create columns</li>
         </ul>
-        <p class="text">There are also classes of type ghost:</p>
-        <p class="text">%none-select — It can be inherited when creating other classes so that the user can not allocate content.</p>
+        <p class="paragraph">There are also classes of type ghost:</p>
+        <p class="paragraph">%none-select — It can be inherited when creating other classes so that the user can not allocate content.</p>
       </div>
     </main>
   </body>

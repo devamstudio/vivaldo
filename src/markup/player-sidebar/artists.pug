@@ -4,7 +4,4 @@ block prepend head
 	-var document_title = ': Artists'
 
 block main
-	.container
-		// Artists list
-		+heading('h1') Artists
-		+artist-cards-list(artists)
+	include ../content-repeated/artists
