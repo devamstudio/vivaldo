@@ -1289,33 +1289,14 @@ article span, article strong, article i, article b, .article span, .article stro
   grid-gap: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) *  1rem);
   padding: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem) 0; }
 
-.comment .comment_header {
-  display: flex;
-  align-items: center; }
-  .comment .comment_header .user {
-    margin-right: auto; }
-  .comment .comment_header .comment_date {
-    color: #a4a4a4; }
+.field .field_input {
+  border-bottom: 1px solid #a4a4a4;
+  transition: all .2s; }
+  .field .field_input:hover {
+    outline: 1px solid #3895FF; }
 
-.comment:hover > .comment_actions {
-  opacity: 1;
-  height: auto; }
-
-.comment .comment_body {
-  margin-left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.35rem); }
-  .comment .comment_body p:last-child {
-    margin-bottom: 0; }
-
-.comment .comment_actions {
-  padding-bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem);
-  margin-left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.35rem);
-  line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem); }
-  .comment .comment_actions .link {
-    margin-right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .75rem);
-    font-size: .9em; }
-
-.comment .comments-list {
-  margin-left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.35rem); }
+.field__inline {
+  line-height: normal !important; }
 
 .dropdown {
   display: inline-block;
@@ -1367,11 +1348,47 @@ article span, article strong, article i, article b, .article span, .article stro
       .dropdown .dropdown_list .dropdown_list-item:hover {
         background-color: #fafafa; }
 
-.rage {
-  font-size: .9em; }
+.comment .comment_header {
+  display: flex;
+  align-items: center; }
+  .comment .comment_header .user {
+    margin-right: auto; }
+  .comment .comment_header .comment_date {
+    color: #a4a4a4; }
+
+.comment:hover > .comment_actions {
+  opacity: 1;
+  height: auto; }
+
+.comment .comment_body {
+  margin-left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.35rem); }
+  .comment .comment_body p:last-child {
+    margin-bottom: 0; }
+
+.comment .comment_actions {
+  padding-bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem);
+  margin-left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.35rem);
+  line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem); }
+  .comment .comment_actions .link {
+    margin-right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .75rem);
+    font-size: .9em; }
+
+.comment .comments-list {
+  margin-left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.35rem); }
 
 .image.image__fit, .image.image__fluid {
   max-width: 100%; }
+
+.link {
+  color: #007bff;
+  text-decoration: none; }
+  .link:hover {
+    text-decoration: underline; }
+  .link:vidited {
+    color: #A300AD; }
+
+.rage {
+  font-size: .9em; }
 
 .news-item {
   display: flex;
@@ -1509,14 +1526,8 @@ article span, article strong, article i, article b, .article span, .article stro
     .player .player_additional-controls {
       display: block; } }
 
-.field .field_input {
-  border-bottom: 1px solid #a4a4a4;
-  transition: all .2s; }
-  .field .field_input:hover {
-    outline: 1px solid #3895FF; }
-
-.field__inline {
-  line-height: normal !important; }
+.heading.heading__uppercase {
+  text-transform: uppercase; }
 
 .tag {
   display: inline-flex;
@@ -1635,17 +1646,6 @@ article span, article strong, article i, article b, .article span, .article stro
     max-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem);
     overflow: hidden;
     text-overflow: ellipsis; }
-
-.heading.heading__uppercase {
-  text-transform: uppercase; }
-
-.link {
-  color: #007bff;
-  text-decoration: none; }
-  .link:hover {
-    text-decoration: underline; }
-  .link:vidited {
-    color: #A300AD; }
 
 .page {
   display: grid;
