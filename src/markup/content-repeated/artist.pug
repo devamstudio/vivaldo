@@ -3,16 +3,16 @@
     .row
         .cols__xs-12.cols__md-6.cols__lg-5.cols__xl-4
             +image(artists[0].image)(class='image__fluid')
-            +tags-list(['Hard','Hard','Rock','Haliluya'])(class="padding__yy-0")
+            +tags-list(['Hard','Hard','Rock','Haliluya']).padding__bottom-0.padding__top-1_4
         .cols__xs-12.cols__md-6.cols__lg-7.cols__xl-8
-            +heading('h1')(class='heading__h1 margin__yy-0')= artists[0].title
+            +heading('h1').heading__h1.margin__yy-0= artists[0].title
             p.paragraph
                 em #[strong 15] albums, #[strong 199] tracks, help all live together since #[strong 1930]
             p.paragraph.margin__top-1 Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
             a.button.button__primary Add to favorite
 .container
-    +heading('h2')(class='heading__h2 margin__top-1 margin__bottom-0') Artist tracks
+    +heading('h2').heading__h4.margin__top-1.margin__bottom-0.text__lineheight-1 Artist tracks
     +tracks-list(tracks, 9)
 .container
-    +heading('h2')(class='heading__h2 margin__top-1 margin__bottom-0') Artist albums
+    +heading('h2').heading__h4.margin__top-1.margin__bottom-0.text__lineheight-1 Artist albums
     +albums-list(albums, 7)
