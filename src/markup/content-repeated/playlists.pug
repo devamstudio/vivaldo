@@ -1,13 +1,14 @@
 .container
-    .row.padding__yy-2
+    .row
         .cols__sm-5.cols__lg-3
             +image(artists[0].image)(class='image__fit')
-            p.paragraph.margin__top-1
-                em= tracks.length + ' Tracks'
-        .cols__sm-7.cols__lg-9
-            +heading('h2')(class='heading__h4 margin__yy-0')
+            
+            +heading('h4').heading__h4.margin__top-1_2.margin__bottom-1
                 +dropdown(['Rename', 'Remove', 'Clean'])(icon={type:'rage',value:'dots'})
                 | Playlist name
+            p.paragraph.margin__top-0
+                em= tracks.length + ' Tracks'
+        .cols__sm-7.cols__lg-9
             +tracks-list(tracks, 10)
 //- .container.container__wide.background__light
     +heading('h2')(class='heading__h5 margin__bottom-0 margin__top-1 text__center') Your other playlists

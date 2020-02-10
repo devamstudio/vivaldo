@@ -16,7 +16,7 @@ html(lang='en')
         link( rel="stylesheet" type="text/css" href="https://space.i-am.studio/font-icons-rage/releases/v1.0.1/css/font-rage.css")
     body.layouts
         header.layouts_header
-            h1.text__center= title
+            h1.text__center.heading.heading__h1= title
         main
             .layouts_list.padding__xx-1
                 for layout in layouts
@@ -24,8 +24,8 @@ html(lang='en')
                         .layouts_list-item_image
                             img.image.image__fluid(src=layout.image, alt='image')
                         .layouts_list-item_description
-                            +heading('h2')
-                                +link(layout.url)= layout.title
+                            +heading('h2').heading__h4.margin__yy-0
+                                +link(layout.url).link= layout.title
                             p= layout.description
         footer.layouts_footer
             a.link(href='./interactive-docs/') Interactive documentation

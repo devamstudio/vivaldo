@@ -1,13 +1,14 @@
 .container
     // Artists list
     .row
-        .cols__xl-8.padding__bottom-1
+        .cols__xs-12
+                p.paragraph.margin__bottom-0: em= news[0].date
+                +heading('h1').heading.heading__h1.margin__top-0.text__lineheight-1= news[0].title
+                +user(users[0].thumb, users[0].name).margin__bottom-1
+        .cols__xl-9.padding__bottom-1
             .article
-                +heading('h1').heading.heading__h1.margin__top-0= news[0].title
-                p.paragraph: em= news[0].date
-                +user(users[0].thumb, users[0].name)
-                .padding__yy-1
-                    +image(news[0].cover)(class='image__fluid')
+                .padding__bottom-1
+                    +image(news[4].cover)(class='image__fluid')
                 p.paragraph Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 p.paragraph Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
                 p.paragraph In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
@@ -15,8 +16,9 @@
                 p.paragraph Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
                 p.paragraph Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
 
+            hr.hr
             .margin__yy-1
-                +heading('h5')(class="heading__h5") Comments
+                +heading('h3').heading__h3.margin__top-0.text__lineheight-1 Comments
                 .comments-list
                     .comment
                         .comment_header
@@ -56,11 +58,15 @@
                                     +link('#').link Reply
                                     +link('#').link Thumbs up
             
-            form.margin__yy-2
-                +heading('h3').heading__h3 Leave a comment
+            form
+                +heading('h4').heading__h4.margin__top-0.text__lineheight-1 Leave a comment
                 .row
                     .cols__lg-6: +field('input')(type='text', label='Enter your name', class='margin__bottom-3_4')
                     .cols__lg-6: +field('input')(type='text', label='Enter your email', class='margin__bottom-3_4')
                 +field('textarea')(type='text', label='Leave a comment', class='margin__bottom-1')
                 .text__right
                     button.button.button__primary Just do it
+        .cols__xl-3
+            +heading('h4').heading__h4.margin__yy-0.text__lineheight-1 Related news:
+            - let news_tags=['History', 'Music']
+            +news-list(news, 3)(news_tags, users=users)

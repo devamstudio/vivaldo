@@ -1,4 +1,6 @@
 .container
     // Albums list
-    +heading('h1').heading__h2.margin__yy-0 All albums
+    +heading('h1').heading__h2.margin__yy-0.text__lineheight-1 All albums
     +albums-list(albums)
+    .text__center.margin__bottom-1
+        include pagination
