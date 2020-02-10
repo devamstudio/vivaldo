@@ -7,7 +7,7 @@
 	&:hover
 		box-shadow: 0 .5em 1.5em rgba(black, .16)
 		padding:
-			bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
+			bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem)
 		//border-radius: 1em
 	// Elements
 	.news-item_cover
@@ -32,21 +32,23 @@
 			family: $font-heading
 			style: italic
 		margin: 
-			top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .25rem)
+			top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem)
 			left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem)
 			right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem)
 	.news-item_title
 		display: inline-block
-		line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
+		line-height: 1.2
 		max-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 2rem)
 		overflow: hidden
-		text-overflow: ellipsis
+		text:
+			overflow: ellipsis
+			decoration: none
 		color: $color-black
 		font:
 			size: 1.2em
 			family: $font-heading
 		margin: 
-			top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .25rem) 
+			top: 0
 			right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem) 
 			left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem)
 			bottom: 0
