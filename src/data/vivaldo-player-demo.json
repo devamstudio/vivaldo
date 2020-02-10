@@ -333,6 +333,18 @@
             "date" : "25/05/2021",
             "title" : "I got a power",
             "author" : 1
+        },
+        {
+            "cover" : "./images/news-2__player.jpg",
+            "date" : "25/05/2020",
+            "title" : "Let's get this party to the moon",
+            "author" : 1
+        },
+        {
+            "cover" : "./images/news-1__player.jpg",
+            "date" : "25/05/2021",
+            "title" : "Message from stars",
+            "author" : 0
         }
     ],
     "users" : [
