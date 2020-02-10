@@ -2,9 +2,7 @@
     .row
         .cols__xs-12.cols__xl-7
             // Artists list
-            +heading('h2')(class='heading__h4 margin__yy-0')
-                +dropdown(['Add', 'Remove'])(icon={type:'rage',value:'dots'})
-                | Artists
+            +heading('h2')(class='heading__h4 margin__yy-0') Artists
             +artist-cards-list(artists, 4)
         .cols__xs-12.cols__xl-5
             // Tracks list
@@ -26,4 +24,4 @@
     // Tracks list
     +heading('h2')(class='heading__h4 margin__bottom-0 margin__top-1') Last news
     - let news_tags=['History', 'Music']
-    +news-list(news, 5)(news_tags, users=users)
+    +news-list(news, 5)(news_tags, users=users).news-list__highlite-first

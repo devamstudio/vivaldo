@@ -291,8 +291,12 @@
             "image" : "./images/artist-8__player.jpg",
             "albums" : [
                 {
-                    "title" : "Kozy homr",
+                    "title" : "Kosy home",
                     "cover" : "./images/album-6__all.jpg"
+                },
+                {
+                    "title" : "Run run girl run",
+                    "cover" : "./images/album-1__all.jpg"
                 }
             ]
         }
@@ -333,6 +337,24 @@
             "date" : "25/05/2021",
             "title" : "I got a power",
             "author" : 1
+        },
+        {
+            "cover" : "./images/news-2__player.jpg",
+            "date" : "25/05/2020",
+            "title" : "Let's get this party to the moon",
+            "author" : 1
+        },
+        {
+            "cover" : "./images/news-1__player.jpg",
+            "date" : "25/05/2021",
+            "title" : "Message from stars",
+            "author" : 0
+        },
+        {
+            "cover" : "./images/news-4__player.jpg",
+            "date" : "25/05/2020",
+            "title" : "BTW What happened?",
+            "author" : 0
         }
     ],
     "users" : [

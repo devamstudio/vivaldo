@@ -85,11 +85,16 @@ block markup
                     +search()
             block main
         footer.footer
-            block footer
-                .footer_nav
-                    +link('./blank.html')(class="footer_nav-item") User agreement
-                    +link('./blank.html')(class="footer_nav-item") Help
-                    +link('./blank.html')(class="footer_nav-item") Subscribe
-                span.footer_copyright &copy; 2019
+            .container
+                block footer
+                    .row
+                        .cols__lg-10
+                            .footer_nav
+                                +link('./blank.html')(class="footer_nav-item") User agreement
+                                +link('./blank.html')(class="footer_nav-item") Help
+                                +link('./blank.html')(class="footer_nav-item") Subscribe
+                        .cols__lg-2.text__lg-right
+                            span.footer_copyright &copy; 
+                                = new Date().getFullYear()
         .player-area
             +player(tracks[3])

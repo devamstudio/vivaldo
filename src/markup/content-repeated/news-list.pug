@@ -1,5 +1,7 @@
 .container
     // News list
-    +heading('h1')(class='heading__h1 margin__yy-0') All news
+    +heading('h1').heading__h2.margin__yy-0.text__lineheight-1 All news
     - let news_tags=['History', 'Music']
-    +news-list(news)(news_tags, users=users)
+    +news-list(news)(news_tags, users=users).news-list__highlite-first
+    .text__center.margin__bottom-1
+        include pagination

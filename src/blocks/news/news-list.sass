@@ -8,8 +8,9 @@
 		gap: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
 	padding: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem) 0
 	@include media_query_up(md)
-	.news-list_item:first-child
-		@include media_query_up(md)
-			grid:
-				column: 1 / span 2
-				row: 1 / span 2
+	&.news-list__highlite-first
+		.news-list_item:first-child
+			@include media_query_up(md)
+				grid:
+					column: 1 / span 2
+					row: 1 / span 2

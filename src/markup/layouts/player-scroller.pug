@@ -77,6 +77,7 @@ block markup
                     +link('./blank.html')(class="footer_nav-item") User agreement
                     +link('./blank.html')(class="footer_nav-item") Help
                     +link('./blank.html')(class="footer_nav-item") Subscribe
-                span.footer_copyright &copy; 2019
+                span.footer_copyright &copy; 
+                    = new Date().getFullYear()
         .player_area
             +player(tracks[3])

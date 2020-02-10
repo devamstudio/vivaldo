@@ -1,4 +1,12 @@
 .container
     // Tracks list
-    +heading('h2')(class="heading__h1 margin__yy-0") All tracks
-    +tracks-list(tracks)
+    +heading('h1').heading__h2.margin__yy-0.text__lineheight-1 Charts
+    +tracks-list(tracks, 12)
+
+    .row
+        .cols__xs-12.cols__md-6
+            +heading('h4')(class="heading__h4 margin__bottom-0") Top 5 «Pop»
+            +tracks-list(tracks.reverse(), 5)
+        .cols__xs-12.cols__md-6
+            +heading('h4')(class="heading__h4 margin__bottom-0") Top 5 «Rock»
+            +tracks-list(tracks.reverse(), 5)

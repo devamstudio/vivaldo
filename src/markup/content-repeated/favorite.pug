@@ -1,12 +1,12 @@
 .container
     // Artists list
-    +heading('h2')(class='heading__h4 margin__top-1 margin__bottom-0') Favorite artists
+    +heading('h2').heading__h4.margin__top-0.margin__bottom-0 Favorite artists
     +artist-cards-list(artists, 4)
 
     // Albums list
-    +heading('h2')(class='heading__h4 margin__top-1 margin__bottom-0') Favorite albums
+    +heading('h2').heading__h4.margin__top-1.margin__bottom-0 Favorite albums
     +albums-list(albums, 10)
 
     // Tracks list
-    +heading('h2')(class='heading__h4 margin__top-1 margin__bottom-0') Favorite tracks
-    +tracks-list(tracks)
+    +heading('h2').heading__h4.margin__top-1.margin__bottom-0 Favorite tracks
+    +tracks-list(tracks, 20)
